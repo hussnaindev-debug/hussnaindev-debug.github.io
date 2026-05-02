@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hussnain Sajjad | Unity Game Developer</title>
+    <title>Hussnain Sajjad | Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* ─── Reset & Base ─── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,7 +30,7 @@
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
             line-height: 1.7;
         }
 
@@ -67,11 +70,11 @@
         }
 
         .nav-logo {
-            font-weight: 900;
-            font-size: 1.1rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
             color: var(--accent2);
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 12px var(--glow);
         }
 
         .nav-links {
@@ -82,9 +85,9 @@
 
         .nav-links a {
             color: var(--muted);
-            font-size: 0.88rem;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
@@ -102,20 +105,13 @@
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
+        #particles {
             position: absolute;
             inset: 0;
-            background-image:
-                linear-gradient(rgba(204,0,0,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(204,0,0,0.04) 1px, transparent 1px);
-            background-size: 60px 60px;
-            animation: gridMove 25s linear infinite;
-        }
-
-        @keyframes gridMove {
-            0%   { transform: translateY(0); }
-            100% { transform: translateY(60px); }
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .hero::after {
@@ -123,11 +119,12 @@
             position: absolute;
             width: 700px;
             height: 700px;
-            background: radial-gradient(circle, rgba(204,0,0,0.18) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(204,0,0,0.14) 0%, transparent 65%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             pointer-events: none;
+            z-index: 0;
         }
 
         .hero-content { position: relative; z-index: 1; }
@@ -147,12 +144,48 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 5rem);
-            font-weight: 900;
-            line-height: 1.05;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            font-weight: 400;
+            line-height: 1;
             margin-bottom: 0.5rem;
             color: #fff;
-            text-shadow: 0 0 40px rgba(204,0,0,0.25);
+            letter-spacing: 6px;
+            animation: glitch 8s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 88%, 100% {
+                transform: none;
+                text-shadow: 0 0 40px rgba(204,0,0,0.3);
+            }
+            89% {
+                transform: skewX(-3deg) translateX(-3px);
+                text-shadow: -4px 0 #ff0000, 4px 0 #880000;
+                clip-path: inset(10% 0 80% 0);
+            }
+            90% {
+                transform: skewX(2deg) translateX(3px);
+                text-shadow: 4px 0 #ff0000, -4px 0 #880000;
+            }
+            91% {
+                transform: skewX(-1deg);
+                text-shadow: -2px 0 #ff2222;
+                clip-path: inset(60% 0 20% 0);
+            }
+            92% {
+                transform: none;
+                text-shadow: 0 0 40px rgba(204,0,0,0.3);
+                clip-path: none;
+            }
+            94% {
+                transform: translateX(2px);
+                text-shadow: -3px 0 #cc0000;
+            }
+            96% {
+                transform: none;
+                text-shadow: 0 0 40px rgba(204,0,0,0.3);
+            }
         }
 
         .hero-sub {
@@ -173,14 +206,15 @@
             padding: 0.8rem 1.9rem;
             border-radius: 6px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             cursor: pointer;
             transition: all 0.25s;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-primary {
@@ -192,7 +226,7 @@
         .btn-primary:hover {
             background: var(--accent2);
             transform: translateY(-2px);
-            box-shadow: 0 0 35px var(--glow);
+            box-shadow: 0 0 40px var(--glow);
             color: #fff;
         }
 
@@ -205,7 +239,7 @@
             border-color: var(--accent);
             color: var(--accent2);
             transform: translateY(-2px);
-            box-shadow: 0 0 15px var(--glow2);
+            box-shadow: 0 0 20px var(--glow2);
         }
 
         .hero-stats {
@@ -226,10 +260,11 @@
         }
 
         .stat-num {
-            font-size: 2.2rem;
-            font-weight: 900;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.6rem;
             color: var(--accent2);
             line-height: 1;
+            letter-spacing: 2px;
             text-shadow: 0 0 20px var(--glow);
         }
 
@@ -239,6 +274,7 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-top: 0.3rem;
+            font-weight: 700;
         }
 
         /* ─── Sections ─── */
@@ -269,10 +305,12 @@
         }
 
         .section-title {
-            font-size: clamp(1.8rem, 4vw, 2.6rem);
-            font-weight: 900;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 400;
             margin-bottom: 0.5rem;
             color: #fff;
+            letter-spacing: 3px;
         }
 
         .section-desc {
@@ -289,6 +327,28 @@
             border-radius: 2px;
             margin: 1rem 0 1.5rem;
             box-shadow: 0 0 10px var(--glow);
+        }
+
+        /* ─── Scan line reveal ─── */
+        .scan-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+        .scan-reveal::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(204,0,0,0.06), transparent);
+            transition: none;
+        }
+        .scan-reveal.visible::after {
+            animation: scanline 0.8s ease forwards;
+        }
+        @keyframes scanline {
+            0%   { left: -100%; }
+            100% { left: 100%; }
         }
 
         /* ─── About ─── */
@@ -335,7 +395,7 @@
         .contact-chip:hover {
             border-color: var(--accent);
             color: var(--accent2);
-            box-shadow: 0 0 10px var(--glow2);
+            box-shadow: 0 0 12px var(--glow2);
         }
 
         .about-side {
@@ -354,6 +414,7 @@
         .info-card:hover {
             border-color: var(--accent);
             box-shadow: 0 0 20px var(--glow2);
+            transform: translateY(-2px);
         }
 
         .info-card-title {
@@ -398,8 +459,9 @@
         }
         .skill-card:hover::before { opacity: 1; }
         .skill-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 20px var(--glow2);
+            border-color: rgba(204,0,0,0.3);
         }
 
         .skill-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
@@ -465,8 +527,17 @@
             height: 14px;
             background: var(--accent);
             border-radius: 50%;
-            box-shadow: 0 0 14px var(--glow);
             border: 2px solid var(--bg);
+        }
+
+        .timeline-dot.active {
+            box-shadow: 0 0 14px var(--glow);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { box-shadow: 0 0 8px var(--glow); }
+            50%       { box-shadow: 0 0 22px rgba(204,0,0,0.7); }
         }
 
         .timeline-card {
@@ -490,7 +561,7 @@
         }
         .timeline-card:hover::before { opacity: 1; }
         .timeline-card:hover {
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 0 30px rgba(0,0,0,0.4), 0 0 15px var(--glow2);
         }
 
         .tl-header {
@@ -527,6 +598,12 @@
             border: 1px solid rgba(204,0,0,0.2);
         }
 
+        .tl-period.current {
+            background: rgba(204,0,0,0.18);
+            border-color: rgba(204,0,0,0.45);
+            color: #ff4444;
+        }
+
         .tl-list { list-style: none; margin-top: 0.75rem; }
         .tl-list li {
             color: #888;
@@ -554,7 +631,7 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: all 0.35s;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -571,8 +648,9 @@
         }
         .project-card:hover::before { opacity: 1; }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px var(--glow2);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 35px var(--glow2);
+            border-color: rgba(204,0,0,0.25);
         }
 
         .project-header {
@@ -609,6 +687,11 @@
             background: rgba(99,179,237,0.1);
             color: #63B3ED;
             border: 1px solid rgba(99,179,237,0.25);
+        }
+        .badge-roblox {
+            background: rgba(0,162,255,0.1);
+            color: #00a2ff;
+            border: 1px solid rgba(0,162,255,0.25);
         }
         .badge-desktop {
             background: rgba(246,173,85,0.1);
@@ -697,7 +780,7 @@
             background: linear-gradient(90deg, var(--accent), transparent);
         }
         .pub-card:hover {
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px var(--glow2);
         }
 
         .pub-icon { font-size: 2.5rem; flex-shrink: 0; }
@@ -829,7 +912,7 @@
 <!-- ════════════ NAV ════════════ -->
 <nav>
     <div class="nav-inner">
-        <span class="nav-logo">HS</span>
+        <span class="nav-logo">Hussnain Sajjad</span>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -842,13 +925,14 @@
 
 <!-- ════════════ HERO ════════════ -->
 <section class="hero" id="home">
+    <canvas id="particles"></canvas>
     <div class="hero-content fade-up">
 
-        <div class="hero-badge">🎮 Unity Game Developer</div>
+        <div class="hero-badge">🎮 Unity &amp; Roblox Developer</div>
 
         <h1>Hussnain Sajjad</h1>
         <p class="hero-sub">
-            Shipping mobile &amp; WebGL games with Unity 2D/3D — gameplay systems,
+            Shipping mobile, WebGL, and Roblox games — gameplay systems,
             meta progression, monetization SDKs, and cross-platform builds.
         </p>
 
@@ -859,16 +943,16 @@
 
         <div class="hero-stats">
             <div class="stat">
-                <div class="stat-num">5+</div>
+                <div class="stat-num">6+</div>
                 <div class="stat-label">Shipped Games</div>
             </div>
             <div class="stat">
-                <div class="stat-num">2</div>
+                <div class="stat-num">3</div>
                 <div class="stat-label">Studios</div>
             </div>
             <div class="stat">
-                <div class="stat-num">3</div>
-                <div class="stat-label">Platforms</div>
+                <div class="stat-num">155K+</div>
+                <div class="stat-label">Roblox Visits</div>
             </div>
             <div class="stat">
                 <div class="stat-num">1</div>
@@ -889,14 +973,16 @@
                 <div class="sep"></div>
 
                 <p>
-                    I'm a Unity Game Developer from Pakistan, specializing in
-                    mobile and WebGL games. I've shipped multiple titles with real users
-                    on Google Play and the App Store.
+                    I'm a Game Developer from Pakistan with dual specialization in
+                    Unity (C#) and Roblox (Luau). I've shipped multiple titles with real users
+                    on Google Play, the App Store, and the Roblox platform.
                 </p>
                 <p>
                     My work spans the full game loop — from responsive player controls and
                     physics systems, to meta features like garages, shops, and leaderboards,
-                    to production SDKs for monetization and analytics.
+                    to production SDKs for monetization and analytics. On Roblox, I build
+                    narrative-driven experiences with cutscene systems, modular weapons,
+                    gacha mechanics, and optimized performance for low-end devices.
                 </p>
                 <p>
                     Comfortable working remotely in agile teams, collaborating with
@@ -914,15 +1000,15 @@
             <div class="about-side fade-up">
                 <div class="info-card">
                     <div class="info-card-title">🎯 Specialization</div>
-                    <p>Mobile &amp; WebGL game development with Unity 2D/3D — gameplay systems, meta progression, SDK integration.</p>
+                    <p>Unity (C#) and Roblox (Luau) — gameplay systems, meta progression, cinematic systems, and SDK integration across mobile, WebGL, and Roblox.</p>
                 </div>
                 <div class="info-card">
                     <div class="info-card-title">🚀 Open To</div>
-                    <p>Remote Unity Developer roles, freelance game projects, and indie collaboration.</p>
+                    <p>Remote Unity or Roblox Developer roles, freelance game projects, and indie collaboration.</p>
                 </div>
                 <div class="info-card">
                     <div class="info-card-title">📦 Shipped On</div>
-                    <p>Google Play &nbsp;·&nbsp; App Store &nbsp;·&nbsp; WebGL</p>
+                    <p>Google Play &nbsp;·&nbsp; App Store &nbsp;·&nbsp; WebGL &nbsp;·&nbsp; Roblox</p>
                 </div>
             </div>
         </div>
@@ -945,8 +1031,10 @@
                 <p class="skill-sub">Primary stack for all shipped titles.</p>
                 <div class="skill-tags">
                     <span class="tag">Unity 2D/3D</span>
+                    <span class="tag">Roblox Studio</span>
                     <span class="tag">Unreal Engine 4</span>
                     <span class="tag">C#</span>
+                    <span class="tag">Luau</span>
                 </div>
             </div>
             <div class="skill-card fade-up">
@@ -957,6 +1045,7 @@
                     <span class="tag">Android</span>
                     <span class="tag">iOS</span>
                     <span class="tag">WebGL</span>
+                    <span class="tag">Roblox</span>
                 </div>
             </div>
             <div class="skill-card fade-up">
@@ -967,6 +1056,8 @@
                     <span class="tag">Touch Controls</span>
                     <span class="tag">Physics</span>
                     <span class="tag">AI</span>
+                    <span class="tag">Gacha Systems</span>
+                    <span class="tag">Pet Systems</span>
                     <span class="tag">Minigame Frameworks</span>
                     <span class="tag">Leaderboards</span>
                 </div>
@@ -980,6 +1071,7 @@
                     <span class="tag">Garages</span>
                     <span class="tag">Upgrades</span>
                     <span class="tag">Unlockables</span>
+                    <span class="tag">Inventory UI</span>
                 </div>
             </div>
             <div class="skill-card fade-up">
@@ -988,13 +1080,15 @@
                 <p class="skill-sub">Clean flows and satisfying animation polish.</p>
                 <div class="skill-tags">
                     <span class="tag">Unity UI</span>
+                    <span class="tag">Roblox UI</span>
                     <span class="tag">DOTween</span>
-                    <span class="tag">UI Animation</span>
+                    <span class="tag">Moon Animator</span>
+                    <span class="tag">Cutscenes</span>
                 </div>
             </div>
             <div class="skill-card fade-up">
                 <div class="skill-icon">💰</div>
-                <div class="skill-title">Monetization & Analytics</div>
+                <div class="skill-title">Monetization &amp; Analytics</div>
                 <p class="skill-sub">Production SDKs for revenue and growth.</p>
                 <div class="skill-tags">
                     <span class="tag">IAP</span>
@@ -1006,13 +1100,14 @@
             </div>
             <div class="skill-card fade-up">
                 <div class="skill-icon">🔧</div>
-                <div class="skill-title">Performance & Builds</div>
+                <div class="skill-title">Performance &amp; Builds</div>
                 <p class="skill-sub">Profiling, optimization, and release-ready builds.</p>
                 <div class="skill-tags">
                     <span class="tag">Unity Profiler</span>
                     <span class="tag">Build Optimization</span>
                     <span class="tag">WebGL Optimization</span>
                     <span class="tag">Asset Delivery</span>
+                    <span class="tag">Low-end Device Support</span>
                 </div>
             </div>
             <div class="skill-card fade-up">
@@ -1042,6 +1137,28 @@
         <div class="timeline">
 
             <div class="timeline-item fade-up">
+                <div class="timeline-dot active"></div>
+                <div class="timeline-card">
+                    <div class="tl-header">
+                        <div>
+                            <div class="tl-role">Roblox Game Developer</div>
+                            <div class="tl-company">ZhenStudio – 26 &nbsp;·&nbsp; Peshawar (On-Site)</div>
+                        </div>
+                        <span class="tl-period current">Jan 2026 – Present</span>
+                    </div>
+                    <ul class="tl-list">
+                        <li>Scaled the game to <strong style="color:#ddd;">155,800+ visits</strong> and <strong style="color:#ddd;">1,200+ favorites</strong> within the first 4 months of launch, driving strong early traction and player engagement.</li>
+                        <li>Developing a story-driven Roblox experience using Roblox Studio and Luau, contributing across gameplay systems, UI, and performance optimization.</li>
+                        <li>Created scripted in-game cutscenes using Moon Animator and integrated them seamlessly into gameplay flow to support narrative delivery.</li>
+                        <li>Built a modular and scalable weapons system supporting combat logic, animations, and player interaction.</li>
+                        <li>Implemented gacha and pet systems, including equip mechanics and follower AI behavior.</li>
+                        <li>Designed and developed gameplay UI systems including backpack inventory, tutorial flows, and dynamic toast messaging.</li>
+                        <li>Optimized performance to ensure smooth gameplay on low-end and mobile-supported Roblox devices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-up">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="tl-header">
@@ -1052,7 +1169,7 @@
                         <span class="tl-period">Sep 2024 – Aug 2025</span>
                     </div>
                     <ul class="tl-list">
-                        <li>Developed and shipped multiple mobile and WebGL Unity 2D/3D games across gameplay, UI, progression, and performance.</li>
+                        <li>Developed and shipped multiple mobile and WebGL Unity 2D/3D games achieving <strong style="color:#ddd;">55,000+ installs</strong> across gameplay, UI, progression, and performance.</li>
                         <li>Implemented and tuned player controllers — touch gestures, swipe/drag, and physics-based motion.</li>
                         <li>Built meta systems including garages, shops, upgrades, unlockables, and progression to increase retention.</li>
                         <li>Integrated monetization — IAP, AdMob, Google Mobile Ads, and Yodo1 ad networks.</li>
@@ -1098,6 +1215,37 @@
         </div>
         <div class="projects-grid">
 
+            <!-- 99 Days Zombie Survival -->
+            <div class="project-card fade-up">
+                <div class="project-header">
+                    <span class="project-emoji">🧟</span>
+                    <div class="platform-badges">
+                        <span class="platform-badge badge-roblox">Roblox</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-title">99 Days Zombie Survival</div>
+                    <div class="project-studio">ZhenStudio – 26 &nbsp;·&nbsp; Jan 2026 – Present</div>
+                    <p class="project-desc">
+                        Narrative-driven Roblox survival experience. Features scripted cinematic
+                        cutscenes via Moon Animator, modular weapons system, gacha and pet systems,
+                        backpack inventory UI, and onboarding flows. 155,800+ visits and 1,200+
+                        favorites within 4 months of launch.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Roblox Studio</span>
+                        <span class="tag">Luau</span>
+                        <span class="tag">Moon Animator</span>
+                        <span class="tag">Gacha System</span>
+                        <span class="tag">Weapons System</span>
+                        <span class="tag">155K+ Visits</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="proj-link" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank">Play on Roblox ↗</a>
+                    </div>
+                </div>
+            </div>
+
             <!-- Nitro Racers -->
             <div class="project-card fade-up">
                 <div class="project-header">
@@ -1112,7 +1260,7 @@
                     <p class="project-desc">
                         3D arcade racing title built on the Burnout Drift Multiplayer framework.
                         Led vehicle handling, drift feel, UI/meta systems, and full game polish.
-                        Features AI opponents, modular garage customization, and online leaderboards.
+                        Features AI opponents via Omni Vehicle AI, modular garage customization, and online leaderboards.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Unity 3D</span>
@@ -1120,9 +1268,6 @@
                         <span class="tag">AI Opponents</span>
                         <span class="tag">Garage System</span>
                         <span class="tag">Leaderboards</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link" href="https://play.google.com/store" target="_blank">Google Play ↗</a>
                     </div>
                 </div>
             </div>
@@ -1141,7 +1286,7 @@
                     <p class="project-desc">
                         2D offline local-multiplayer party game with 30 unique minigames,
                         each with its own rules, win conditions, and input handling.
-                        Includes IAP, DOTween UI polish, AppsFlyer analytics, and iOS ATT compliance.
+                        5,000+ installs. Includes IAP, DOTween UI polish, AppsFlyer analytics, and iOS ATT compliance.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Unity 2D</span>
@@ -1152,7 +1297,7 @@
                         <span class="tag">DOTween</span>
                     </div>
                     <div class="project-links">
-                        <a class="proj-link" href="https://play.google.com/store" target="_blank">Google Play ↗</a>
+                        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.junostudio.fourreaction" target="_blank">Google Play ↗</a>
                     </div>
                 </div>
             </div>
@@ -1182,8 +1327,8 @@
                         <span class="tag">Leaderboards</span>
                     </div>
                     <div class="project-links">
-                        <a class="proj-link" href="https://play.google.com/store" target="_blank">Google Play ↗</a>
-                        <a class="proj-link" href="https://apps.apple.com" target="_blank">App Store ↗</a>
+                        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.gamestudios.strikemaster" target="_blank">Google Play ↗</a>
+                        <a class="proj-link" href="https://apps.apple.com/us/app/rolling-ball-strike-master-3d/id6739831443" target="_blank">App Store ↗</a>
                     </div>
                 </div>
             </div>
@@ -1203,17 +1348,14 @@
                     <p class="project-desc">
                         Single-player 2D platformer. Contributed to level design applying pacing,
                         readability, and difficulty progression. Implemented Google Mobile Ads SDK
-                        with optimized placements and coordinated with art/design for visual consistency.
+                        with optimized placements. Reached 50,000+ downloads on Google Play.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Unity 2D</span>
                         <span class="tag">Platformer</span>
                         <span class="tag">Level Design</span>
                         <span class="tag">Google Ads</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link" href="https://play.google.com/store" target="_blank">Google Play ↗</a>
-                        <a class="proj-link" href="https://apps.apple.com" target="_blank">App Store ↗</a>
+                        <span class="tag">50K+ Downloads</span>
                     </div>
                 </div>
             </div>
@@ -1314,7 +1456,7 @@
             <h2 class="section-title">Let's Build Something</h2>
             <div class="sep" style="margin:1rem auto 1.5rem;"></div>
             <p class="contact-intro">
-                Open to remote Unity roles, freelance projects, and game dev collabs.
+                Open to remote Unity and Roblox roles, freelance projects, and game dev collabs.
                 Reach out through any channel below.
             </p>
         </div>
@@ -1344,7 +1486,7 @@
                 <span class="contact-icon">📍</span>
                 <div>
                     <div class="contact-label">Location</div>
-                    <div class="contact-value">Pakistan</div>
+                    <div class="contact-value">Peshawar, Pakistan</div>
                 </div>
             </div>
         </div>
@@ -1358,6 +1500,7 @@
 
 <!-- ════════════ SCRIPTS ════════════ -->
 <script>
+    // ── Fade-up on scroll ──
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -1368,6 +1511,44 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     document.querySelector('.hero .fade-up').classList.add('visible');
+
+    // ── Particle rain ──
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const PARTICLE_COUNT = 60;
+    const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 1.5 + 0.5,
+        speed: Math.random() * 0.6 + 0.2,
+        opacity: Math.random() * 0.4 + 0.1,
+    }));
+
+    function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(204, 0, 0, ${p.opacity})`;
+            ctx.fill();
+
+            p.y += p.speed;
+            if (p.y > canvas.height) {
+                p.y = -4;
+                p.x = Math.random() * canvas.width;
+            }
+        });
+        requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
 </script>
 
 </body>
