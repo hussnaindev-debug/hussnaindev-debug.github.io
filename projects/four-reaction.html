@@ -34,8 +34,9 @@
             <span class="tl-period">5,000+ Installs</span>
         </div>
         <p class="detail-tagline">
-            A 2D offline local-multiplayer party game packing 30 unique minigames — each with its own
-            rules, win conditions, and input handling — wrapped in polished UI with IAP and analytics.
+            A 2D local multiplayer party game for friends, packed with 30 unique minigames, a solo AI
+            mode, and a cheeky personality that applauds your wins and taunts your mistakes. Built
+            entirely from scratch, solo.
         </p>
         <div class="detail-links">
             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.junostudio.fourreaction" target="_blank">Google Play ↗</a>
@@ -49,15 +50,30 @@
         <h2 class="detail-h2">Overview</h2>
         <div class="sep"></div>
         <p class="detail-body-text">
-            4 Reaction is a couch-multiplayer party game where up to four players share one screen and
-            battle across 30 distinct minigames. Each minigame is self-contained — its own ruleset,
-            win condition, and input scheme — so the challenge was building a flexible framework that
-            could host wildly different mechanics under one consistent flow.
+            4 Reaction is a 2D local multiplayer party game made to be played with friends on a single
+            device. I designed and built the entire game on my own, completely from scratch, with no
+            template or starter kit behind it. Every system and all 30 minigames are my own work.
         </p>
         <p class="detail-body-text">
-            On top of the gameplay, I integrated in-app purchases, AppsFlyer attribution, and Apple ATT
-            compliance, and used DOTween to give the menus and transitions a satisfying, polished feel.
-            The game reached <strong style="color:#ddd;">5,000+ installs</strong> on Google Play.
+            The heart of the game is its 30 unique minigames, each one a fast test of quick thinking and
+            reaction. It has real personality too: answer correctly and it applauds you, slip up and it
+            playfully taunts you, so every round stays lively and competitive.
+        </p>
+        <p class="detail-body-text">
+            Matches scale from one-on-one all the way to a four-player free-for-all, and a solo AI mode
+            with adjustable difficulty means there is always someone to play against. An XP system rewards
+            every match and lets players unlock new minigames over time, giving a satisfying sense of
+            progression.
+        </p>
+        <p class="detail-body-text">
+            Under the hood, every minigame is fully self-contained, with its own prefab, a ScriptableObject
+            that drives its settings, and its own dedicated script. This modular architecture made each
+            minigame easy to build, tune, and expand on its own.
+        </p>
+        <p class="detail-body-text">
+            On the production side, I integrated in-app purchases so players can buy extra minigames,
+            AppsFlyer for analytics, and full iOS ATT compliance for privacy-friendly tracking. The game
+            reached <strong style="color:#ddd;">5,000+ installs</strong> on Google Play.
         </p>
     </div>
 </section>
@@ -68,28 +84,36 @@
         <div class="sep"></div>
         <div class="feature-grid">
             <div class="feature-item">
+                <h4>🛠️ Built Solo, From Scratch</h4>
+                <p>Designed, coded, and shipped entirely by me with no kit or template. Every system is custom built.</p>
+            </div>
+            <div class="feature-item">
                 <h4>🎮 30 Unique Minigames</h4>
-                <p>Each with its own rules, win conditions, and input handling under one shared framework.</p>
+                <p>Thirty distinct challenges, each with its own rules, win conditions, and input style.</p>
             </div>
             <div class="feature-item">
-                <h4>👥 Local Multiplayer</h4>
-                <p>Offline same-screen play for up to four players — pure couch party fun.</p>
+                <h4>😄 Reactive Personality</h4>
+                <p>The game applauds correct answers and playfully taunts mistakes, giving every round character.</p>
             </div>
             <div class="feature-item">
-                <h4>✨ DOTween Polish</h4>
-                <p>Smooth, animated UI transitions and feedback throughout the menus and rounds.</p>
+                <h4>👥 1 to 4 Players</h4>
+                <p>Local same-screen play, from one-on-one up to a four-player free-for-all.</p>
             </div>
             <div class="feature-item">
-                <h4>💰 In-App Purchases</h4>
-                <p>IAP integration for monetization.</p>
+                <h4>🤖 AI Opponent</h4>
+                <p>A solo mode against an AI with adjustable difficulty for when no friends are around.</p>
             </div>
             <div class="feature-item">
-                <h4>📊 AppsFlyer Analytics</h4>
-                <p>Attribution and event tracking for growth insights.</p>
+                <h4>⭐ XP and Unlocks</h4>
+                <p>Earn XP from matches and spend it to unlock more minigames over time.</p>
             </div>
             <div class="feature-item">
-                <h4>🔒 iOS ATT Compliance</h4>
-                <p>Privacy-compliant App Tracking Transparency flows.</p>
+                <h4>🧩 Modular Architecture</h4>
+                <p>Each minigame has its own prefab, ScriptableObject settings, and script for easy expansion.</p>
+            </div>
+            <div class="feature-item">
+                <h4>💰 IAP, Analytics and ATT</h4>
+                <p>In-app purchases for extra minigames, AppsFlyer analytics, and iOS ATT compliance.</p>
             </div>
         </div>
     </div>
@@ -130,7 +154,11 @@
         <div class="detail-tags">
             <span class="tag">Unity 2D</span>
             <span class="tag">C#</span>
+            <span class="tag">ScriptableObjects</span>
+            <span class="tag">Prefab Architecture</span>
             <span class="tag">Local Multiplayer</span>
+            <span class="tag">AI Opponent</span>
+            <span class="tag">XP System</span>
             <span class="tag">DOTween</span>
             <span class="tag">IAP</span>
             <span class="tag">AppsFlyer</span>
