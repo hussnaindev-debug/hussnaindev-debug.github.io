@@ -10,15 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/site.css" />
 </head>
-<body>
+<body class="cs" style="--pa:#34D399; --pa-2:#6EE7B7; --pa-soft:rgba(52,211,153,0.13); --pa-border:rgba(52,211,153,0.38);">
+
+<a class="skip-link" href="#overview">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
     <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
-    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
-    <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
-    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
     <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+    <symbol id="i-sword" viewBox="0 0 24 24"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><line x1="19" y1="21" x2="21" y2="19"/></symbol>
+    <symbol id="i-swords" viewBox="0 0 24 24"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" y1="19" x2="19" y2="13"/><line x1="16" y1="16" x2="20" y2="20"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" y1="14" x2="9" y2="18"/><line x1="7" y1="17" x2="4" y2="20"/><line x1="3" y1="19" x2="5" y2="21"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15M9 3.236v15"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M3 7.5h4M17 3v18M3 12h18M3 16.5h4M17 16.5h4M17 7.5h4"/></symbol>
+    <symbol id="i-backpack" viewBox="0 0 24 24"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8M8 18h8"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M12 12v4"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
@@ -37,129 +46,197 @@
     </div>
 </header>
 
+<nav class="cs-subnav" aria-label="On this page">
+    <div class="cs-subnav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#role">My Role</a>
+        <a href="#built">What I Built</a>
+        <a href="#combat">Combat</a>
+        <a href="#enemies">Enemy AI</a>
+        <a href="#poi">Points of Interest</a>
+        <a href="#cutscenes">Cutscenes</a>
+        <a href="#status">Status</a>
+        <a href="#tech">Built With</a>
+    </div>
+</nav>
+
 <main id="main">
 
-<section class="page-hero">
-    <div class="container reveal">
-        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Roblox games</a>
-        <div class="page-eyebrow"><svg class="icon"><use href="#i-sparkles"/></svg> Roguelike Action-Adventure · Roblox · Luau</div>
-        <span class="badge-dev" style="margin-bottom:1rem;"><svg class="icon"><use href="#i-sparkles"/></svg> Flagship · In Early Development</span>
-        <h1>Bloom Prison</h1>
-        <div class="page-sub">Sole Developer</div>
-        <div class="hero-meta">
-            <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
-            <span class="chip chip-accent">Flagship Project</span>
-            <span class="chip">Sole Developer</span>
-            <span class="chip">Roguelike</span>
+<section class="cs-hero">
+    <div class="container">
+        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Selected Work / Roblox Games</a>
+        <div class="cs-hero-grid">
+            <div>
+                <div class="cs-hero-kicker"><svg class="icon"><use href="#i-sparkles"/></svg> Roguelike Action-Adventure · Roblox</div>
+                <h1>Bloom Prison</h1>
+                <p class="cs-hero-lead">My flagship project: a roguelike action-adventure for Roblox, designed and built solo.</p>
+                <div class="cs-hero-role"><svg class="icon"><use href="#i-gamepad"/></svg> Sole Developer</div>
+                <div class="cs-hero-actions">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox <svg class="icon"><use href="#i-external"/></svg></a>
+                    <a class="btn btn-ghost" href="#combat">See the systems</a>
+                </div>
+            </div>
+            <div class="cs-hero-visual">
+                <div class="cs-hero-devbuild">
+                    <span class="db-badge"><svg class="icon"><use href="#i-sparkles"/></svg> Early Development</span>
+                    <div class="db-mark"><svg class="icon"><use href="#i-sword"/></svg></div>
+                    <p>An active development build. Screenshots and footage are on the way as the project grows.</p>
+                </div>
+            </div>
         </div>
-        <p class="page-lead">
-            My proudest and most ambitious project: a roguelike action-adventure experience for Roblox,
-            currently in early development. I'm the sole developer on it at my company, building every system
-            in Roblox Studio with Luau, from fluid melee combat and distinct enemy AI to randomized points of
-            interest, cutscenes, and a full inventory system.
-        </p>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
-            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">The game</h2>
-        <p>Bloom Prison is a <strong>roguelike action-adventure experience for Roblox</strong>, and it's the project I'm proudest of. I'm the <strong>sole developer</strong> on it at my company, and it's currently in early development. Every system, from combat and enemy AI to points of interest, cutscenes, abilities, VFX, and inventory, is designed and scripted by me in Roblox Studio with Luau.</p>
-        <p>Each run drops the player into a world of readable, reactive encounters and randomized points of interest, built around combat that stays fluid from one attack to the next. The sections below break down the core systems as they stand today, with much more planned as development continues.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">What I built</h2>
-        <div class="feat-grid">
-            <div class="feat"><h4>Free-flow combat</h4><p>Input-buffered melee that keeps the flow going from one attack to the next, with auto-targeting of the nearest enemy so mobile players never fight the controls.</p></div>
-            <div class="feat"><h4>Weapons &amp; abilities</h4><p>Each weapon has its own abilities, VFX, and clear strengths and weaknesses. Some abilities are pure attacks, others grant temporary buffs.</p></div>
-            <div class="feat"><h4>Distinct enemy AI</h4><p>Every enemy is unique. Swarms, poisonous types, and ranged attackers each behave differently and have to be dealt with on their own terms.</p></div>
-            <div class="feat"><h4>Abilities &amp; VFX</h4><p>An ability system paired with a hand-built VFX layer, giving each power a distinct look and impactful on-screen feel.</p></div>
-            <div class="feat"><h4>Randomized POIs</h4><p>Points of interest spawn randomly each run. Some grant armor, some weapons, some heal, driving exploration and replayability.</p></div>
-            <div class="feat"><h4>Cutscenes</h4><p>Story cutscenes authored in Moon Animator, played back for every player in the server when triggered. One today, with more planned.</p></div>
-            <div class="feat"><h4>Inventory system &amp; UI</h4><p>A full inventory system backing a clean inventory UI, letting players manage weapons, items, and gear.</p></div>
-            <div class="feat"><h4>Roguelike runs</h4><p>Randomized layouts and rewards each run give the game a repeatable, run-based structure built to keep encounters fresh.</p></div>
+        <div class="cs-metrics">
+            <div class="cs-metric"><div class="cm-num">Flagship</div><div class="cm-label">Personal project</div></div>
+            <div class="cs-metric"><div class="cm-num">Solo</div><div class="cm-label">Sole developer</div></div>
+            <div class="cs-metric"><div class="cm-num">Roguelike</div><div class="cm-label">Run-based</div></div>
+            <div class="cs-metric"><div class="cm-num">Luau</div><div class="cm-label">Roblox Studio</div></div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">Combat</h2>
-        <p>Combat is built around flow. The goal is to make chaining from one attack into the next feel effortless, so encounters read as continuous sequences rather than isolated swings. Input buffering is central: the player can queue their next input mid-attack and it lands as soon as the current move allows, keeping the rhythm unbroken and rewarding timing without demanding frame-perfect execution.</p>
-        <p>To keep things approachable, especially on mobile, the player automatically targets the nearest enemy without needing to hold directional input, an approach inspired by the free-flow combat of the Batman: Arkham games. This lets players focus on offense and positioning instead of fighting the camera or controls.</p>
-        <p>Each weapon carries its own identity through a unique set of abilities and VFX, along with clear strengths and weaknesses that make weapon choice meaningful. Some abilities are pure offense, while others grant temporary buffs, giving players room to develop their own playstyle across a run.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">Enemy AI</h2>
-        <p>Every enemy is designed to be a distinct threat rather than a reskin. The roster spans different archetypes, from swarming enemies that overwhelm through numbers, to poisonous enemies that punish careless positioning, to ranged attackers that force the player to close distance or take cover. Each type behaves differently and has to be approached on its own terms.</p>
-        <p>Because their behaviors differ, encounters become a matter of reading the field and adapting, deciding which threat to neutralize first and how to handle a mixed group. Enemies detect the player, close in, and commit to attacks with their own timing and spacing, so fights stay reactive instead of predictable.</p>
-        <p>The enemy AI is designed to scale with the roguelike structure of the game, so as new archetypes and combinations are added through development, encounters can be composed to keep each run fresh.</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">Points of Interest</h2>
-        <p>Points of interest are the exploration backbone of each run. They're placed randomly across the map every time, so no two runs lay out the same, which reinforces the roguelike loop and keeps players moving and searching rather than following a fixed path.</p>
-        <p>Each point of interest behaves differently and offers its own reward. Some grant armor, some hand over new weapons, some heal the player, and others carry their own effects, so deciding which to seek out and when becomes part of the moment-to-moment strategy. As development continues, the pool will grow to add more variety and more meaningful decisions to every run.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">Cutscenes</h2>
-        <p>Cutscenes deliver the game's story and frame its key moments. They're authored in Moon Animator and play back for every player in the server when triggered, so story beats land as a shared, synchronized experience rather than a private one.</p>
-        <p>The game currently features a single cutscene, with more planned as development progresses and the narrative expands. The system is built so additional cutscenes can be added and triggered cleanly as the world and its story grow.</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">Screenshots</h2>
-        <p class="prose" style="margin-bottom:1.25rem;">Screenshots coming soon.</p>
-        <div class="gallery">
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
+<section class="cs-section" id="overview">
+    <div class="container">
+        <div class="cs-body-grid">
+            <div class="cs-prose">
+                <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">The game</h2></div>
+                <p style="margin-top:1rem;">Bloom Prison is a <strong>roguelike action-adventure experience for Roblox</strong>, and it's the project I'm proudest of. I'm the <strong>sole developer</strong> on it at my company, and it's currently in early development.</p>
+                <p>Every system, from combat and enemy AI to points of interest, cutscenes, abilities, VFX, and inventory, is designed and scripted by me in Roblox Studio with Luau.</p>
+                <p>Each run drops the player into a world of readable, reactive encounters and randomized points of interest, built around combat that stays fluid from one attack to the next. The sections below break down the core systems as they stand today, with much more planned as development continues.</p>
+            </div>
+            <aside class="cs-info">
+                <dl>
+                    <div class="cs-info-row"><dt>Role</dt><dd>Sole Developer</dd></div>
+                    <div class="cs-info-row"><dt>Platform</dt><dd>Roblox</dd></div>
+                    <div class="cs-info-row"><dt>Engine</dt><dd>Roblox Studio (Luau)</dd></div>
+                    <div class="cs-info-row"><dt>Genre</dt><dd>Roguelike Action-Adventure</dd></div>
+                    <div class="cs-info-row"><dt>Status</dt><dd>In early development</dd></div>
+                </dl>
+                <div class="cs-info-cta">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                </div>
+            </aside>
         </div>
-        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
-        <div class="frame frame-wide"><div class="frame-ph"><svg class="icon"><use href="#i-video"/></svg><span>Coming soon</span></div></div>
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">Tech &amp; tools</h2>
-        <div class="chips">
+<section class="cs-section alt" id="role">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">My role</h2></div>
+        <div class="cs-role-card" style="margin-top:1.25rem;">
+            <div class="role-title">Sole Developer</div>
+            <p>I design and script <strong>every system in the game</strong> myself in Roblox Studio with Luau: the free-flow combat, the enemy AI, the ability and VFX systems, the randomized points of interest, the cutscenes, and the full inventory system. Bloom Prison is a solo project at my company.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="built">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">What I built</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">The systems that make up the experience as it stands today.</p>
+        <div class="build-grid">
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-sword"/></svg></div><h4>Free-flow combat</h4><p>Input-buffered melee with auto-targeting so mobile players never fight the controls.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-swords"/></svg></div><h4>Weapons &amp; abilities</h4><p>Each weapon has its own abilities, VFX, and clear strengths and weaknesses.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-bot"/></svg></div><h4>Distinct enemy AI</h4><p>Swarms, poisonous types, and ranged attackers each behave differently.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-zap"/></svg></div><h4>Abilities &amp; VFX</h4><p>An ability system paired with a hand-built VFX layer for impactful powers.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-map"/></svg></div><h4>Randomized POIs</h4><p>Points of interest spawn randomly each run, granting armor, weapons, or heals.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-film"/></svg></div><h4>Cutscenes</h4><p>Story cutscenes in Moon Animator, played for every player when triggered.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-backpack"/></svg></div><h4>Inventory system &amp; UI</h4><p>A full inventory system and UI for managing weapons, items, and gear.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-dice"/></svg></div><h4>Roguelike runs</h4><p>Randomized layouts and rewards give each run a repeatable, fresh structure.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="combat">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Combat system</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>Combat is built around flow. The goal is to make chaining from one attack into the next feel effortless, so encounters read as continuous sequences rather than isolated swings. <strong>Input buffering</strong> is central: the player can queue their next input mid-attack and it lands as soon as the current move allows, keeping the rhythm unbroken and rewarding timing without demanding frame-perfect execution.</p>
+            <p>To keep things approachable, especially on mobile, the player <strong>automatically targets the nearest enemy</strong> without needing to hold directional input, an approach inspired by the free-flow combat of the Batman: Arkham games. This lets players focus on offense and positioning instead of fighting the camera or controls.</p>
+            <p>Each weapon carries its own identity through a unique set of abilities and VFX, along with clear strengths and weaknesses that make weapon choice meaningful. Some abilities are pure offense, while others grant temporary buffs, giving players room to develop their own playstyle across a run.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="enemies">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Enemy AI</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>Every enemy is designed to be a distinct threat rather than a reskin. The roster spans different archetypes, from <strong>swarming enemies</strong> that overwhelm through numbers, to <strong>poisonous enemies</strong> that punish careless positioning, to <strong>ranged attackers</strong> that force the player to close distance or take cover. Each type behaves differently and has to be approached on its own terms.</p>
+            <p>Because their behaviors differ, encounters become a matter of reading the field and adapting, deciding which threat to neutralize first and how to handle a mixed group. Enemies detect the player, close in, and commit to attacks with their own timing and spacing, so fights stay reactive instead of predictable.</p>
+            <p>The enemy AI is designed to scale with the roguelike structure of the game, so as new archetypes and combinations are added through development, encounters can be composed to keep each run fresh.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="poi">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Points of interest</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>Points of interest are the exploration backbone of each run. They're placed <strong>randomly across the map every time</strong>, so no two runs lay out the same, which reinforces the roguelike loop and keeps players moving and searching rather than following a fixed path.</p>
+            <p>Each point of interest behaves differently and offers its own reward. Some grant armor, some hand over new weapons, some heal the player, and others carry their own effects, so deciding which to seek out and when becomes part of the moment-to-moment strategy. As development continues, the pool will grow to add more variety and more meaningful decisions to every run.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="cutscenes">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Cutscenes</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>Cutscenes deliver the game's story and frame its key moments. They're authored in <strong>Moon Animator</strong> and play back for every player in the server when triggered, so story beats land as a shared, synchronized experience rather than a private one.</p>
+            <p>The game currently features a single cutscene, with more planned as development progresses and the narrative expands. The system is built so additional cutscenes can be added and triggered cleanly as the world and its story grow.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Development status: one polished panel instead of empty coming-soon boxes -->
+<section class="cs-section alt" id="status">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Development status</h2></div>
+        <div class="cs-video" style="margin-top:1.25rem;">
+            <div class="cs-video-ph">
+                <span class="db-badge" style="display:inline-flex;align-items:center;gap:0.45rem;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pa-2);background:var(--pa-soft);border:1px solid var(--pa-border);padding:0.35rem 0.8rem;border-radius:100px;"><svg class="icon" style="width:14px;height:14px;"><use href="#i-sparkles"/></svg> Early Development</span>
+                <span>Bloom Prison is actively being developed. Screenshots and gameplay footage will be added as the project progresses.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="tech">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Built with</h2></div>
+        <div class="builtwith" style="margin-top:1.25rem;">
             <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Roguelike</span><span class="chip">Free-Flow Combat</span>
             <span class="chip">Enemy AI</span><span class="chip">Abilities &amp; VFX</span><span class="chip">Moon Animator</span><span class="chip">Cutscenes</span>
             <span class="chip">Inventory System</span><span class="chip">Weapons</span>
         </div>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+    </div>
+</section>
+
+<section class="cs-section" style="padding-top:0;">
+    <div class="container">
+        <div class="cs-pager">
+            <a class="pg pg-prev" href="rise-and-roll.html"><svg class="icon"><use href="#i-arrow-l"/></svg><span><span class="pg-label">Previous</span>Rise &amp; Roll</span></a>
+            <a class="pg-all" href="../index.html#work">All projects</a>
+            <a class="pg pg-next" href="99-days-zombie-survival.html"><span><span class="pg-label">Next</span>99 Days Zombie Survival</span><svg class="icon"><use href="#i-arrow-r"/></svg></a>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">More Roblox games</h2>
-        <div class="more-chips">
-            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
-            <a class="more-chip2" href="octopus-energy.html"><svg class="icon"><use href="#i-gamepad"/></svg> Octopus Energy</a>
-            <a class="more-chip2" href="survive-area-51-arena.html"><svg class="icon"><use href="#i-gamepad"/></svg> Survive Area 51 Arena</a>
-            <a class="more-chip2" href="../roblox.html"><svg class="icon"><use href="#i-arrow-r"/></svg> All Roblox games</a>
+<section class="cs-section alt">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">More projects</h2></div>
+        <div class="more-cards" style="margin-top:1.5rem;">
+            <a class="more-card" href="99-days-zombie-survival.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">99 Days Zombie Survival</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A narrative survival experience with cutscenes and gacha. 155K+ visits.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="survive-area-51-arena.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Survive Area 51 Arena</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A wave-based survival and tower-defense game.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="four-reaction.html">
+                <div class="mc-thumb"><img src="../assets/media/four-reaction/poster.png" alt="4 Reaction gameplay" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">4 Reaction</div><div class="mc-plat">Unity · Mobile</div><p class="mc-desc">A local multiplayer party game with 30 minigames.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
         </div>
     </div>
 </section>
@@ -176,13 +253,7 @@
     </div>
 </footer>
 
-<script>
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="../assets/case-study.js"></script>
 
 </body>
 </html>

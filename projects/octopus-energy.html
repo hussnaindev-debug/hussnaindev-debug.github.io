@@ -10,13 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/site.css" />
 </head>
-<body>
+<body class="cs" style="--pa:#3B9EFF; --pa-2:#7CC1FF; --pa-soft:rgba(59,158,255,0.14); --pa-border:rgba(59,158,255,0.4);">
+
+<a class="skip-link" href="#overview">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
     <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
-    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
-    <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-shopping" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
     <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
@@ -36,89 +44,158 @@
     </div>
 </header>
 
+<nav class="cs-subnav" aria-label="On this page">
+    <div class="cs-subnav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#role">My Role</a>
+        <a href="#built">What I Built</a>
+        <a href="#systems">Systems</a>
+        <a href="#status">Media</a>
+        <a href="#tech">Built With</a>
+    </div>
+</nav>
+
 <main id="main">
 
-<section class="page-hero">
-    <div class="container reveal">
-        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Roblox games</a>
-        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Tycoon · Roblox · Luau</div>
-        <h1>Octopus Energy</h1>
-        <div class="page-sub">Roblox · Game Developer</div>
-        <div class="hero-meta">
-            <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
-            <span class="chip">Live on Roblox</span>
-            <span class="chip">All systems by me</span>
+<section class="cs-hero">
+    <div class="container">
+        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Selected Work / Roblox Games</a>
+        <div class="cs-hero-grid">
+            <div>
+                <div class="cs-hero-kicker"><svg class="icon"><use href="#i-factory"/></svg> Tycoon · Roblox · Luau</div>
+                <h1>Octopus Energy</h1>
+                <p class="cs-hero-lead">A Roblox tycoon game where players collect tycoons and build a base, and I built every system.</p>
+                <div class="cs-hero-role"><svg class="icon"><use href="#i-gamepad"/></svg> Game Developer · All Systems</div>
+                <div class="cs-hero-actions">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox <svg class="icon"><use href="#i-external"/></svg></a>
+                    <a class="btn btn-ghost" href="#systems">See the systems</a>
+                </div>
+            </div>
+            <div class="cs-hero-visual">
+                <div class="cs-hero-devbuild">
+                    <span class="db-badge"><svg class="icon"><use href="#i-factory"/></svg> Live on Roblox</span>
+                    <div class="db-mark"><svg class="icon"><use href="#i-factory"/></svg></div>
+                    <p>Media capture is on the way. Play the live experience on Roblox in the meantime.</p>
+                </div>
+            </div>
         </div>
-        <p class="page-lead">
-            A Roblox tycoon game where players collect a range of tycoons and build their base around them,
-            packed with obbys, collectables, pets, daily rewards, a shop, and a leaderboard. I built every
-            system in the experience.
-        </p>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
-            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">The game</h2>
-        <p>Octopus Energy is a Roblox tycoon game. Players collect a variety of tycoons and build their base up around them, with a core loop that rewards expanding, earning, and reinvesting. I designed and built all of the systems in the experience, from the tycoon economy to the meta features that keep players engaged.</p>
-        <p>Around that core loop is a full stack of progression and reward systems: obbys to complete, collectables to track down, a pet system, daily rewards, a shop for spending earnings, and a leaderboard for competition. Everything runs on a server-authoritative Roblox setup so player progress and economy stay secure and persistent.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">What I built</h2>
-        <div class="feat-grid">
-            <div class="feat"><h4>All systems by me</h4><p>Designed and built every system, from the economy to the meta features.</p></div>
-            <div class="feat"><h4>Tycoon collection</h4><p>Collect a range of different tycoons and build your base around them.</p></div>
-            <div class="feat"><h4>Obbys</h4><p>Obstacle courses for players to complete for rewards and variety.</p></div>
-            <div class="feat"><h4>Collectables &amp; pets</h4><p>Hidden collectables to hunt down, plus a pet system that follows and supports the player.</p></div>
-            <div class="feat"><h4>Daily rewards &amp; shop</h4><p>A daily reward loop and a shop where players spend earnings on upgrades and items.</p></div>
-            <div class="feat"><h4>Leaderboard</h4><p>A competitive leaderboard to rank players against each other.</p></div>
+        <div class="cs-metrics">
+            <div class="cs-metric"><div class="cm-num">Live</div><div class="cm-label">On Roblox</div></div>
+            <div class="cs-metric"><div class="cm-num">All</div><div class="cm-label">Systems by me</div></div>
+            <div class="cs-metric"><div class="cm-num">Tycoon</div><div class="cm-label">+ Pets · Shop</div></div>
+            <div class="cs-metric"><div class="cm-num">Luau</div><div class="cm-label">Server-authoritative</div></div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">Screenshots</h2>
-        <p class="prose" style="margin-bottom:1.25rem;">Screenshots coming soon.</p>
-        <div class="gallery">
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
+<section class="cs-section" id="overview">
+    <div class="container">
+        <div class="cs-body-grid">
+            <div class="cs-prose">
+                <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">The game</h2></div>
+                <p style="margin-top:1rem;">Octopus Energy is a Roblox tycoon game. Players collect a variety of tycoons and build their base up around them, with a core loop that rewards expanding, earning, and reinvesting. I designed and built all of the systems in the experience, from the tycoon economy to the meta features that keep players engaged.</p>
+                <p>Around that core loop is a full stack of progression and reward systems: obbys to complete, collectables to track down, a pet system, daily rewards, a shop for spending earnings, and a leaderboard for competition. Everything runs on a server-authoritative Roblox setup so player progress and economy stay secure and persistent.</p>
+            </div>
+            <aside class="cs-info">
+                <dl>
+                    <div class="cs-info-row"><dt>Role</dt><dd>Game Developer</dd></div>
+                    <div class="cs-info-row"><dt>Platform</dt><dd>Roblox</dd></div>
+                    <div class="cs-info-row"><dt>Engine</dt><dd>Roblox Studio (Luau)</dd></div>
+                    <div class="cs-info-row"><dt>Genre</dt><dd>Tycoon</dd></div>
+                    <div class="cs-info-row"><dt>Status</dt><dd>Live on Roblox</dd></div>
+                </dl>
+                <div class="cs-info-cta">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                </div>
+            </aside>
         </div>
-        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
-        <div class="frame frame-wide"><div class="frame-ph"><svg class="icon"><use href="#i-video"/></svg><span>Coming soon</span></div></div>
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">Tech &amp; tools</h2>
-        <div class="chips">
+<section class="cs-section alt" id="role">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">My role</h2></div>
+        <div class="cs-role-card" style="margin-top:1.25rem;">
+            <div class="role-title">Game Developer · All Systems</div>
+            <p>I <strong>designed and built every system</strong> in the experience, from the tycoon economy to the meta features. That covers the core earning-and-reinvesting loop, obbys, collectables, a pet system, daily rewards, the shop, and the leaderboard, all on a server-authoritative setup.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="built">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">What I built</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">Every system in the experience, from the economy to the meta features.</p>
+        <div class="build-grid">
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-factory"/></svg></div><h4>Tycoon collection</h4><p>Collect a range of different tycoons and build your base up around them.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-mountain"/></svg></div><h4>Obbys</h4><p>Obstacle courses for players to complete for rewards and variety.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-gem"/></svg></div><h4>Collectables</h4><p>Hidden collectables to hunt down across the experience.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-paw"/></svg></div><h4>Pet system</h4><p>Collectible pets that follow and support the player.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-gift"/></svg></div><h4>Daily rewards</h4><p>A daily reward loop that brings players back each day.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-shopping"/></svg></div><h4>Shop system</h4><p>A shop where players spend earnings on upgrades and items.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-trophy"/></svg></div><h4>Leaderboard</h4><p>A competitive leaderboard to rank players against each other.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="systems">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">A full tycoon loop, server-authoritative</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>The heart of Octopus Energy is a <strong>tycoon economy</strong>: collect tycoons, earn from them, and reinvest to expand. I designed and built that core loop and then layered a full stack of progression and reward systems on top, obbys, collectables, a pet system, daily rewards, a shop, and a leaderboard, so there's always a next goal.</p>
+            <p>All of it runs on a <strong>server-authoritative</strong> Roblox setup, which keeps player progress and the in-game economy secure and persistent rather than trusting the client. Building every one of these systems myself meant they fit together into one coherent loop.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="status">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Media</h2></div>
+        <div class="cs-video" style="margin-top:1.25rem;">
+            <div class="cs-video-ph">
+                <div class="vp-ring"><svg class="icon"><use href="#i-video"/></svg></div>
+                <span>Gameplay footage coming soon. Play the live experience on Roblox.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="tech">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Built with</h2></div>
+        <div class="builtwith" style="margin-top:1.25rem;">
             <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Tycoon</span><span class="chip">Pet System</span>
             <span class="chip">Shop System</span><span class="chip">Daily Rewards</span><span class="chip">Obby</span><span class="chip">Leaderboard</span>
         </div>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+    </div>
+</section>
+
+<section class="cs-section" style="padding-top:0;">
+    <div class="container">
+        <div class="cs-pager">
+            <a class="pg pg-prev" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-arrow-l"/></svg><span><span class="pg-label">Previous</span>99 Days Zombie Survival</span></a>
+            <a class="pg-all" href="../index.html#work">All projects</a>
+            <a class="pg pg-next" href="survive-area-51-arena.html"><span><span class="pg-label">Next</span>Survive Area 51 Arena</span><svg class="icon"><use href="#i-arrow-r"/></svg></a>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">More Roblox games</h2>
-        <div class="more-chips">
-            <a class="more-chip2" href="bloom-prison.html"><svg class="icon"><use href="#i-gamepad"/></svg> Bloom Prison</a>
-            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
-            <a class="more-chip2" href="survive-area-51-arena.html"><svg class="icon"><use href="#i-gamepad"/></svg> Survive Area 51 Arena</a>
-            <a class="more-chip2" href="../roblox.html"><svg class="icon"><use href="#i-arrow-r"/></svg> All Roblox games</a>
+<section class="cs-section alt">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">More projects</h2></div>
+        <div class="more-cards" style="margin-top:1.5rem;">
+            <a class="more-card" href="survive-area-51-arena.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Survive Area 51 Arena</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A wave-based survival and tower-defense game.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="99-days-zombie-survival.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">99 Days Zombie Survival</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A narrative survival experience. 155K+ visits.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="bloom-prison.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Bloom Prison</div><div class="mc-plat">Roblox · In Development</div><p class="mc-desc">My flagship roguelike action-adventure, built solo.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
         </div>
     </div>
 </section>
@@ -135,13 +212,7 @@
     </div>
 </footer>
 
-<script>
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="../assets/case-study.js"></script>
 
 </body>
 </html>

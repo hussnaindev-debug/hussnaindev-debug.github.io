@@ -10,13 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/site.css" />
 </head>
-<body>
+<body class="cs" style="--pa:#F56565; --pa-2:#FC8181; --pa-soft:rgba(245,101,101,0.14); --pa-border:rgba(245,101,101,0.4);">
+
+<a class="skip-link" href="#overview">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
     <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
-    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
-    <symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18M3 7.5h4M17 3v18M3 12h18M3 16.5h4M17 16.5h4M17 7.5h4"/></symbol>
+    <symbol id="i-crosshair" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 8h.01M16 8h.01M8 16h.01M16 16h.01M12 12h.01"/></symbol>
+    <symbol id="i-backpack" viewBox="0 0 24 24"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8M8 18h8"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M12 12v4"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
     <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
@@ -36,89 +42,156 @@
     </div>
 </header>
 
+<nav class="cs-subnav" aria-label="On this page">
+    <div class="cs-subnav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#role">My Role</a>
+        <a href="#built">What I Built</a>
+        <a href="#systems">Systems</a>
+        <a href="#status">Media</a>
+        <a href="#tech">Built With</a>
+    </div>
+</nav>
+
 <main id="main">
 
-<section class="page-hero">
-    <div class="container reveal">
-        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Roblox games</a>
-        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Narrative Survival · Roblox · Luau</div>
-        <h1>99 Days Zombie Survival</h1>
-        <div class="page-sub">ZhenStudio – 26 · Roblox Game Developer</div>
-        <div class="hero-meta">
-            <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
-            <span class="chip">Jan 2026 – Present</span>
-            <span class="chip">155,800+ Visits</span>
-            <span class="chip">1,200+ Favorites</span>
+<section class="cs-hero">
+    <div class="container">
+        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Selected Work / Roblox Games</a>
+        <div class="cs-hero-grid">
+            <div>
+                <div class="cs-hero-kicker"><svg class="icon"><use href="#i-crosshair"/></svg> Narrative Survival · Roblox · Luau</div>
+                <h1>99 Days Zombie Survival</h1>
+                <p class="cs-hero-lead">A story-driven Roblox survival experience where players endure 99 days against the undead.</p>
+                <div class="cs-hero-role"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox Game Developer</div>
+                <div class="cs-hero-actions">
+                    <a class="btn btn-primary" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox <svg class="icon"><use href="#i-external"/></svg></a>
+                    <a class="btn btn-ghost" href="#systems">See the systems</a>
+                </div>
+            </div>
+            <div class="cs-hero-visual">
+                <div class="cs-hero-devbuild">
+                    <span class="db-badge"><svg class="icon"><use href="#i-crosshair"/></svg> Live on Roblox</span>
+                    <div class="db-mark"><svg class="icon"><use href="#i-crosshair"/></svg></div>
+                    <p>Media capture is on the way. Play the live experience on Roblox in the meantime.</p>
+                </div>
+            </div>
         </div>
-        <p class="page-lead">
-            A narrative-driven Roblox survival experience where players endure 99 days against the undead,
-            built with cinematic cutscenes, a modular weapons system, gacha mechanics, and performance tuned
-            for low-end mobile devices.
-        </p>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
-            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">The game</h2>
-        <p>99 Days Zombie Survival is a story-driven Roblox title built in Roblox Studio with Luau. As a core developer on the project, I contributed across gameplay systems, UI, and performance, taking the experience from early build to a live game that reached <strong>155,800+ visits</strong> and <strong>1,200+ favorites</strong> within its first four months.</p>
-        <p>The game blends narrative delivery with action survival: scripted cutscenes drive the story between waves, while a modular weapons system and gacha rolls give players long-term progression goals. A heavy focus on optimization keeps it smooth on mobile and low-end Roblox clients.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">What I built</h2>
-        <div class="feat-grid">
-            <div class="feat"><h4>Cinematic cutscenes</h4><p>Scripted in-game cutscenes built with Moon Animator, integrated into the gameplay flow to deliver the story.</p></div>
-            <div class="feat"><h4>Modular weapons system</h4><p>A scalable weapons framework handling combat logic, animations, and player interaction across many weapon types.</p></div>
-            <div class="feat"><h4>Gacha system</h4><p>Randomized reward rolls with rarity tiers, driving collection and re-engagement.</p></div>
-            <div class="feat"><h4>Backpack &amp; UI</h4><p>Inventory UI, tutorial onboarding flows, and dynamic toast messaging for clean player feedback.</p></div>
-            <div class="feat"><h4>Mobile optimization</h4><p>Performance tuning to keep gameplay smooth on low-end and mobile-supported Roblox devices.</p></div>
+        <div class="cs-metrics">
+            <div class="cs-metric"><div class="cm-num">155,800+</div><div class="cm-label">Visits</div></div>
+            <div class="cs-metric"><div class="cm-num">1,200+</div><div class="cm-label">Favorites</div></div>
+            <div class="cs-metric"><div class="cm-num">4 mo</div><div class="cm-label">Since launch</div></div>
+            <div class="cs-metric"><div class="cm-num">Core</div><div class="cm-label">Developer</div></div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">Screenshots</h2>
-        <p class="prose" style="margin-bottom:1.25rem;">Screenshots coming soon.</p>
-        <div class="gallery">
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
-            <div class="frame"><div class="frame-ph"><svg class="icon"><use href="#i-image"/></svg><span>Coming soon</span></div></div>
+<section class="cs-section" id="overview">
+    <div class="container">
+        <div class="cs-body-grid">
+            <div class="cs-prose">
+                <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">The game</h2></div>
+                <p style="margin-top:1rem;">99 Days Zombie Survival is a story-driven Roblox title built in Roblox Studio with Luau. As a core developer on the project, I contributed across gameplay systems, UI, and performance, taking the experience from early build to a live game that reached <strong>155,800+ visits</strong> and <strong>1,200+ favorites</strong> within its first four months.</p>
+                <p>The game blends narrative delivery with action survival: scripted cutscenes drive the story between waves, while a modular weapons system and gacha rolls give players long-term progression goals. A heavy focus on optimization keeps it smooth on mobile and low-end Roblox clients.</p>
+            </div>
+            <aside class="cs-info">
+                <dl>
+                    <div class="cs-info-row"><dt>Role</dt><dd>Roblox Game Developer</dd></div>
+                    <div class="cs-info-row"><dt>Studio</dt><dd>ZhenStudio – 26</dd></div>
+                    <div class="cs-info-row"><dt>Platform</dt><dd>Roblox</dd></div>
+                    <div class="cs-info-row"><dt>Engine</dt><dd>Roblox Studio (Luau)</dd></div>
+                    <div class="cs-info-row"><dt>Status</dt><dd>Live · Jan 2026 – Present</dd></div>
+                </dl>
+                <div class="cs-info-cta">
+                    <a class="btn btn-primary" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                </div>
+            </aside>
         </div>
-        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
-        <div class="frame frame-wide"><div class="frame-ph"><svg class="icon"><use href="#i-video"/></svg><span>Coming soon</span></div></div>
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">Tech &amp; tools</h2>
-        <div class="chips">
+<section class="cs-section alt" id="role">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">My role</h2></div>
+        <div class="cs-role-card" style="margin-top:1.25rem;">
+            <div class="role-title">Roblox Game Developer</div>
+            <p>As a <strong>core developer</strong> on the project, I contributed across gameplay systems, UI, and performance, taking the experience from an early build to a live game. My work included the cutscene system, a modular weapons framework, a gacha system, the backpack inventory UI, and the optimization that keeps it running on low-end devices.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="built">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">What I built</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">The systems I contributed across the experience.</p>
+        <div class="build-grid">
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-film"/></svg></div><h4>Cinematic cutscenes</h4><p>Scripted in-game cutscenes built with Moon Animator, woven into the gameplay flow to deliver the story.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-crosshair"/></svg></div><h4>Modular weapons system</h4><p>A scalable weapons framework handling combat logic, animations, and player interaction across many weapon types.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-dice"/></svg></div><h4>Gacha system</h4><p>Randomized reward rolls with rarity tiers, driving collection and re-engagement.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-backpack"/></svg></div><h4>Backpack &amp; UI</h4><p>Inventory UI, tutorial onboarding flows, and dynamic toast messaging for clean player feedback.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-gauge"/></svg></div><h4>Mobile optimization</h4><p>Performance tuning to keep gameplay smooth on low-end and mobile-supported Roblox devices.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="systems">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Narrative meets survival</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>The design challenge on 99 Days Zombie Survival was blending a story-driven experience with action survival on Roblox. Scripted <strong>cutscenes built in Moon Animator</strong> drive the narrative between waves, and integrating them cleanly into the gameplay flow, so they support the action instead of interrupting it, was a core part of my work.</p>
+            <p>On the progression side, a <strong>modular weapons system</strong> handles combat logic, animations, and player interaction across many weapon types, while a <strong>gacha system</strong> with rarity tiers gives players long-term collection goals. Backing it all is a heavy optimization pass so the experience stays smooth on mobile and low-end clients, which matters for reach on Roblox. Together these helped the game reach <strong>155,800+ visits</strong> and <strong>1,200+ favorites</strong> in its first four months.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="status">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Media</h2></div>
+        <div class="cs-video" style="margin-top:1.25rem;">
+            <div class="cs-video-ph">
+                <div class="vp-ring"><svg class="icon"><use href="#i-video"/></svg></div>
+                <span>Gameplay footage coming soon. Play the live experience on Roblox.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="tech">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Built with</h2></div>
+        <div class="builtwith" style="margin-top:1.25rem;">
             <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Moon Animator</span><span class="chip">Gacha System</span>
             <span class="chip">Weapons System</span><span class="chip">Inventory UI</span><span class="chip">Mobile Optimization</span>
         </div>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+    </div>
+</section>
+
+<section class="cs-section" style="padding-top:0;">
+    <div class="container">
+        <div class="cs-pager">
+            <a class="pg pg-prev" href="bloom-prison.html"><svg class="icon"><use href="#i-arrow-l"/></svg><span><span class="pg-label">Previous</span>Bloom Prison</span></a>
+            <a class="pg-all" href="../index.html#work">All projects</a>
+            <a class="pg pg-next" href="octopus-energy.html"><span><span class="pg-label">Next</span>Octopus Energy</span><svg class="icon"><use href="#i-arrow-r"/></svg></a>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">More projects</h2>
-        <div class="more-chips">
-            <a class="more-chip2" href="bloom-prison.html"><svg class="icon"><use href="#i-gamepad"/></svg> Bloom Prison</a>
-            <a class="more-chip2" href="octopus-energy.html"><svg class="icon"><use href="#i-gamepad"/></svg> Octopus Energy</a>
-            <a class="more-chip2" href="survive-area-51-arena.html"><svg class="icon"><use href="#i-gamepad"/></svg> Survive Area 51 Arena</a>
-            <a class="more-chip2" href="four-reaction.html"><svg class="icon"><use href="#i-smartphone"/></svg> 4 Reaction</a>
+<section class="cs-section alt">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">More projects</h2></div>
+        <div class="more-cards" style="margin-top:1.5rem;">
+            <a class="more-card" href="octopus-energy.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Octopus Energy</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A tycoon game where I built every system.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="bloom-prison.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Bloom Prison</div><div class="mc-plat">Roblox · In Development</div><p class="mc-desc">My flagship roguelike action-adventure, built solo.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="four-reaction.html">
+                <div class="mc-thumb"><img src="../assets/media/four-reaction/poster.png" alt="4 Reaction gameplay" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">4 Reaction</div><div class="mc-plat">Unity · Mobile</div><p class="mc-desc">A local multiplayer party game with 30 minigames.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
         </div>
     </div>
 </section>
@@ -131,17 +204,11 @@
             <div class="footer-id"><div class="f-name">Hussnain Sajjad</div><div class="f-role">Game Developer · Unity &amp; Roblox</div></div>
             <a class="btn btn-ghost btn-sm" href="../index.html#contact">Let's Talk</a>
         </div>
-        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../index.html">Home</a> · Hosted on GitHub Pages</div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../roblox.html">Roblox games</a> · <a href="../index.html">Home</a></div>
     </div>
 </footer>
 
-<script>
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="../assets/case-study.js"></script>
 
 </body>
 </html>

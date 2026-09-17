@@ -10,12 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/site.css" />
 </head>
-<body>
+<body class="cs" style="--pa:#38C172; --pa-2:#68D391; --pa-soft:rgba(56,193,114,0.14); --pa-border:rgba(56,193,114,0.4);">
+
+<a class="skip-link" href="#overview">Skip to content</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
     <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
-    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M10.4 21.9a10 10 0 0 0 9.941-15.416"/><path d="M13.5 2.1a10 10 0 0 0-9.841 15.416"/></symbol>
+    <symbol id="i-layers-2" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.84z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></symbol>
+    <symbol id="i-shopping" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-chevron-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
     <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
@@ -34,63 +45,137 @@
     </div>
 </header>
 
+<nav class="cs-subnav" aria-label="On this page">
+    <div class="cs-subnav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#role">My Role</a>
+        <a href="#built">What I Built</a>
+        <a href="#physics">Physics</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#tech">Built With</a>
+    </div>
+</nav>
+
 <main id="main">
 
-<section class="page-hero">
-    <div class="container reveal">
-        <a class="back-link" href="../unity.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Unity games</a>
-        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Physics Arcade · Unity · WebGL</div>
-        <h1>Rise &amp; Roll</h1>
-        <div class="page-sub">UFD Studios · Lead Developer</div>
-        <div class="hero-meta">
-            <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> WebGL</span>
-            <span class="chip">Playable in browser</span>
+<section class="cs-hero">
+    <div class="container">
+        <a class="back-link" href="../unity.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Selected Work / Unity Games</a>
+        <div class="cs-hero-grid">
+            <div>
+                <div class="cs-hero-kicker"><svg class="icon"><use href="#i-orbit"/></svg> Physics Arcade · Unity · WebGL</div>
+                <h1>Rise &amp; Roll</h1>
+                <p class="cs-hero-lead">A physics-based ball-rolling game where momentum and timing carry you through the course.</p>
+                <div class="cs-hero-role"><svg class="icon"><use href="#i-gamepad"/></svg> Lead Developer</div>
+                <div class="cs-hero-actions">
+                    <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io <svg class="icon"><use href="#i-external"/></svg></a>
+                    <a class="btn btn-ghost" href="#gallery">See the game</a>
+                </div>
+            </div>
+            <div class="cs-hero-visual">
+                <img src="../assets/media/rise-and-roll/poster.png" alt="Rise and Roll gameplay: rolling a physics ball through an obstacle course" />
+            </div>
         </div>
-        <p class="page-lead">
-            A physics-based ball-rolling game where you swipe to send the ball through level after level of
-            obstacles, unlocking new skins along the way and chasing the top of the leaderboard.
-        </p>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
-            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container reveal prose">
-        <h2 class="detail-h2">The game</h2>
-        <p>Rise &amp; Roll is a WebGL ball-rolling game built in Unity and published on itch.io, playable straight from the browser. You control a ball and swipe to set it rolling, working through levels packed with obstacles that test your timing and control.</p>
-        <p>The feel comes from its physics. The ball responds to your swipes with real momentum, so rolling, building speed, and threading past hazards all come down to reading the physics rather than memorizing inputs. Each level introduces new obstacles to keep it fresh.</p>
-        <p>Around the core loop is a shop for unlocking and equipping ball skins, and an itch.io leaderboard that turned each attempt into a race for the best score. This is one of my earlier games, so depending on itch.io's current rules the leaderboard service may no longer be live, but the system was fully built and integrated.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">What I built</h2>
-        <div class="feat-grid">
-            <div class="feat"><h4>Built end to end</h4><p>From physics to the shop and leaderboard.</p></div>
-            <div class="feat"><h4>Physics-based rolling</h4><p>Swipe to roll the ball with real momentum and weight driving every movement.</p></div>
-            <div class="feat"><h4>Levels &amp; obstacles</h4><p>A series of levels, each introducing new obstacles to test timing and control.</p></div>
-            <div class="feat"><h4>Ball skins shop</h4><p>A shop system to unlock and equip different ball skins.</p></div>
-            <div class="feat"><h4>itch.io leaderboard</h4><p>Score competition through an integrated itch.io leaderboard.</p></div>
-            <div class="feat"><h4>WebGL, no download</h4><p>Runs directly in the browser on itch.io.</p></div>
+        <div class="cs-metrics">
+            <div class="cs-metric"><div class="cm-num">Physics</div><div class="cm-label">Swipe control</div></div>
+            <div class="cs-metric"><div class="cm-num">Levels</div><div class="cm-label">Obstacle courses</div></div>
+            <div class="cs-metric"><div class="cm-num">Shop</div><div class="cm-label">+ Leaderboard</div></div>
+            <div class="cs-metric"><div class="cm-num">Lead</div><div class="cm-label">Developer</div></div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">Screenshots</h2>
-        <div class="gallery">
-            <div class="frame"><img src="../assets/media/rise-and-roll/shot-1.jpg" alt="Rise and Roll title screen" loading="lazy" /></div>
-            <div class="frame"><img src="../assets/media/rise-and-roll/shot-2.jpg" alt="Ball rolling down the track on level 9" loading="lazy" /></div>
-            <div class="frame"><img src="../assets/media/rise-and-roll/shot-3.jpg" alt="Ball skins shop with select and close" loading="lazy" /></div>
-            <div class="frame"><img src="../assets/media/rise-and-roll/shot-4.jpg" alt="Level completed screen with three stars and coins" loading="lazy" /></div>
+<section class="cs-section" id="overview">
+    <div class="container">
+        <div class="cs-body-grid">
+            <div class="cs-prose">
+                <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">The game</h2></div>
+                <p style="margin-top:1rem;">Rise &amp; Roll is a WebGL ball-rolling game built in Unity and published on itch.io, playable straight from the browser. You control a ball and swipe to set it rolling, working through levels packed with obstacles that test your timing and control.</p>
+                <p>The feel comes from its physics. The ball responds to your swipes with real momentum, so rolling, building speed, and threading past hazards all come down to reading the physics rather than memorizing inputs. Each level introduces new obstacles to keep it fresh.</p>
+                <p>Around the core loop is a shop for unlocking and equipping ball skins, and an itch.io leaderboard that turned each attempt into a race for the best score. This is one of my earlier games, so depending on itch.io's current rules the leaderboard service may no longer be live, but the system was fully built and integrated.</p>
+            </div>
+            <aside class="cs-info">
+                <dl>
+                    <div class="cs-info-row"><dt>Role</dt><dd>Lead Developer</dd></div>
+                    <div class="cs-info-row"><dt>Studio</dt><dd>UFD Studios</dd></div>
+                    <div class="cs-info-row"><dt>Platform</dt><dd>WebGL (Browser)</dd></div>
+                    <div class="cs-info-row"><dt>Engine</dt><dd>Unity (C#)</dd></div>
+                    <div class="cs-info-row"><dt>Status</dt><dd>Playable on itch.io</dd></div>
+                </dl>
+                <div class="cs-info-cta">
+                    <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
+                </div>
+            </aside>
         </div>
-        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
-        <div class="frame frame-wide">
+    </div>
+</section>
+
+<section class="cs-section alt" id="role">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">My role</h2></div>
+        <div class="cs-role-card" style="margin-top:1.25rem;">
+            <div class="role-title">Lead Developer</div>
+            <p>I built the game <strong>end to end</strong>, from the swipe-driven physics movement and the obstacle-filled levels to the ball-skins shop and the integrated itch.io leaderboard for the WebGL release.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="built">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">What I built</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">The physics movement, the levels, and the shop and leaderboard around them.</p>
+        <div class="build-grid">
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-gamepad"/></svg></div><h4>Built end to end</h4><p>From physics to the shop and leaderboard.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-orbit"/></svg></div><h4>Physics-based rolling</h4><p>Swipe to roll the ball with real momentum and weight driving every movement.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-layers-2"/></svg></div><h4>Levels &amp; obstacles</h4><p>A series of levels, each introducing new obstacles to test timing and control.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-shopping"/></svg></div><h4>Ball skins shop</h4><p>A shop system to unlock and equip different ball skins.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-trophy"/></svg></div><h4>itch.io leaderboard</h4><p>Score competition through an integrated itch.io leaderboard.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-globe"/></svg></div><h4>WebGL, no download</h4><p>Runs directly in the browser on itch.io.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="physics">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Momentum-driven movement</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>What gives Rise &amp; Roll its feel is that the ball is genuinely physics-driven. A swipe doesn't snap it to a position; it applies <strong>real momentum and weight</strong>, so the ball builds speed, carries it, and reacts to slopes and hazards the way a rolling object should.</p>
+            <p>That means clearing a level is about reading the physics and timing your input, not memorizing a fixed path. Each new level layers in obstacles that push on that skill. Around the core loop, a shop lets players unlock and equip ball skins, and an itch.io leaderboard turned each attempt into a race for the best score.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="gallery">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Inside the game</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">Gameplay, levels, and the skins shop. Click any image to enlarge.</p>
+        <div class="cs-gallery">
+            <figure class="g-lead" data-full="../assets/media/rise-and-roll/shot-2.jpg">
+                <img src="../assets/media/rise-and-roll/shot-2.jpg" alt="Ball rolling down the track on level 9" loading="lazy" />
+                <figcaption>Rolling down the track</figcaption>
+            </figure>
+            <figure data-full="../assets/media/rise-and-roll/shot-1.jpg">
+                <img src="../assets/media/rise-and-roll/shot-1.jpg" alt="Rise and Roll title screen" loading="lazy" />
+                <figcaption>Title screen</figcaption>
+            </figure>
+            <figure data-full="../assets/media/rise-and-roll/shot-3.jpg">
+                <img src="../assets/media/rise-and-roll/shot-3.jpg" alt="Ball skins shop with select and close" loading="lazy" />
+                <figcaption>Ball skins shop</figcaption>
+            </figure>
+            <figure data-full="../assets/media/rise-and-roll/shot-4.jpg">
+                <img src="../assets/media/rise-and-roll/shot-4.jpg" alt="Level completed screen with three stars and coins" loading="lazy" />
+                <figcaption>Level complete</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="gameplay">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Gameplay</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">A run showing the rolling physics, obstacles, and shop.</p>
+        <div class="cs-video">
             <video controls preload="metadata" poster="../assets/media/rise-and-roll/poster.png">
                 <source src="../assets/media/rise-and-roll/gameplay.mp4" type="video/mp4" />
                 Your browser doesn't support embedded video.
@@ -99,32 +184,55 @@
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container reveal">
-        <h2 class="detail-h2">Tech &amp; tools</h2>
-        <div class="chips">
+<section class="cs-section" id="tech">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Built with</h2></div>
+        <div class="builtwith" style="margin-top:1.25rem;">
             <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">WebGL</span><span class="chip">Physics</span>
             <span class="chip">Swipe Controls</span><span class="chip">Shop System</span><span class="chip">itch.io Leaderboard</span>
-        </div>
-        <div class="hero-actions">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container reveal">
-        <h2 class="detail-h2">More projects</h2>
-        <div class="more-chips">
-            <a class="more-chip2" href="mouse-maze.html"><svg class="icon"><use href="#i-gamepad"/></svg> Mouse Maze</a>
-            <a class="more-chip2" href="four-reaction.html"><svg class="icon"><use href="#i-smartphone"/></svg> 4 Reaction</a>
-            <a class="more-chip2" href="circular-pong.html"><svg class="icon"><use href="#i-smartphone"/></svg> Circular Pong</a>
-            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
+<section class="cs-section" style="padding-top:0;">
+    <div class="container">
+        <div class="cs-pager">
+            <a class="pg pg-prev" href="mouse-maze.html"><svg class="icon"><use href="#i-arrow-l"/></svg><span><span class="pg-label">Previous</span>Mouse Maze</span></a>
+            <a class="pg-all" href="../index.html#work">All projects</a>
+            <a class="pg pg-next" href="bloom-prison.html"><span><span class="pg-label">Next</span>Bloom Prison</span><svg class="icon"><use href="#i-arrow-r"/></svg></a>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">More projects</h2></div>
+        <div class="more-cards" style="margin-top:1.5rem;">
+            <a class="more-card" href="mouse-maze.html">
+                <div class="mc-thumb"><img src="../assets/media/mouse-maze/poster.png" alt="Mouse Maze gameplay" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">Mouse Maze</div><div class="mc-plat">Unity · WebGL</div><p class="mc-desc">A browser maze game with adaptive PC and mobile controls.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="circular-pong.html">
+                <div class="mc-thumb"><img src="../assets/media/circular-pong/poster.png" alt="Circular Pong gameplay" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">Circular Pong</div><div class="mc-plat">Unity · Mobile</div><p class="mc-desc">An arcade ring-based reflex game with a live-ops meta layer.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="bloom-prison.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Bloom Prison</div><div class="mc-plat">Roblox · In Development</div><p class="mc-desc">My flagship roguelike action-adventure, built solo.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
         </div>
     </div>
 </section>
 
 </main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-btn lb-close" aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <button class="lb-btn lb-prev" aria-label="Previous image"><svg class="icon"><use href="#i-chevron-l"/></svg></button>
+    <button class="lb-btn lb-next" aria-label="Next image"><svg class="icon"><use href="#i-chevron-r"/></svg></button>
+    <img src="" alt="" />
+    <div class="lb-cap"></div>
+</div>
 
 <footer class="footer">
     <div class="container">
@@ -136,13 +244,7 @@
     </div>
 </footer>
 
-<script>
-    const nav = document.getElementById('nav');
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
-    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="../assets/case-study.js"></script>
 
 </body>
 </html>
