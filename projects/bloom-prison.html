@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bloom Prison | Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<!-- ════════════ NAV ════════════ -->
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="../index.html">Hussnain Sajjad</a>
+        <ul class="nav-links">
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../roblox.html">Roblox Games</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ════════════ DETAIL HERO ════════════ -->
+<header class="detail-hero">
+    <div class="container fade-up visible">
+        <a class="back-link" href="../roblox.html">← Back to Roblox Games</a>
+        <div class="detail-emoji">🌸</div>
+        <span class="dev-banner">🚧 In Early Development</span>
+        <h1 class="detail-title">Bloom Prison</h1>
+        <div class="detail-studio">Roguelike Action-Adventure &nbsp;·&nbsp; Sole Developer</div>
+        <div class="detail-meta">
+            <span class="platform-badge badge-roblox">Roblox</span>
+            <span class="tl-period current">Flagship Project</span>
+            <span class="tl-period">Sole Developer</span>
+            <span class="tl-period">Roguelike</span>
+        </div>
+        <p class="detail-tagline">
+            My proudest and most ambitious project: a roguelike action-adventure experience for
+            Roblox, currently in early development. I am the sole developer on it at my company,
+            building every system in Roblox Studio with Luau, from fluid melee combat and distinct
+            enemy AI to randomized points of interest, cutscenes, and a full inventory system.
+        </p>
+        <div class="detail-links">
+            <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank">Play on Roblox ↗</a>
+            <a class="btn btn-outline" href="../index.html#contact">Get in Touch</a>
+        </div>
+    </div>
+</header>
+
+<!-- ════════════ OVERVIEW ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Overview</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">
+            Bloom Prison is a <strong style="color:#ddd;">roguelike action-adventure experience for
+            Roblox</strong>, and it is the project I am proudest of. I am the
+            <strong style="color:#ddd;">sole developer</strong> on it at my company, and it is
+            currently in early development. Every system in the game, from the combat and enemy AI to
+            the points of interest, cutscenes, abilities, VFX, and inventory, is designed and
+            scripted by me in Roblox Studio with Luau.
+        </p>
+        <p class="detail-body-text">
+            Each run drops the player into a world of readable, reactive encounters and randomized
+            points of interest, built around combat that stays fluid from one attack to the next. The
+            sections below break down the core systems as they stand today, with much more planned as
+            development continues.
+        </p>
+    </div>
+</section>
+
+<!-- ════════════ KEY FEATURES ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Key Features</h2>
+        <div class="sep"></div>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>⚔️ Free-Flow Combat</h4>
+                <p>Input-buffered melee combat that keeps the flow going from one attack to the next, with auto-targeting of the nearest enemy so mobile players never fight the controls.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🗡️ Weapons &amp; Abilities</h4>
+                <p>Each weapon has its own abilities, VFX, and clear strengths and weaknesses. Some abilities are pure attacks, others grant temporary buffs, so players shape their own playstyle.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🤖 Distinct Enemy AI</h4>
+                <p>Every enemy is unique. Swarms, poisonous types, and ranged attackers each behave differently and have to be dealt with on their own terms.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✨ Abilities &amp; VFX</h4>
+                <p>An ability system paired with a hand-built VFX layer, giving each power a distinct look and impactful on-screen feel.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🗺️ Randomized POIs</h4>
+                <p>Points of interest spawn randomly across the map each run. Some grant armor, some weapons, some heal, driving exploration and roguelike replayability.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🎬 Cutscenes</h4>
+                <p>Story cutscenes authored in Moon Animator and played back for every player in the server when triggered. One cutscene today, with more planned.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🎒 Inventory System &amp; UI</h4>
+                <p>A full inventory system backing a clean inventory UI, letting players manage weapons, items, and gear.</p>
+            </div>
+            <div class="feature-item">
+                <h4>🎲 Roguelike Runs</h4>
+                <p>Randomized layouts and rewards each run give the game a repeatable, run-based structure built to keep encounters fresh.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ COMBAT ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Combat</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">
+            Combat is built around flow. The core goal is to make chaining from one attack into the
+            next feel effortless, so encounters read as continuous sequences rather than isolated
+            swings. Input buffering is central to this: the player can queue their next input mid-attack
+            and it lands as soon as the current move allows, which keeps the rhythm of a fight
+            unbroken and rewards good timing without demanding frame-perfect execution.
+        </p>
+        <p class="detail-body-text">
+            To keep the experience approachable, especially on mobile, the player automatically
+            targets the nearest enemy without needing to hold directional input, an approach inspired
+            by the free-flow combat of the Batman: Arkham games. This lets players focus on offense
+            and positioning instead of fighting the camera or controls.
+        </p>
+        <p class="detail-body-text">
+            Each weapon carries its own identity through a unique set of abilities and VFX, along with
+            clear strengths and weaknesses that make weapon choice meaningful. Some abilities are pure
+            offense, while others grant temporary buffs, giving players room to develop their own
+            playstyle across a run.
+        </p>
+    </div>
+</section>
+
+<!-- ════════════ ENEMY AI ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Enemy AI</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">
+            Every enemy is designed to be a distinct threat rather than a reskin. The roster spans
+            different archetypes, from swarming enemies that overwhelm through numbers, to poisonous
+            enemies that punish careless positioning, to ranged attackers that force the player to
+            close distance or take cover. Each type behaves differently and has to be approached on
+            its own terms.
+        </p>
+        <p class="detail-body-text">
+            Because their behaviors differ, encounters become a matter of reading the field and
+            adapting, deciding which threat to neutralize first and how to handle a mixed group.
+            Enemies detect the player, close in, and commit to attacks with their own timing and
+            spacing, so fights stay reactive instead of predictable.
+        </p>
+        <p class="detail-body-text">
+            The enemy AI is designed to scale with the roguelike structure of the game, so as new
+            archetypes and combinations are added through development, encounters can be composed to
+            keep each run fresh and keep the player thinking.
+        </p>
+    </div>
+</section>
+
+<!-- ════════════ POINTS OF INTEREST ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Points of Interest</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">
+            Points of interest are the exploration backbone of each run. They are placed randomly
+            across the map every time, so no two runs lay out the same, which reinforces the roguelike
+            loop and keeps players moving and searching rather than following a fixed path.
+        </p>
+        <p class="detail-body-text">
+            Each point of interest behaves differently and offers its own reward. Some grant armor,
+            some hand over new weapons, some heal the player, and others carry their own effects, so
+            deciding which to seek out and when becomes part of the moment-to-moment strategy. As
+            development continues, the pool of points of interest will grow to add more variety and
+            more meaningful decisions to every run.
+        </p>
+    </div>
+</section>
+
+<!-- ════════════ CUTSCENES ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Cutscenes</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">
+            Cutscenes deliver the game's story and frame its key moments. They are authored in Moon
+            Animator and play back for every player in the server when triggered, so story beats land
+            as a shared, synchronized experience rather than a private one.
+        </p>
+        <p class="detail-body-text">
+            The game currently features a single cutscene, with more planned as development
+            progresses and the narrative expands. The system is built so additional cutscenes can be
+            added and triggered cleanly as the world and its story grow.
+        </p>
+    </div>
+</section>
+
+<!-- ════════════ SCREENSHOTS ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Screenshots</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">Screenshots coming soon.</p>
+        <div class="gallery-grid">
+            <div class="media-frame"><div class="media-placeholder"><span class="ph-icon">🖼️</span><span class="ph-label">Coming Soon</span></div></div>
+            <div class="media-frame"><div class="media-placeholder"><span class="ph-icon">🖼️</span><span class="ph-label">Coming Soon</span></div></div>
+            <div class="media-frame"><div class="media-placeholder"><span class="ph-icon">🖼️</span><span class="ph-label">Coming Soon</span></div></div>
+            <div class="media-frame"><div class="media-placeholder"><span class="ph-icon">🖼️</span><span class="ph-label">Coming Soon</span></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ GAMEPLAY VIDEO ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Gameplay Video</h2>
+        <div class="sep"></div>
+        <p class="detail-body-text">Gameplay video coming soon.</p>
+        <div class="media-frame video-frame"><div class="media-placeholder"><span class="ph-icon">▶️</span><span class="ph-label">Coming Soon</span></div></div>
+    </div>
+</section>
+
+<!-- ════════════ TECH STACK ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">Tech &amp; Tools</h2>
+        <div class="sep"></div>
+        <div class="detail-tags">
+            <span class="tag">Roblox Studio</span>
+            <span class="tag">Luau</span>
+            <span class="tag">Roguelike</span>
+            <span class="tag">Free-Flow Combat</span>
+            <span class="tag">Enemy AI</span>
+            <span class="tag">Abilities &amp; VFX</span>
+            <span class="tag">Moon Animator</span>
+            <span class="tag">Cutscenes</span>
+            <span class="tag">Inventory System</span>
+            <span class="tag">Weapons</span>
+        </div>
+        <div class="detail-links">
+            <a class="btn btn-primary" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank">Play on Roblox ↗</a>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ MORE PROJECTS ════════════ -->
+<section class="detail-section">
+    <div class="container fade-up">
+        <h2 class="detail-h2">More Projects</h2>
+        <div class="sep"></div>
+        <div class="more-projects">
+            <a class="more-chip" href="99-days-zombie-survival.html">🧟 99 Days Zombie Survival</a>
+            <a class="more-chip" href="octopus-energy.html">🐙 Octopus Energy</a>
+            <a class="more-chip" href="survive-area-51-arena.html">👽 Survive Area 51 Arena</a>
+            <a class="more-chip" href="dig-to-escape.html">🏴‍☠️ Dig to Escape</a>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+    <p>© 2026 <span>Hussnain Sajjad</span> · <a href="../index.html">Home</a> · Hosted on GitHub Pages</p>
+</footer>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
