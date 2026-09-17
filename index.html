@@ -2,800 +2,677 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hussnain Sajjad | Game Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hussnain Sajjad is a game developer specializing in Unity/C# and Roblox/Luau, building gameplay systems, mobile games, and interactive experiences from prototype to production." />
+    <title>Hussnain Sajjad — Game Developer (Unity & Roblox)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
 
+<a class="skip-link" href="#work">Skip to work</a>
+
+<!-- ─── Lucide icon sprite (inline, no external requests) ─── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+        <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+        <symbol id="i-settings" viewBox="0 0 24 24"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></symbol>
+        <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol>
+        <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+        <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2.5 5 2.5 5 2.5c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9.5C4 13 7 15 10 15a4.8 4.8 0 0 0-1 3.5V22"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+        <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+        <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+        <symbol id="i-hammer" viewBox="0 0 24 24"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></symbol>
+    </defs>
+</svg>
+
 <!-- ════════════ NAV ════════════ -->
-<nav>
+<header class="nav" id="nav">
     <div class="nav-inner">
-        <span class="nav-logo">Hussnain Sajjad</span>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <a class="nav-logo" href="#home">
+            <span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span>
+            Hussnain Sajjad
+        </a>
+        <nav aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a class="nav-icon nav-desktop-cta" href="https://github.com/hussnaindev-debug" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+            <a class="nav-icon nav-desktop-cta" href="https://www.linkedin.com/in/hussnain-sajjad-4129302b7" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+            <a class="btn btn-primary btn-sm nav-desktop-cta" href="#contact">Let's Talk</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                <svg class="icon"><use href="#i-menu"/></svg>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home <svg class="icon"><use href="#i-arrow-r"/></svg></a></li>
+            <li><a href="#work">Work <svg class="icon"><use href="#i-arrow-r"/></svg></a></li>
+            <li><a href="#experience">Experience <svg class="icon"><use href="#i-arrow-r"/></svg></a></li>
+            <li><a href="#about">About <svg class="icon"><use href="#i-arrow-r"/></svg></a></li>
+            <li><a href="#contact">Contact <svg class="icon"><use href="#i-arrow-r"/></svg></a></li>
+            <li><a class="btn btn-primary menu-cta" href="#contact">Let's Talk</a></li>
         </ul>
     </div>
-</nav>
+</header>
+
+<main id="main">
 
 <!-- ════════════ HERO ════════════ -->
 <section class="hero" id="home">
-    <canvas id="particles"></canvas>
-    <div class="hero-content fade-up">
-
-        <div class="hero-badge">🎮 Unity &amp; Roblox Developer</div>
-
-        <h1>Hussnain Sajjad</h1>
-        <p class="hero-sub">
-            Shipping mobile, WebGL, and Roblox games: gameplay systems,
-            meta progression, monetization SDKs, and cross-platform builds.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View Games ↓</a>
-            <a href="mailto:hussnain.devcodes@gmail.com" class="btn btn-outline">Hire Me</a>
+    <div class="container">
+        <div class="reveal">
+            <span class="hero-eyebrow"><span class="dot"></span> Available for game dev roles &amp; freelance</span>
+            <h1>Game developer building <span class="grad">gameplay that ships</span>.</h1>
+            <p class="hero-lead">
+                I'm Hussnain Sajjad, a game developer specializing in Unity/C# and Roblox/Luau.
+                I build gameplay systems, mobile games, and interactive experiences, and take
+                them from prototype to production.
+            </p>
+            <div class="hero-cta">
+                <a class="btn btn-primary" href="#work">View selected work <svg class="icon"><use href="#i-arrow-r"/></svg></a>
+                <a class="btn btn-ghost" href="#contact">Let's connect</a>
+            </div>
+            <div class="hero-stack">
+                <span class="tech">Unity</span><span class="sep-dot">·</span>
+                <span class="tech">C#</span><span class="sep-dot">·</span>
+                <span class="tech">Roblox</span><span class="sep-dot">·</span>
+                <span class="tech">Luau</span><span class="sep-dot">·</span>
+                <span class="tech">Mobile</span><span class="sep-dot">·</span>
+                <span class="tech">WebGL</span>
+            </div>
         </div>
 
-        <div class="hero-stats">
-            <div class="stat">
+        <div class="stats reveal" role="list" aria-label="Career highlights">
+            <div class="stat" role="listitem">
                 <div class="stat-num">6+</div>
-                <div class="stat-label">Shipped Games</div>
+                <div class="stat-label">Shipped games</div>
             </div>
-            <div class="stat">
+            <div class="stat" role="listitem">
+                <div class="stat-num">155K+</div>
+                <div class="stat-label">Roblox visits</div>
+            </div>
+            <div class="stat" role="listitem">
                 <div class="stat-num">3</div>
                 <div class="stat-label">Studios</div>
             </div>
-            <div class="stat">
-                <div class="stat-num">155K+</div>
-                <div class="stat-label">Roblox Visits</div>
-            </div>
-            <div class="stat">
+            <div class="stat" role="listitem">
                 <div class="stat-num">1</div>
-                <div class="stat-label">Publication</div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ════════════ ABOUT ════════════ -->
-<section id="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text fade-up">
-                <p class="section-label">About Me</p>
-                <h2 class="section-title">Who I Am</h2>
-                <div class="sep"></div>
-
-                <p>
-                    I'm a Game Developer from Pakistan with dual specialization in
-                    Unity (C#) and Roblox (Luau). I've shipped multiple titles with real users
-                    on Google Play, the App Store, and the Roblox platform.
-                </p>
-                <p>
-                    My work spans the full game loop, from responsive player controls and
-                    physics systems, to meta features like garages, shops, and leaderboards,
-                    to production SDKs for monetization and analytics. On Roblox, I build
-                    narrative-driven experiences with cutscene systems, modular weapons,
-                    gacha mechanics, and optimized performance for low-end devices.
-                </p>
-                <p>
-                    Comfortable working remotely in agile teams, collaborating with
-                    designers, artists, and QA using Git and Jira.
-                </p>
-
-                <div class="about-links">
-                    <a class="contact-chip" href="mailto:hussnain.devcodes@gmail.com">✉️ hussnain.devcodes@gmail.com</a>
-                    <a class="contact-chip" href="https://www.linkedin.com/in/hussnain-sajjad-4129302b7" target="_blank">💼 LinkedIn</a>
-                    <a class="contact-chip" href="tel:+923176993179">📞 +92 317 6993179</a>
-                    <span class="contact-chip">📍 Pakistan</span>
-                </div>
-            </div>
-
-            <div class="about-side fade-up">
-                <div class="info-card">
-                    <div class="info-card-title">🎯 Specialization</div>
-                    <p>Unity (C#) and Roblox (Luau): gameplay systems, meta progression, cinematic systems, and SDK integration across mobile, WebGL, and Roblox.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-card-title">🚀 Open To</div>
-                    <p>Remote Unity or Roblox Developer roles, freelance game projects, and indie collaboration.</p>
-                </div>
-                <div class="info-card">
-                    <div class="info-card-title">📦 Shipped On</div>
-                    <p>Google Play &nbsp;·&nbsp; App Store &nbsp;·&nbsp; WebGL &nbsp;·&nbsp; Roblox</p>
-                </div>
+                <div class="stat-label">Published paper</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ════════════ SKILLS ════════════ -->
-<section id="skills">
+<!-- ════════════ FLAGSHIP + SELECTED WORK ════════════ -->
+<section class="section" id="work">
     <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Skills</p>
-            <h2 class="section-title">Tech Stack</h2>
-            <div class="sep"></div>
-            <p class="section-desc">Tools, platforms, and systems I use to build and ship games.</p>
+        <div class="section-head reveal">
+            <span class="section-index">01 / Selected Work</span>
+            <h2 class="section-title">Games I've designed, built, and shipped.</h2>
+            <p class="section-desc">
+                A close look at the projects where I owned the gameplay, systems, and release.
+                Each links to a full case study with screenshots and gameplay footage.
+            </p>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card fade-up">
-                <div class="skill-icon">🎮</div>
-                <div class="skill-title">Game Engines</div>
-                <p class="skill-sub">Primary stack for all shipped titles.</p>
-                <div class="skill-tags">
-                    <span class="tag">Unity 2D/3D</span>
-                    <span class="tag">Roblox Studio</span>
-                    <span class="tag">Unreal Engine 4</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">Luau</span>
+
+        <!-- Flagship -->
+        <div class="flagship reveal" style="margin-bottom:2.5rem;">
+            <div class="flagship-body">
+                <span class="badge-dev"><svg class="icon"><use href="#i-sparkles"/></svg> Flagship · In Development</span>
+                <h3 class="flagship-title">Bloom Prison</h3>
+                <div class="flagship-meta">Roguelike Action-Adventure · Roblox · Sole Developer</div>
+                <p class="flagship-desc">
+                    My most ambitious project, and the one I'm proudest of. A roguelike action-adventure
+                    for Roblox that I'm building as the sole developer at my company. I design and script
+                    every system: free-flow melee combat with per-weapon abilities and VFX, distinct enemy
+                    archetypes, randomized points of interest each run, cutscenes, and a full inventory
+                    system. It's in early development, with more coming.
+                </p>
+                <div class="chips" style="margin:1.25rem 0 1.5rem;">
+                    <span class="chip chip-accent">Roblox Studio</span>
+                    <span class="chip">Luau</span>
+                    <span class="chip">Free-Flow Combat</span>
+                    <span class="chip">Enemy AI</span>
+                    <span class="chip">Abilities &amp; VFX</span>
+                </div>
+                <div class="work-links">
+                    <a class="link-btn primary" href="projects/bloom-prison.html">Read case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                    <a class="link-btn" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
                 </div>
             </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">📱</div>
-                <div class="skill-title">Platforms</div>
-                <p class="skill-sub">Cross-platform builds with device-level optimization.</p>
-                <div class="skill-tags">
-                    <span class="tag">Android</span>
-                    <span class="tag">iOS</span>
-                    <span class="tag">WebGL</span>
-                    <span class="tag">Roblox</span>
+            <div class="flagship-art">
+                <!-- Real cover art can replace this placeholder: <img src="assets/media/bloom-prison/cover.jpg" alt="Bloom Prison gameplay"> -->
+                <div class="art-placeholder">
+                    <svg class="icon"><use href="#i-sparkles"/></svg>
+                    <span>Artwork coming soon</span>
                 </div>
             </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">⚙️</div>
-                <div class="skill-title">Gameplay Systems</div>
-                <p class="skill-sub">Core loops and mechanics that hook players.</p>
-                <div class="skill-tags">
-                    <span class="tag">Touch Controls</span>
-                    <span class="tag">Physics</span>
-                    <span class="tag">AI</span>
-                    <span class="tag">Gacha Systems</span>
-                    <span class="tag">Minigame Frameworks</span>
-                    <span class="tag">Leaderboards</span>
+        </div>
+
+        <!-- Featured shipped work -->
+        <div class="work-list">
+
+            <!-- 01 4 Reaction -->
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <span class="work-num">01</span>
+                    <img src="assets/media/four-reaction/poster.png" alt="4 Reaction gameplay: a multiplayer minigame round in progress" loading="lazy" width="800" height="450" />
                 </div>
-            </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">🏪</div>
-                <div class="skill-title">Meta Systems</div>
-                <p class="skill-sub">Progression features that drive retention.</p>
-                <div class="skill-tags">
-                    <span class="tag">Shops</span>
-                    <span class="tag">Garages</span>
-                    <span class="tag">Upgrades</span>
-                    <span class="tag">Unlockables</span>
-                    <span class="tag">Inventory UI</span>
+                <div class="work-body">
+                    <div class="work-tagline">
+                        <span class="platform-tag pt-android"><svg class="icon"><use href="#i-smartphone"/></svg> Android</span>
+                        <span class="work-type">Local Multiplayer · Unity · Mobile</span>
+                    </div>
+                    <h3 class="work-title">4 Reaction</h3>
+                    <p class="work-desc">
+                        A 2D local multiplayer party game built around 30 fast, competitive minigames, with a
+                        cheeky personality that applauds your wins and taunts your slip-ups.
+                    </p>
+                    <p class="work-role">
+                        <strong>My role:</strong> Lead developer. I built the game from scratch with no template,
+                        owning the gameplay framework, a modular minigame architecture (prefab + ScriptableObject
+                        + script per game), an AI opponent, the XP unlock system, and the IAP, AppsFlyer analytics,
+                        and iOS ATT release pipeline.
+                    </p>
+                    <div class="work-metrics">
+                        <div class="work-metric"><div class="m-num">30</div><div class="m-label">Minigames</div></div>
+                        <div class="work-metric"><div class="m-num">5K+</div><div class="m-label">Installs</div></div>
+                        <div class="work-metric"><div class="m-num">1–4</div><div class="m-label">Players</div></div>
+                    </div>
+                    <div class="chips work-tech">
+                        <span class="chip">Unity 2D</span><span class="chip">C#</span><span class="chip">ScriptableObjects</span>
+                        <span class="chip">AI Opponent</span><span class="chip">IAP</span><span class="chip">AppsFlyer</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/four-reaction.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://play.google.com/store/apps/details?id=com.junostudio.fourreaction" target="_blank" rel="noopener"><svg class="icon"><use href="#i-store"/></svg> Google Play</a>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">🖥️</div>
-                <div class="skill-title">UI / UX</div>
-                <p class="skill-sub">Clean flows and satisfying animation polish.</p>
-                <div class="skill-tags">
-                    <span class="tag">Unity UI</span>
-                    <span class="tag">Roblox UI</span>
-                    <span class="tag">DOTween</span>
-                    <span class="tag">Moon Animator</span>
-                    <span class="tag">Cutscenes</span>
+            </article>
+
+            <!-- 02 Circular Pong -->
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <span class="work-num">02</span>
+                    <img src="assets/media/circular-pong/poster.png" alt="Circular Pong gameplay: a paddle keeping a ball inside a ring" loading="lazy" width="800" height="450" />
                 </div>
-            </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">💰</div>
-                <div class="skill-title">Monetization &amp; Analytics</div>
-                <p class="skill-sub">Production SDKs for revenue and growth.</p>
-                <div class="skill-tags">
-                    <span class="tag">IAP</span>
-                    <span class="tag">AdMob</span>
-                    <span class="tag">Yodo1</span>
-                    <span class="tag">AppsFlyer</span>
-                    <span class="tag">iOS ATT</span>
+                <div class="work-body">
+                    <div class="work-tagline">
+                        <span class="platform-tag pt-android"><svg class="icon"><use href="#i-smartphone"/></svg> Android</span>
+                        <span class="work-type">Arcade · Unity · Mobile</span>
+                    </div>
+                    <h3 class="work-title">Circular Pong</h3>
+                    <p class="work-desc">
+                        An arcade color-ball game where you spin a paddle to keep the ball inside the ring, dodge
+                        obstacles, and collect coins, wrapped in a full live-ops meta layer.
+                    </p>
+                    <p class="work-role">
+                        <strong>My role:</strong> Lead developer. I led development and built the core arcade loop
+                        alongside a skins store, spin wheel, daily rewards, weekly missions, a Google Play
+                        leaderboard, and Google Ads plus IAP monetization.
+                    </p>
+                    <div class="work-metrics">
+                        <div class="work-metric"><div class="m-num">Live</div><div class="m-label">Google Play</div></div>
+                        <div class="work-metric"><div class="m-num">Meta</div><div class="m-label">Store · Missions</div></div>
+                    </div>
+                    <div class="chips work-tech">
+                        <span class="chip">Unity 2D</span><span class="chip">C#</span><span class="chip">Leaderboard</span>
+                        <span class="chip">Skins Store</span><span class="chip">Google Ads</span><span class="chip">IAP</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/circular-pong.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank" rel="noopener"><svg class="icon"><use href="#i-store"/></svg> Google Play</a>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">🔧</div>
-                <div class="skill-title">Performance &amp; Builds</div>
-                <p class="skill-sub">Profiling, optimization, and release-ready builds.</p>
-                <div class="skill-tags">
-                    <span class="tag">Unity Profiler</span>
-                    <span class="tag">Build Optimization</span>
-                    <span class="tag">WebGL Optimization</span>
-                    <span class="tag">Asset Delivery</span>
-                    <span class="tag">Low-end Device Support</span>
+            </article>
+
+            <!-- 03 Mouse Maze -->
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <span class="work-num">03</span>
+                    <img src="assets/media/mouse-maze/poster.png" alt="Mouse Maze gameplay: guiding a mouse through a maze to the cheese" loading="lazy" width="800" height="450" />
                 </div>
-            </div>
-            <div class="skill-card fade-up">
-                <div class="skill-icon">🤝</div>
-                <div class="skill-title">Workflow</div>
-                <p class="skill-sub">Remote-first agile collaboration.</p>
-                <div class="skill-tags">
-                    <span class="tag">Git</span>
-                    <span class="tag">Jira</span>
-                    <span class="tag">Agile</span>
-                    <span class="tag">Sprint Planning</span>
+                <div class="work-body">
+                    <div class="work-tagline">
+                        <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> WebGL</span>
+                        <span class="work-type">Browser Game · Unity · WebGL</span>
+                    </div>
+                    <h3 class="work-title">Mouse Maze</h3>
+                    <p class="work-desc">
+                        A browser-based maze game where you guide a mouse to the cheese, playable on both desktop
+                        and mobile from the same build.
+                    </p>
+                    <p class="work-role">
+                        <strong>My role:</strong> Lead developer. I built adaptive controls that detect the player's
+                        device and switch between keyboard input on PC and an on-screen joystick on mobile, with
+                        DOTween-animated menus and panels.
+                    </p>
+                    <div class="work-metrics">
+                        <div class="work-metric"><div class="m-num">2-in-1</div><div class="m-label">PC + Mobile</div></div>
+                        <div class="work-metric"><div class="m-num">WebGL</div><div class="m-label">Browser build</div></div>
+                    </div>
+                    <div class="chips work-tech">
+                        <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">WebGL</span>
+                        <span class="chip">Adaptive Controls</span><span class="chip">DOTween</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/mouse-maze.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://daredevil101.itch.io/mouse-maze" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
+                    </div>
                 </div>
-            </div>
+            </article>
+
+            <!-- 04 Rise & Roll -->
+            <article class="work-card reveal">
+                <div class="work-media">
+                    <span class="work-num">04</span>
+                    <img src="assets/media/rise-and-roll/poster.png" alt="Rise and Roll gameplay: rolling a physics ball through an obstacle course" loading="lazy" width="800" height="450" />
+                </div>
+                <div class="work-body">
+                    <div class="work-tagline">
+                        <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> WebGL</span>
+                        <span class="work-type">Physics Arcade · Unity · WebGL</span>
+                    </div>
+                    <h3 class="work-title">Rise &amp; Roll</h3>
+                    <p class="work-desc">
+                        A physics-based ball-rolling game where you swipe to roll through obstacle-filled levels,
+                        unlock skins, and climb a leaderboard.
+                    </p>
+                    <p class="work-role">
+                        <strong>My role:</strong> Lead developer. I built the swipe-driven physics movement, a ball-skin
+                        shop, and an integrated itch.io leaderboard for the WebGL release.
+                    </p>
+                    <div class="work-metrics">
+                        <div class="work-metric"><div class="m-num">Physics</div><div class="m-label">Swipe control</div></div>
+                        <div class="work-metric"><div class="m-num">Shop</div><div class="m-label">+ Leaderboard</div></div>
+                    </div>
+                    <div class="chips work-tech">
+                        <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">WebGL</span>
+                        <span class="chip">Physics</span><span class="chip">Shop System</span><span class="chip">Leaderboard</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/rise-and-roll.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </div>
 </section>
 
 <!-- ════════════ EXPERIENCE ════════════ -->
-<section id="experience">
+<section class="section" id="experience">
     <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Experience</p>
-            <h2 class="section-title">Where I've Worked</h2>
-            <div class="sep"></div>
-            <p class="section-desc">Professional roles shipping real games to real users.</p>
+        <div class="section-head reveal">
+            <span class="section-index">02 / Experience</span>
+            <h2 class="section-title">Where I've shipped games.</h2>
+            <p class="section-desc">Three studios, across Roblox live experiences and Unity mobile and WebGL titles.</p>
         </div>
+
         <div class="timeline">
 
-            <div class="timeline-item fade-up">
-                <div class="timeline-dot active"></div>
-                <div class="timeline-card">
-                    <div class="tl-header">
-                        <div>
-                            <div class="tl-role">Roblox Game Developer</div>
-                            <div class="tl-company">ZhenStudio – 26 &nbsp;·&nbsp; Peshawar (On-Site)</div>
-                        </div>
-                        <span class="tl-period current">Jan 2026 – Present</span>
+            <article class="exp-card reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">Roblox Game Developer</div>
+                        <div class="exp-co">ZhenStudio – 26 <span class="exp-loc">· Peshawar (On-Site)</span></div>
                     </div>
-                    <ul class="tl-list">
-                        <li>Scaled the game to <strong style="color:#ddd;">155,800+ visits</strong> and <strong style="color:#ddd;">1,200+ favorites</strong> within the first 4 months of launch, driving strong early traction and player engagement.</li>
-                        <li>Developing a story-driven Roblox experience using Roblox Studio and Luau, contributing across gameplay systems, UI, and performance optimization.</li>
-                        <li>Created scripted in-game cutscenes using Moon Animator and integrated them seamlessly into gameplay flow to support narrative delivery.</li>
-                        <li>Built a modular and scalable weapons system supporting combat logic, animations, and player interaction.</li>
-                        <li>Implemented a gacha system with randomized rewards and rarity tiers.</li>
-                        <li>Designed and developed gameplay UI systems including backpack inventory, tutorial flows, and dynamic toast messaging.</li>
-                        <li>Optimized performance to ensure smooth gameplay on low-end and mobile-supported Roblox devices.</li>
-                    </ul>
+                    <span class="exp-dates current">Jan 2026 – Present</span>
                 </div>
-            </div>
+                <ul class="exp-bullets">
+                    <li>Grew the live experience to <strong>155,800+ visits</strong> and <strong>1,200+ favorites</strong> within its first four months.</li>
+                    <li>Develop a story-driven Roblox experience in Roblox Studio and Luau, working across gameplay, UI, and performance.</li>
+                    <li>Built scripted in-game cutscenes in Moon Animator and wired them into the gameplay flow for narrative delivery.</li>
+                    <li>Built a modular, scalable weapons system covering combat logic, animations, and player interaction.</li>
+                    <li>Implemented a gacha system with randomized rewards and rarity tiers.</li>
+                    <li>Shipped gameplay UI including backpack inventory, tutorial flows, and dynamic toast messaging, and optimized for low-end and mobile Roblox devices.</li>
+                </ul>
+            </article>
 
-            <div class="timeline-item fade-up">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="tl-header">
-                        <div>
-                            <div class="tl-role">Junior Game Developer</div>
-                            <div class="tl-company">UFD Studios &nbsp;·&nbsp; Lahore (Remote)</div>
-                        </div>
-                        <span class="tl-period">Sep 2024 – Aug 2025</span>
+            <article class="exp-card reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">Junior Game Developer</div>
+                        <div class="exp-co">UFD Studios <span class="exp-loc">· Lahore (Remote)</span></div>
                     </div>
-                    <ul class="tl-list">
-                        <li>Developed and shipped multiple mobile and WebGL Unity 2D/3D games, including <strong style="color:#ddd;">Nitro Racers</strong>, <strong style="color:#ddd;">Strike Master</strong>, and <strong style="color:#ddd;">Pookie Park</strong>, achieving <strong style="color:#ddd;">55,000+ installs</strong> across gameplay, UI, progression, and performance.</li>
-                        <li>Implemented and tuned player controllers with touch gestures, swipe/drag, and physics-based motion.</li>
-                        <li>Built meta systems including garages, shops, upgrades, unlockables, and progression to increase retention.</li>
-                        <li>Integrated monetization including IAP, AdMob, Google Mobile Ads, and Yodo1 ad networks.</li>
-                        <li>Implemented AppsFlyer attribution and Apple ATT flows for privacy-compliant iOS tracking.</li>
-                        <li>Owned cross-platform builds for Android/iOS and optimized WebGL assets, load times, and runtime performance.</li>
-                        <li>Collaborated remotely with designers, artists, and QA via Git and Jira in agile sprints.</li>
-                    </ul>
+                    <span class="exp-dates">Sep 2024 – Aug 2025</span>
                 </div>
-            </div>
+                <ul class="exp-bullets">
+                    <li>Shipped multiple Unity 2D/3D mobile and WebGL games, including <strong>Nitro Racers</strong>, <strong>Strike Master</strong>, and <strong>Pookie Park</strong>, reaching <strong>55,000+ installs</strong>.</li>
+                    <li>Implemented and tuned player controllers with touch gestures, swipe and drag input, and physics-based motion.</li>
+                    <li>Built meta systems, garages, shops, upgrades, unlockables, and progression, to lift retention.</li>
+                    <li>Integrated monetization with IAP, AdMob, Google Mobile Ads, and Yodo1 ad networks.</li>
+                    <li>Added AppsFlyer attribution and Apple ATT flows for privacy-compliant iOS tracking.</li>
+                    <li>Owned Android and iOS builds, optimized WebGL assets and load times, and collaborated with designers, artists, and QA via Git and Jira.</li>
+                </ul>
+            </article>
 
-            <div class="timeline-item fade-up">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="tl-header">
-                        <div>
-                            <div class="tl-role">Unity 3D Developer Intern</div>
-                            <div class="tl-company">AIRIDev &nbsp;·&nbsp; Islamabad (Remote)</div>
-                        </div>
-                        <span class="tl-period">Apr 2024 – Oct 2024</span>
+            <article class="exp-card reveal">
+                <div class="exp-top">
+                    <div>
+                        <div class="exp-role">Unity 3D Developer Intern</div>
+                        <div class="exp-co">AIRIDev <span class="exp-loc">· Islamabad (Remote)</span></div>
                     </div>
-                    <ul class="tl-list">
-                        <li>Built prototypes and core-loop implementations of hyper-casual and runner-style games.</li>
-                        <li>Delivered multiple mini-projects from concept to completion using C# and Unity physics.</li>
-                        <li>Improved performance and stability by optimizing assets/scenes and using the Unity Profiler.</li>
-                        <li>Contributed to UI implementation and animation polish for stronger player feedback.</li>
-                        <li>Worked in an agile setup with regular stand-ups and sprint planning.</li>
-                    </ul>
+                    <span class="exp-dates">Apr 2024 – Oct 2024</span>
                 </div>
-            </div>
+                <ul class="exp-bullets">
+                    <li>Built prototypes and core-loop implementations of hyper-casual and runner-style games.</li>
+                    <li>Delivered multiple mini-projects from concept to completion using C# and Unity physics.</li>
+                    <li>Improved performance and stability by optimizing assets and scenes with the Unity Profiler.</li>
+                    <li>Contributed UI implementation and animation polish for stronger player feedback.</li>
+                    <li>Worked in an agile setup with regular stand-ups and sprint planning.</li>
+                </ul>
+            </article>
 
         </div>
     </div>
 </section>
 
-<!-- ════════════ PROJECTS ════════════ -->
-<section id="projects">
+<!-- ════════════ WHAT I BUILD ════════════ -->
+<section class="section" id="build">
     <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Projects</p>
-            <h2 class="section-title">Shipped Games</h2>
-            <div class="sep"></div>
-            <p class="section-desc">Real titles live on app stores and the web, built, tested, and released. Click <strong style="color:#ccc;">Details</strong> on any card for a full breakdown with screenshots and gameplay video.</p>
-            <div class="detail-links" style="margin-bottom:2.5rem;">
-                <a class="btn btn-outline" href="unity.html">🎮 Unity Games →</a>
-                <a class="btn btn-outline" href="roblox.html">🧩 Roblox Games →</a>
+        <div class="section-head reveal">
+            <span class="section-index">03 / What I Build</span>
+            <h2 class="section-title">The systems behind the games.</h2>
+        </div>
+        <div class="cap-grid">
+            <div class="cap-card reveal">
+                <div class="cap-icon"><svg class="icon"><use href="#i-gamepad"/></svg></div>
+                <h3>Gameplay Engineering</h3>
+                <p>Responsive controls, game loops, physics, AI opponents, and modular minigame frameworks.</p>
+            </div>
+            <div class="cap-card reveal">
+                <div class="cap-icon"><svg class="icon"><use href="#i-settings"/></svg></div>
+                <h3>Game Systems</h3>
+                <p>Progression, inventories, shops, upgrades, unlockables, gacha, and leaderboards.</p>
+            </div>
+            <div class="cap-card reveal">
+                <div class="cap-icon"><svg class="icon"><use href="#i-smartphone"/></svg></div>
+                <h3>Mobile &amp; Platform Integration</h3>
+                <p>IAP, ads, analytics, attribution, platform SDKs, and Android/iOS production builds.</p>
+            </div>
+            <div class="cap-card reveal">
+                <div class="cap-icon"><svg class="icon"><use href="#i-gauge"/></svg></div>
+                <h3>Optimization &amp; Shipping</h3>
+                <p>Profiling, performance work, low-end device support, WebGL builds, and release prep.</p>
             </div>
         </div>
-        <!-- ★ FEATURED: Bloom Prison ★ -->
-        <div class="featured-wrap fade-up">
-            <div class="featured-card">
-                <div class="featured-body">
-                    <span class="featured-flag">★ Featured Project</span>
-                    <div class="featured-title">Bloom Prison</div>
-                    <div class="featured-studio">Roguelike Action-Adventure &nbsp;·&nbsp; Sole Developer &nbsp;·&nbsp; In Early Development</div>
-                    <p class="featured-desc">
-                        My flagship title and proudest work: a roguelike action-adventure experience
-                        for Roblox that I develop as the sole developer at my company. Fluid melee
-                        combat with per-weapon abilities and VFX, distinct enemy archetypes, randomized
-                        points of interest each run, cutscenes, and a full inventory system, every
-                        system designed and scripted by me. Currently in early development.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Roguelike</span>
-                        <span class="tag">Free-Flow Combat</span>
-                        <span class="tag">Enemy AI</span>
-                        <span class="tag">Abilities &amp; VFX</span>
-                        <span class="tag">Inventory System</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/bloom-prison.html">Full Breakdown ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-                <div class="featured-art">
-                    <!-- Drop a cover image here later: <img src="assets/bloom-prison-cover.jpg" alt="Bloom Prison"> -->
-                    <div class="featured-art-placeholder">🌸</div>
-                </div>
+    </div>
+</section>
+
+<!-- ════════════ HOW I WORK ════════════ -->
+<section class="section" id="how">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-index">04 / How I Work</span>
+            <h2 class="section-title">Prototype to production.</h2>
+        </div>
+        <div class="reveal">
+            <div class="flow">
+                <span class="flow-step"><span class="step-n">01</span> Prototype</span>
+                <span class="flow-arrow"><svg class="icon"><use href="#i-arrow-r"/></svg></span>
+                <span class="flow-step"><span class="step-n">02</span> Build</span>
+                <span class="flow-arrow"><svg class="icon"><use href="#i-arrow-r"/></svg></span>
+                <span class="flow-step"><span class="step-n">03</span> Test</span>
+                <span class="flow-arrow"><svg class="icon"><use href="#i-arrow-r"/></svg></span>
+                <span class="flow-step"><span class="step-n">04</span> Polish</span>
+                <span class="flow-arrow"><svg class="icon"><use href="#i-arrow-r"/></svg></span>
+                <span class="flow-step"><span class="step-n">05</span> Ship</span>
             </div>
+            <p class="how-text">
+                I like getting a playable version working early, then iterating on the systems, feel,
+                performance, and polish that turn a prototype into a shippable game.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ MORE PROJECTS ════════════ -->
+<section class="section" id="more">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-index">More Projects</span>
+            <h2 class="section-title">Roblox experiences &amp; more.</h2>
+            <p class="section-desc">Additional shipped and in-progress work. See the full Unity and Roblox collections for everything.</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="more-grid">
 
-            <!-- 99 Days Zombie Survival -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🧟</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">99 Days Zombie Survival</div>
+                    <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
                 </div>
-                <div class="project-body">
-                    <div class="project-title">99 Days Zombie Survival</div>
-                    <div class="project-studio">ZhenStudio – 26 &nbsp;·&nbsp; Jan 2026 – Present</div>
-                    <p class="project-desc">
-                        Narrative-driven Roblox survival experience. Features scripted cinematic
-                        cutscenes via Moon Animator, modular weapons system, gacha system,
-                        backpack inventory UI, and onboarding flows. 155,800+ visits and 1,200+
-                        favorites within 4 months of launch.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Moon Animator</span>
-                        <span class="tag">Gacha System</span>
-                        <span class="tag">Weapons System</span>
-                        <span class="tag">155K+ Visits</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/99-days-zombie-survival.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank">Play on Roblox ↗</a>
-                    </div>
+                <p class="mini-desc">A narrative-driven survival experience with cinematic cutscenes, a modular weapons system, and a gacha loop. Reached 155,800+ visits.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Roblox · Luau</span>
+                    <a class="mini-link" href="projects/99-days-zombie-survival.html">Details <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">Octopus Energy</div>
+                    <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                </div>
+                <p class="mini-desc">A tycoon game where players collect tycoons and build a base, with obbys, pets, daily rewards, a shop, and a leaderboard. I built every system.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Roblox · Luau</span>
+                    <a class="mini-link" href="projects/octopus-energy.html">Details <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">Survive Area 51 Arena</div>
+                    <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                </div>
+                <p class="mini-desc">A wave-based survival game: hold off escalating waves, build fences and plant guns to defend, unlock weapons, and climb the leaderboard.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Roblox · Luau</span>
+                    <a class="mini-link" href="projects/survive-area-51-arena.html">Details <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">Dig to Escape</div>
+                    <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                </div>
+                <p class="mini-desc">An escape game set in a haunted sunken pirate ship. Dig your way out while managing stamina and trading items with other players.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Roblox · Luau</span>
+                    <a class="mini-link" href="projects/dig-to-escape.html">Details <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">Unity Games</div>
+                    <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> Collection</span>
+                </div>
+                <p class="mini-desc">The full set of Unity mobile and WebGL titles, with screenshots, gameplay video, and case studies for each.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Unity · C#</span>
+                    <a class="mini-link" href="unity.html">View all <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+            <article class="mini-card reveal">
+                <div class="mini-top">
+                    <div class="mini-title">Roblox Games</div>
+                    <span class="platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Collection</span>
+                </div>
+                <p class="mini-desc">The full set of Roblox experiences, including Bloom Prison and every live title in one place.</p>
+                <div class="mini-foot">
+                    <span class="mini-tech">Roblox · Luau</span>
+                    <a class="mini-link" href="roblox.html">View all <svg class="icon"><use href="#i-arrow-ur"/></svg></a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ════════════ ABOUT ════════════ -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-index">About</span>
+            <h2 class="section-title">A bit about me.</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p>
+                    I'm a game developer from Pakistan working across Unity/C# and Roblox/Luau. I've shipped
+                    titles with real players on Google Play, the App Store, and Roblox, and I'm most at home in
+                    the guts of a game: player controls, physics, AI, and the meta systems, shops, garages,
+                    progression, leaderboards, that keep people coming back.
+                </p>
+                <p>
+                    On Roblox I build narrative-driven experiences with cutscenes, modular weapons, and gacha
+                    systems, tuned to run well on low-end devices. I work comfortably in remote agile teams
+                    alongside designers, artists, and QA using Git and Jira, and I care about actually shipping,
+                    not just prototyping.
+                </p>
+
+                <div class="skills-groups">
+                    <div class="skill-group"><span class="sg-label">Engines</span><div class="chips"><span class="chip">Unity 2D/3D</span><span class="chip">Roblox Studio</span><span class="chip">Unreal Engine 4</span></div></div>
+                    <div class="skill-group"><span class="sg-label">Languages</span><div class="chips"><span class="chip">C#</span><span class="chip">Luau</span></div></div>
+                    <div class="skill-group"><span class="sg-label">Platforms</span><div class="chips"><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">WebGL</span><span class="chip">Roblox</span></div></div>
+                    <div class="skill-group"><span class="sg-label">Services</span><div class="chips"><span class="chip">IAP</span><span class="chip">AdMob</span><span class="chip">Yodo1</span><span class="chip">AppsFlyer</span><span class="chip">iOS ATT</span></div></div>
+                    <div class="skill-group"><span class="sg-label">Workflow</span><div class="chips"><span class="chip">Git</span><span class="chip">Jira</span><span class="chip">Agile</span><span class="chip">DOTween</span><span class="chip">Moon Animator</span></div></div>
                 </div>
             </div>
 
-
-            <!-- Octopus Energy -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🐙</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
+            <aside class="about-panel reveal">
+                <h3>Currently open to</h3>
+                <ul class="open-list">
+                    <li><svg class="icon"><use href="#i-check"/></svg> Remote game development roles</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg> Freelance projects</li>
+                    <li><svg class="icon"><use href="#i-check"/></svg> Game collaborations</li>
+                </ul>
+                <h3 style="margin-top:1.6rem;">Based in</h3>
+                <ul class="open-list">
+                    <li><svg class="icon" style="color:var(--text-3)"><use href="#i-pin"/></svg> Peshawar, Pakistan</li>
+                </ul>
+                <h3 style="margin-top:1.6rem;">Shipped on</h3>
+                <div class="chips">
+                    <span class="chip">Google Play</span><span class="chip">App Store</span><span class="chip">WebGL</span><span class="chip">Roblox</span>
                 </div>
-                <div class="project-body">
-                    <div class="project-title">Octopus Energy</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A Roblox tycoon game where players collect different tycoons and build their base
-                        around them. Features obbys, collectables, pets, daily rewards, a shop, and a
-                        leaderboard. I built every system.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Tycoon</span>
-                        <span class="tag">Pets</span>
-                        <span class="tag">Shop System</span>
-                        <span class="tag">Leaderboard</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/octopus-energy.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Survive Area 51 Arena -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">👽</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Survive Area 51 Arena</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A wave-based survival game. Fight off escalating waves of enemies, build fences
-                        and plant guns to defend, unlock powerful weapons, and climb the leaderboard.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Wave Survival</span>
-                        <span class="tag">Tower Defense</span>
-                        <span class="tag">Weapons</span>
-                        <span class="tag">Leaderboard</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/survive-area-51-arena.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/122972445498260/Survive-Area-51-Arena" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dig to Escape -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🏴‍☠️</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Dig to Escape</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A recently developed escape game set in a haunted sunken pirate ship. Dig your way
-                        out while managing your stamina, and trade items with other players along the way.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Escape</span>
-                        <span class="tag">Digging</span>
-                        <span class="tag">Trading System</span>
-                        <span class="tag">Stamina</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/dig-to-escape.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/127431524246841/Dig-to-Escape" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4 Reaction -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🎲</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-android">Android</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">4 Reaction</div>
-                    <div class="project-studio">UFD Studios &nbsp;·&nbsp; Mar 2025</div>
-                    <p class="project-desc">
-                        A 2D local multiplayer party game I built from scratch as lead developer, with 30 unique
-                        minigames, a reactive personality that taunts and applauds you, an AI opponent,
-                        and an XP unlock system. 5,000+ installs. Includes IAP, AppsFlyer analytics, and iOS ATT compliance.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity 2D</span>
-                        <span class="tag">Lead Dev</span>
-                        <span class="tag">30 Minigames</span>
-                        <span class="tag">Local Multiplayer</span>
-                        <span class="tag">AI Opponent</span>
-                        <span class="tag">XP System</span>
-                        <span class="tag">IAP</span>
-                        <span class="tag">AppsFlyer</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/four-reaction.html">Details ↗</a>
-                        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.junostudio.fourreaction" target="_blank">Google Play ↗</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Circular Pong -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🏓</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-android">Android</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Circular Pong</div>
-                    <div class="project-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-                    <p class="project-desc">
-                        An arcade color-ball game I led the development of. Control a paddle to keep
-                        the ball inside the ring, dodge obstacles, and collect coins. Features a skins
-                        store, spin wheel, daily rewards, weekly missions, a Google Play leaderboard,
-                        Google Ads, and IAP.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity 2D</span>
-                        <span class="tag">Lead Dev</span>
-                        <span class="tag">Arcade</span>
-                        <span class="tag">Leaderboard</span>
-                        <span class="tag">Skins Store</span>
-                        <span class="tag">Google Ads</span>
-                        <span class="tag">IAP</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/circular-pong.html">Details ↗</a>
-                        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank">Google Play ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mouse Maze -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🐭</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-webgl">WebGL</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Mouse Maze</div>
-                    <div class="project-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-                    <p class="project-desc">
-                        A browser-based WebGL maze game where you guide a mouse to the cheese. Detects the
-                        player's device and switches between keyboard controls on PC and an on-screen
-                        joystick on mobile, with interactive DOTween-animated menus and panels.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">WebGL</span>
-                        <span class="tag">Adaptive Controls</span>
-                        <span class="tag">On-Screen Joystick</span>
-                        <span class="tag">DOTween</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/mouse-maze.html">Details ↗</a>
-                        <a class="proj-link" href="https://daredevil101.itch.io/mouse-maze" target="_blank">Play on itch.io ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rise & Roll -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🎱</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-webgl">WebGL</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Rise &amp; Roll</div>
-                    <div class="project-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-                    <p class="project-desc">
-                        A physics-based WebGL ball-rolling game. Swipe to roll the ball through levels full
-                        of obstacles, unlock ball skins in the shop, and compete on an integrated itch.io
-                        leaderboard.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">WebGL</span>
-                        <span class="tag">Physics</span>
-                        <span class="tag">Swipe Controls</span>
-                        <span class="tag">Shop System</span>
-                        <span class="tag">Leaderboard</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/rise-and-roll.html">Details ↗</a>
-                        <a class="proj-link" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank">Play on itch.io ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Meta-Space -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🌐</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-desktop">Desktop / VR</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Meta-Space: Education in the Metaverse</div>
-                    <div class="project-studio">UET Peshawar &nbsp;·&nbsp; Dec 2023 – Mar 2024</div>
-                    <p class="project-desc">
-                        Immersive virtual classroom in Unreal Engine 4 with MetaHuman avatars
-                        and Agora SDK for real-time voice &amp; file sharing. Features interactive
-                        whiteboards and collaboration tools. Research published in IJIST journal.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unreal Engine 4</span>
-                        <span class="tag">MetaHuman</span>
-                        <span class="tag">Agora SDK</span>
-                        <span class="tag">Blender</span>
-                        <span class="tag">Published Research</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link" href="https://journal.50sea.com/index.php/IJIST/article/view/768" target="_blank">Read Paper ↗</a>
-                    </div>
-                </div>
-            </div>
-
+            </aside>
         </div>
     </div>
 </section>
 
 <!-- ════════════ PUBLICATION ════════════ -->
-<section id="publication">
+<section class="section" id="publication">
     <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Research</p>
-            <h2 class="section-title">Publication</h2>
-            <div class="sep"></div>
-            <p class="section-desc">Academic research from my final year project at UET Peshawar.</p>
+        <div class="section-head reveal">
+            <span class="section-index">05 / Publication</span>
+            <h2 class="section-title">Research.</h2>
         </div>
-        <div class="pub-card fade-up">
-            <div class="pub-icon">📄</div>
+        <div class="pub reveal">
+            <div class="pub-icon"><svg class="icon"><use href="#i-file"/></svg></div>
             <div>
-                <div class="pub-title">Meta-Space: Pioneering Education in the Metaverse</div>
-                <div class="pub-journal">International Journal of Innovations in Science &amp; Technology (IJIST)</div>
-                <p class="pub-desc">
-                    Designed and developed an immersive virtual classroom using Unreal Engine 4,
-                    integrating Agora SDK for real-time voice communication, MetaHuman avatars
-                    for presence, and interactive tools to mirror real classroom workflows.
-                    Conducted user testing with educators and iterated on usability, performance,
-                    and learning outcomes.
+                <h3>Meta-Space: Pioneering Education in the Metaverse</h3>
+                <div class="pub-venue">International Journal of Innovations in Science &amp; Technology (IJIST) · UET Peshawar</div>
+                <p>
+                    My final-year research project: an immersive virtual classroom built in Unreal Engine 4,
+                    with MetaHuman avatars for presence and Agora SDK for real-time voice and file sharing.
+                    I designed interactive tools to mirror real classroom workflows, then ran user testing with
+                    educators and iterated on usability, performance, and learning outcomes.
                 </p>
-                <a class="proj-link" href="https://journal.50sea.com/index.php/IJIST/article/view/768" target="_blank">
-                    Read Full Paper ↗
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ════════════ EDUCATION ════════════ -->
-<section id="education">
-    <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Education</p>
-            <h2 class="section-title">Academic Background</h2>
-            <div class="sep"></div>
-            <p class="section-desc">Formal education in engineering and computer science.</p>
-        </div>
-        <div class="edu-grid">
-            <div class="edu-card fade-up">
-                <div class="edu-icon">🎓</div>
-                <div class="edu-degree">B.S. Computer Systems Engineering</div>
-                <div class="edu-school">University of Engineering &amp; Technology, Peshawar</div>
-                <div class="edu-info">📍 Pakistan &nbsp;·&nbsp; 2024</div>
-            </div>
-            <div class="edu-card fade-up">
-                <div class="edu-icon">📚</div>
-                <div class="edu-degree">Faculty of Science in Computer Science</div>
-                <div class="edu-school">Edwards College Peshawar</div>
-                <div class="edu-info">📍 Pakistan &nbsp;·&nbsp; 2020</div>
+                <div class="chips" style="margin-top:1rem;">
+                    <span class="chip">Unreal Engine 4</span><span class="chip">MetaHuman</span><span class="chip">Agora SDK</span><span class="chip">Blender</span>
+                </div>
+                <a class="link-btn" href="https://journal.50sea.com/index.php/IJIST/article/view/768" target="_blank" rel="noopener"><svg class="icon"><use href="#i-file"/></svg> Read paper <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ════════════ CONTACT ════════════ -->
-<section id="contact">
+<section class="section" id="contact">
     <div class="container">
-        <div class="fade-up">
-            <p class="section-label" style="justify-content:center;">Contact</p>
-            <h2 class="section-title">Let's Build Something</h2>
-            <div class="sep" style="margin:1rem auto 1.5rem;"></div>
-            <p class="contact-intro">
-                Open to remote Unity and Roblox roles, freelance projects, and game dev collabs.
-                Reach out through any channel below.
-            </p>
-        </div>
-        <div class="contact-grid fade-up">
-            <a class="contact-card" href="mailto:hussnain.devcodes@gmail.com">
-                <span class="contact-icon">✉️</span>
-                <div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">hussnain.devcodes@gmail.com</div>
-                </div>
-            </a>
-            <a class="contact-card" href="https://www.linkedin.com/in/hussnain-sajjad-4129302b7" target="_blank">
-                <span class="contact-icon">💼</span>
-                <div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">hussnain-sajjad-4129302b7</div>
-                </div>
-            </a>
-            <a class="contact-card" href="tel:+923176993179">
-                <span class="contact-icon">📞</span>
-                <div>
-                    <div class="contact-label">Phone</div>
-                    <div class="contact-value">+92 317 6993179</div>
-                </div>
-            </a>
-            <div class="contact-card">
-                <span class="contact-icon">📍</span>
-                <div>
-                    <div class="contact-label">Location</div>
-                    <div class="contact-value">Peshawar, Pakistan</div>
-                </div>
+        <div class="contact-wrap reveal">
+            <h2>Have a game in mind?</h2>
+            <p>I'm open to game development roles, freelance projects, and interesting collaborations. The fastest way to reach me is email.</p>
+            <div class="contact-actions">
+                <a class="btn btn-primary" href="mailto:hussnain.devcodes@gmail.com"><svg class="icon"><use href="#i-mail"/></svg> Email me</a>
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/hussnain-sajjad-4129302b7" target="_blank" rel="noopener"><svg class="icon"><use href="#i-linkedin"/></svg> LinkedIn</a>
+                <a class="btn btn-ghost" href="https://github.com/hussnaindev-debug" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg> GitHub</a>
             </div>
         </div>
     </div>
 </section>
 
+</main>
+
 <!-- ════════════ FOOTER ════════════ -->
-<footer>
-    <p>© 2026 <span>Hussnain Sajjad</span> · Built with HTML/CSS · Hosted on GitHub Pages</p>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id">
+                <div class="f-name">Hussnain Sajjad</div>
+                <div class="f-role">Game Developer · Unity &amp; Roblox</div>
+            </div>
+            <div class="footer-links">
+                <a class="nav-icon" href="https://github.com/hussnaindev-debug" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a>
+                <a class="nav-icon" href="https://www.linkedin.com/in/hussnain-sajjad-4129302b7" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+                <a class="nav-icon" href="mailto:hussnain.devcodes@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+            </div>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · Built with HTML &amp; CSS · Hosted on GitHub Pages</div>
+    </div>
 </footer>
 
-<!-- ════════════ SCRIPTS ════════════ -->
 <script>
-    // ── Fade-up on scroll ──
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.08 });
+    // Sticky nav shadow on scroll
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    document.querySelector('.hero .fade-up').classList.add('visible');
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    const setMenu = (open) => {
+        menu.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.querySelector('use').setAttribute('href', open ? '#i-x' : '#i-menu');
+    };
+    toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-    // ── Particle rain ──
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-
-    function resizeCanvas() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    const PARTICLE_COUNT = 60;
-    const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 1.5 + 0.5,
-        speed: Math.random() * 0.6 + 0.2,
-        opacity: Math.random() * 0.4 + 0.1,
-    }));
-
-    function drawParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(p => {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(204, 0, 0, ${p.opacity})`;
-            ctx.fill();
-
-            p.y += p.speed;
-            if (p.y > canvas.height) {
-                p.y = -4;
-                p.x = Math.random() * canvas.width;
-            }
-        });
-        requestAnimationFrame(drawParticles);
-    }
-    drawParticles();
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>
