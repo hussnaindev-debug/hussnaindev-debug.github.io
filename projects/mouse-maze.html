@@ -2,172 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Mouse Maze | Hussnain Sajjad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mouse Maze: a browser-based Unity WebGL maze game with adaptive PC and mobile controls, built by Hussnain Sajjad." />
+    <title>Mouse Maze — Case Study | Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
 
-<nav>
-    <div class="nav-inner">
-        <a class="nav-logo" href="../index.html">Hussnain Sajjad</a>
-        <ul class="nav-links">
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+</defs></svg>
 
-<header class="detail-hero">
-    <div class="container fade-up visible">
-        <a class="back-link" href="../index.html#projects">← Back to Projects</a>
-        <div class="detail-emoji">🐭</div>
-        <h1 class="detail-title">Mouse Maze</h1>
-        <div class="detail-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-        <div class="detail-meta">
-            <span class="platform-badge badge-webgl">WebGL</span>
-            <span class="tl-period">Playable in Browser</span>
-        </div>
-        <p class="detail-tagline">
-            A browser-based maze game where you guide a mouse through twisting corridors to reach the
-            cheese, with controls that adapt automatically to whether you are on a PC or a phone.
-        </p>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/mouse-maze" target="_blank">Play on itch.io ↗</a>
-            <a class="btn btn-outline" href="../index.html#contact">Get in Touch</a>
-        </div>
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="../index.html"><span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span> Hussnain Sajjad</a>
+        <nav aria-label="Primary"><ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../unity.html">Unity</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul></nav>
+        <div class="nav-right"><a class="btn btn-primary btn-sm nav-desktop-cta" href="../index.html#contact">Let's Talk</a></div>
     </div>
 </header>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Overview</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">
-            Mouse Maze is a WebGL game built in Unity and published on itch.io, so it runs right in the
-            browser with no download. You play as a mouse navigating a maze, working your way through the
-            corridors to find the cheese waiting at the end.
-        </p>
-        <p class="detail-body-text">
-            The part I am most proud of is the control system. The game detects what device the player is
-            on and enables the right scheme automatically: keyboard controls on desktop, and a responsive
-            on-screen joystick on touch devices. That means the same WebGL build feels natural whether it
-            is opened on a laptop or a phone, with no setup from the player.
-        </p>
-        <p class="detail-body-text">
-            The interface is built to feel alive. Menus, buttons, and panels are animated with DOTween,
-            giving every interaction smooth motion and polish rather than hard cuts, which makes the whole
-            experience feel responsive and finished.
-        </p>
-    </div>
-</section>
+<main id="main">
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Key Features</h2>
-        <div class="sep"></div>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>🛠️ Game Developer</h4>
-                <p>Built the game end to end, from gameplay to UI and the adaptive control system.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🧀 Maze Navigation</h4>
-                <p>Guide a mouse through a maze of corridors to reach the cheese at the end.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🖥️ Adaptive Controls</h4>
-                <p>The game detects the player's device and enables the right control scheme automatically.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🕹️ On-Screen Joystick</h4>
-                <p>A responsive touch joystick for mobile players, plus keyboard controls on desktop.</p>
-            </div>
-            <div class="feature-item">
-                <h4>✨ DOTween UI</h4>
-                <p>Interactive menus with animated buttons and panel transitions for a polished feel.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🌐 WebGL, No Download</h4>
-                <p>Runs directly in the browser on itch.io, on both desktop and mobile.</p>
-            </div>
+<section class="page-hero">
+    <div class="container reveal">
+        <a class="back-link" href="../unity.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Unity games</a>
+        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Browser Game · Unity · WebGL</div>
+        <h1>Mouse Maze</h1>
+        <div class="page-sub">UFD Studios · Lead Developer</div>
+        <div class="hero-meta">
+            <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> WebGL</span>
+            <span class="chip">Playable in browser</span>
+        </div>
+        <p class="page-lead">
+            A browser-based maze game where you guide a mouse through twisting corridors to reach the cheese,
+            with controls that adapt automatically to whether you're on a PC or a phone.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://daredevil101.itch.io/mouse-maze" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
+            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
+<section class="section">
+    <div class="container reveal prose">
+        <h2 class="detail-h2">The game</h2>
+        <p>Mouse Maze is a WebGL game built in Unity and published on itch.io, so it runs right in the browser with no download. You play as a mouse navigating a maze, working through the corridors to find the cheese at the end.</p>
+        <p>The part I'm most proud of is the control system. The game detects the player's device and enables the right scheme automatically: keyboard controls on desktop, and a responsive on-screen joystick on touch devices. The same WebGL build feels natural on a laptop or a phone, with no setup from the player.</p>
+        <p>The interface is built to feel alive, with menus, buttons, and panels animated in DOTween, so every interaction has smooth motion and polish rather than hard cuts.</p>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">What I built</h2>
+        <div class="feat-grid">
+            <div class="feat"><h4>Built end to end</h4><p>From gameplay to UI and the adaptive control system.</p></div>
+            <div class="feat"><h4>Maze navigation</h4><p>Guide a mouse through a maze of corridors to reach the cheese.</p></div>
+            <div class="feat"><h4>Adaptive controls</h4><p>Detects the player's device and enables the right control scheme automatically.</p></div>
+            <div class="feat"><h4>On-screen joystick</h4><p>A responsive touch joystick for mobile, plus keyboard controls on desktop.</p></div>
+            <div class="feat"><h4>DOTween UI</h4><p>Interactive menus with animated buttons and panel transitions for a polished feel.</p></div>
+            <div class="feat"><h4>WebGL, no download</h4><p>Runs directly in the browser on itch.io, on desktop and mobile.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container reveal">
         <h2 class="detail-h2">Screenshots</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">Maze gameplay, menus, and controls.</p>
-        <div class="gallery-grid">
-            <div class="media-frame"><img src="../assets/media/mouse-maze/shot-1.jpg" alt="Mouse Maze main menu with play and settings" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/mouse-maze/shot-2.jpg" alt="Level select screen with cheese-block levels" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/mouse-maze/shot-3.jpg" alt="Mouse navigating the 3D maze on level 5" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/mouse-maze/shot-4.jpg" alt="Victory screen with three stars" loading="lazy"></div>
+        <div class="gallery">
+            <div class="frame"><img src="../assets/media/mouse-maze/shot-1.jpg" alt="Mouse Maze main menu with play and settings" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/mouse-maze/shot-2.jpg" alt="Level select screen with cheese-block levels" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/mouse-maze/shot-3.jpg" alt="Mouse navigating the 3D maze on level 5" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/mouse-maze/shot-4.jpg" alt="Victory screen with three stars" loading="lazy" /></div>
         </div>
-    </div>
-</section>
-
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Gameplay Video</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">A run through the maze showing controls and UI.</p>
-        <div class="media-frame video-frame">
+        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
+        <div class="frame frame-wide">
             <video controls preload="metadata" poster="../assets/media/mouse-maze/poster.png">
-                <source src="../assets/media/mouse-maze/gameplay.mp4" type="video/mp4">
+                <source src="../assets/media/mouse-maze/gameplay.mp4" type="video/mp4" />
                 Your browser doesn't support embedded video.
             </video>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Tech &amp; Tools</h2>
-        <div class="sep"></div>
-        <div class="detail-tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-            <span class="tag">WebGL</span>
-            <span class="tag">DOTween</span>
-            <span class="tag">Device Detection</span>
-            <span class="tag">On-Screen Joystick</span>
-            <span class="tag">Keyboard Controls</span>
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">Tech &amp; tools</h2>
+        <div class="chips">
+            <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">WebGL</span><span class="chip">DOTween</span>
+            <span class="chip">Device Detection</span><span class="chip">On-Screen Joystick</span><span class="chip">Keyboard Controls</span>
         </div>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/mouse-maze" target="_blank">Play on itch.io ↗</a>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://daredevil101.itch.io/mouse-maze" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">More Projects</h2>
-        <div class="sep"></div>
-        <div class="more-projects">
-            <a class="more-chip" href="rise-and-roll.html">🎱 Rise &amp; Roll</a>
-            <a class="more-chip" href="99-days-zombie-survival.html">🧟 99 Days Zombie Survival</a>
-            <a class="more-chip" href="four-reaction.html">🎲 4 Reaction</a>
-            <a class="more-chip" href="circular-pong.html">🏓 Circular Pong</a>
+<section class="section">
+    <div class="container reveal">
+        <h2 class="detail-h2">More projects</h2>
+        <div class="more-chips">
+            <a class="more-chip2" href="rise-and-roll.html"><svg class="icon"><use href="#i-gamepad"/></svg> Rise &amp; Roll</a>
+            <a class="more-chip2" href="four-reaction.html"><svg class="icon"><use href="#i-smartphone"/></svg> 4 Reaction</a>
+            <a class="more-chip2" href="circular-pong.html"><svg class="icon"><use href="#i-smartphone"/></svg> Circular Pong</a>
+            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 <span>Hussnain Sajjad</span> · <a href="../index.html">Home</a> · Hosted on GitHub Pages</p>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id"><div class="f-name">Hussnain Sajjad</div><div class="f-role">Game Developer · Unity &amp; Roblox</div></div>
+            <a class="btn btn-ghost btn-sm" href="../index.html#contact">Let's Talk</a>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../index.html">Home</a> · Hosted on GitHub Pages</div>
+    </div>
 </footer>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>

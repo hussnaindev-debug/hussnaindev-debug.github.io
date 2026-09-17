@@ -2,241 +2,215 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Roblox Games | Hussnain Sajjad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Roblox experiences built by Hussnain Sajjad in Roblox Studio and Luau, including Bloom Prison, his flagship roguelike in development." />
+    <title>Roblox Games — Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
 
-<nav>
-    <div class="nav-inner">
-        <a class="nav-logo" href="index.html">Hussnain Sajjad</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Full Portfolio</a></li>
-            <li><a href="unity.html">Unity Games</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+</defs></svg>
 
-<header class="detail-hero">
-    <div class="container fade-up visible">
-        <a class="back-link" href="index.html">← Full Portfolio</a>
-        <div class="detail-emoji">🎮</div>
-        <h1 class="detail-title">Roblox Games</h1>
-        <div class="detail-studio">Roblox Developer &nbsp;·&nbsp; Luau</div>
-        <p class="detail-tagline">
-            Live Roblox experiences I have developed, covering gameplay systems, cinematic cutscenes,
-            modular weapons, gacha and economy systems, UI, and performance tuned for mobile. Built with
-            Roblox Studio and Luau on a server-authoritative model.
-        </p>
-        <div class="hero-stats" style="justify-content:flex-start;margin-top:2rem;">
-            <div class="stat" style="padding-left:0;">
-                <div class="stat-num">155K+</div>
-                <div class="stat-label">Visits</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">5</div>
-                <div class="stat-label">Experiences</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">Luau</div>
-                <div class="stat-label">Server + Client</div>
-            </div>
+<!-- NAV -->
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+            <span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span>
+            Hussnain Sajjad
+        </a>
+        <nav aria-label="Primary">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="unity.html">Unity</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a class="btn btn-primary btn-sm nav-desktop-cta" href="index.html#contact">Let's Talk</a>
+            <a class="btn btn-ghost btn-sm" href="unity.html">Unity →</a>
         </div>
     </div>
 </header>
 
-<section class="detail-section">
-    <div class="container">
-        <div class="fade-up">
-            <p class="section-label">Roblox Portfolio</p>
-            <h2 class="detail-h2">Experiences</h2>
-            <div class="sep"></div>
-            <p class="detail-body-text">A selection of Roblox experiences I have worked on. Click <strong style="color:#ccc;">Details</strong> on any card for a full breakdown, or play it live on Roblox.</p>
-        </div>
+<main id="main">
 
-        <!-- ★ FEATURED: Bloom Prison ★ -->
-        <div class="featured-wrap fade-up">
-            <div class="featured-card">
-                <div class="featured-body">
-                    <span class="featured-flag">★ Featured Project</span>
-                    <div class="featured-title">Bloom Prison</div>
-                    <div class="featured-studio">Roguelike Action-Adventure &nbsp;·&nbsp; Sole Developer &nbsp;·&nbsp; In Early Development</div>
-                    <p class="featured-desc">
-                        My flagship title and proudest work: a roguelike action-adventure experience
-                        for Roblox that I develop as the sole developer at my company. Fluid melee
-                        combat with per-weapon abilities and VFX, distinct enemy archetypes, randomized
-                        points of interest each run, cutscenes, and a full inventory system, every
-                        system designed and scripted by me. Currently in early development.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Roguelike</span>
-                        <span class="tag">Free-Flow Combat</span>
-                        <span class="tag">Enemy AI</span>
-                        <span class="tag">Abilities &amp; VFX</span>
-                        <span class="tag">Inventory System</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/bloom-prison.html">Full Breakdown ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-                <div class="featured-art">
-                    <!-- Drop a cover image here later: <img src="assets/bloom-prison-cover.jpg" alt="Bloom Prison"> -->
-                    <div class="featured-art-placeholder">🌸</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-grid">
-
-            <!-- 99 Days Zombie Survival -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🧟</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">99 Days Zombie Survival</div>
-                    <div class="project-studio">ZhenStudio – 26 &nbsp;·&nbsp; Jan 2026 – Present</div>
-                    <p class="project-desc">
-                        Narrative-driven Roblox survival experience. Features scripted cinematic
-                        cutscenes via Moon Animator, modular weapons system, gacha system,
-                        backpack inventory UI, and onboarding flows. 155,800+ visits and 1,200+
-                        favorites within 4 months of launch.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Moon Animator</span>
-                        <span class="tag">Gacha System</span>
-                        <span class="tag">Weapons System</span>
-                        <span class="tag">155K+ Visits</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/99-days-zombie-survival.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Octopus Energy -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🐙</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Octopus Energy</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A Roblox tycoon game where players collect different tycoons and build their base
-                        around them. Features obbys, collectables, pets, daily rewards, a shop, and a
-                        leaderboard. I built every system.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Tycoon</span>
-                        <span class="tag">Pets</span>
-                        <span class="tag">Shop System</span>
-                        <span class="tag">Leaderboard</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/octopus-energy.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Survive Area 51 Arena -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">👽</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Survive Area 51 Arena</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A wave-based survival game. Fight off escalating waves of enemies, build fences
-                        and plant guns to defend, unlock powerful weapons, and climb the leaderboard.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Wave Survival</span>
-                        <span class="tag">Tower Defense</span>
-                        <span class="tag">Weapons</span>
-                        <span class="tag">Leaderboard</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/survive-area-51-arena.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/122972445498260/Survive-Area-51-Arena" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dig to Escape -->
-            <div class="project-card fade-up">
-                <div class="project-header">
-                    <span class="project-emoji">🏴‍☠️</span>
-                    <div class="platform-badges">
-                        <span class="platform-badge badge-roblox">Roblox</span>
-                    </div>
-                </div>
-                <div class="project-body">
-                    <div class="project-title">Dig to Escape</div>
-                    <div class="project-studio">Roblox Experience</div>
-                    <p class="project-desc">
-                        A recently developed escape game set in a haunted sunken pirate ship. Dig your way
-                        out while managing your stamina, and trade items with other players along the way.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Roblox Studio</span>
-                        <span class="tag">Luau</span>
-                        <span class="tag">Escape</span>
-                        <span class="tag">Digging</span>
-                        <span class="tag">Trading System</span>
-                        <span class="tag">Stamina</span>
-                    </div>
-                    <div class="project-links">
-                        <a class="proj-link filled" href="projects/dig-to-escape.html">Details ↗</a>
-                        <a class="proj-link" href="https://www.roblox.com/games/127431524246841/Dig-to-Escape" target="_blank">Play on Roblox ↗</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="detail-links fade-up" style="margin-top:2.5rem;">
-            <a class="btn btn-outline" href="unity.html">See Unity Games →</a>
-            <a class="btn btn-primary" href="index.html#contact">Work With Me</a>
+<!-- HERO -->
+<section class="page-hero">
+    <div class="container reveal">
+        <a class="back-link" href="index.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Back to portfolio</a>
+        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox · Luau</div>
+        <h1>Roblox Games</h1>
+        <div class="page-sub">Live experiences &amp; a flagship in development</div>
+        <p class="page-lead">
+            Roblox experiences I've built in Roblox Studio with Luau, covering gameplay systems,
+            cutscenes, weapons, gacha, tycoon economies, and UI, tuned to run well on low-end devices
+            on a server-authoritative model.
+        </p>
+        <div class="mini-stats">
+            <div class="mini-stat"><div class="ms-num">155K+</div><div class="ms-label">Visits</div></div>
+            <div class="mini-stat"><div class="ms-num">4</div><div class="ms-label">Experiences</div></div>
+            <div class="mini-stat"><div class="ms-num">Luau</div><div class="ms-label">Server + Client</div></div>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 <span>Hussnain Sajjad</span> · <a href="index.html">Full Portfolio</a> · Roblox Game Development</p>
+<!-- FLAGSHIP -->
+<section class="section">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-index">Flagship</span>
+            <h2 class="section-title">Bloom Prison</h2>
+            <p class="section-desc">My most ambitious Roblox project, in early development.</p>
+        </div>
+
+        <div class="flagship reveal">
+            <div class="flagship-body">
+                <span class="badge-dev"><svg class="icon"><use href="#i-sparkles"/></svg> Flagship · In Development</span>
+                <h3 class="flagship-title">Bloom Prison</h3>
+                <div class="flagship-meta">Roguelike Action-Adventure · Sole Developer</div>
+                <p class="flagship-desc">
+                    A roguelike action-adventure I'm building as the sole developer at my company. I design
+                    and script every system: free-flow melee combat with per-weapon abilities and VFX,
+                    distinct enemy archetypes, randomized points of interest each run, cutscenes, and a full
+                    inventory system.
+                </p>
+                <div class="chips" style="margin:1.25rem 0 1.5rem;">
+                    <span class="chip chip-accent">Roblox Studio</span><span class="chip">Luau</span>
+                    <span class="chip">Free-Flow Combat</span><span class="chip">Enemy AI</span><span class="chip">Abilities &amp; VFX</span>
+                </div>
+                <div class="work-links">
+                    <a class="link-btn primary" href="projects/bloom-prison.html">Read case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                    <a class="link-btn" href="https://www.roblox.com/share?code=2559c1f826afa642be130feaf8e437e6&type=ExperienceDetails&stamp=1789672246663" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                </div>
+            </div>
+            <div class="flagship-art">
+                <div class="art-placeholder">
+                    <svg class="icon"><use href="#i-sparkles"/></svg>
+                    <span>Artwork coming soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIVE EXPERIENCES -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-index">Live Experiences</span>
+            <h2 class="section-title">Shipped on Roblox</h2>
+            <p class="section-desc">Experiences live on the platform. Each card links to a full breakdown.</p>
+        </div>
+
+        <div class="game-grid">
+
+            <!-- 99 Days -->
+            <article class="game-card reveal">
+                <div class="game-thumb">
+                    <span class="thumb-badge platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                    <div class="thumb-placeholder"><svg class="icon"><use href="#i-gamepad"/></svg><span>Screenshots coming soon</span></div>
+                </div>
+                <div class="game-info">
+                    <div class="g-title">99 Days Zombie Survival</div>
+                    <div class="g-studio">ZhenStudio – 26 · Jan 2026 – Present</div>
+                    <p class="g-desc">A narrative-driven survival experience with cinematic cutscenes via Moon Animator, a modular weapons system, a gacha loop, and backpack inventory UI. Reached 155,800+ visits and 1,200+ favorites within four months.</p>
+                    <div class="chips">
+                        <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Moon Animator</span><span class="chip">Gacha</span><span class="chip">155K+ Visits</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/99-days-zombie-survival.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://www.roblox.com/games/77487145790598/99-Days-Zombie-Survivsal" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Octopus Energy -->
+            <article class="game-card reveal">
+                <div class="game-thumb">
+                    <span class="thumb-badge platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                    <div class="thumb-placeholder"><svg class="icon"><use href="#i-gamepad"/></svg><span>Screenshots coming soon</span></div>
+                </div>
+                <div class="game-info">
+                    <div class="g-title">Octopus Energy</div>
+                    <div class="g-studio">Roblox Experience</div>
+                    <p class="g-desc">A tycoon game where players collect tycoons and build a base around them, with obbys, collectables, pets, daily rewards, a shop, and a leaderboard. I built every system in the experience.</p>
+                    <div class="chips">
+                        <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Tycoon</span><span class="chip">Pets</span><span class="chip">Shop System</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/octopus-energy.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Survive Area 51 -->
+            <article class="game-card reveal">
+                <div class="game-thumb">
+                    <span class="thumb-badge platform-tag pt-roblox"><svg class="icon"><use href="#i-gamepad"/></svg> Roblox</span>
+                    <div class="thumb-placeholder"><svg class="icon"><use href="#i-gamepad"/></svg><span>Screenshots coming soon</span></div>
+                </div>
+                <div class="game-info">
+                    <div class="g-title">Survive Area 51 Arena</div>
+                    <div class="g-studio">Roblox Experience</div>
+                    <p class="g-desc">A wave-based survival game: hold off escalating waves of enemies, build fences and plant guns to defend, unlock powerful weapons, and climb the leaderboard.</p>
+                    <div class="chips">
+                        <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Wave Survival</span><span class="chip">Tower Defense</span><span class="chip">Leaderboard</span>
+                    </div>
+                    <div class="work-links">
+                        <a class="link-btn primary" href="projects/survive-area-51-arena.html">Case study <svg class="icon arrow"><use href="#i-arrow-ur"/></svg></a>
+                        <a class="link-btn" href="https://www.roblox.com/games/122972445498260/Survive-Area-51-Arena" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Collection banner styled as a card slot: link to Unity -->
+            <div class="collection-banner reveal">
+                <div class="cb-icon"><svg class="icon"><use href="#i-smartphone"/></svg></div>
+                <div class="cb-text">
+                    <div class="cb-title">Unity mobile &amp; WebGL games</div>
+                    <div class="cb-desc">4 shipped titles with real screenshots and gameplay video.</div>
+                </div>
+                <a class="link-btn" href="unity.html">View Unity games <svg class="icon arrow"><use href="#i-arrow-r"/></svg></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id">
+                <div class="f-name">Hussnain Sajjad</div>
+                <div class="f-role">Game Developer · Unity &amp; Roblox</div>
+            </div>
+            <a class="btn btn-ghost btn-sm" href="index.html#contact">Let's Talk</a>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="index.html">Full portfolio</a> · Hosted on GitHub Pages</div>
+    </div>
 </footer>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>

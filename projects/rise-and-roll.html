@@ -2,173 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Rise &amp; Roll | Hussnain Sajjad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rise & Roll: a physics-based Unity WebGL ball-rolling game with a skins shop and leaderboard, built by Hussnain Sajjad." />
+    <title>Rise &amp; Roll — Case Study | Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
 
-<nav>
-    <div class="nav-inner">
-        <a class="nav-logo" href="../index.html">Hussnain Sajjad</a>
-        <ul class="nav-links">
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+</defs></svg>
 
-<header class="detail-hero">
-    <div class="container fade-up visible">
-        <a class="back-link" href="../index.html#projects">← Back to Projects</a>
-        <div class="detail-emoji">🎱</div>
-        <h1 class="detail-title">Rise &amp; Roll</h1>
-        <div class="detail-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-        <div class="detail-meta">
-            <span class="platform-badge badge-webgl">WebGL</span>
-            <span class="tl-period">Playable in Browser</span>
-        </div>
-        <p class="detail-tagline">
-            A physics-based ball-rolling game where you swipe to send the ball through level after level
-            of obstacles, unlocking new skins along the way and chasing the top of the leaderboard.
-        </p>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank">Play on itch.io ↗</a>
-            <a class="btn btn-outline" href="../index.html#contact">Get in Touch</a>
-        </div>
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="../index.html"><span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span> Hussnain Sajjad</a>
+        <nav aria-label="Primary"><ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../unity.html">Unity</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul></nav>
+        <div class="nav-right"><a class="btn btn-primary btn-sm nav-desktop-cta" href="../index.html#contact">Let's Talk</a></div>
     </div>
 </header>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Overview</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">
-            Rise &amp; Roll is a WebGL ball-rolling game built in Unity and published on itch.io, playable
-            straight from the browser. You control a ball and swipe to set it rolling, working through a
-            series of levels packed with obstacles that test your timing and control.
-        </p>
-        <p class="detail-body-text">
-            The feel of the game comes from its physics. The ball responds to your swipes with real
-            momentum, so rolling, building speed, and threading past hazards all come down to reading the
-            physics rather than memorizing inputs. Each level introduces new obstacles to keep the
-            challenge fresh.
-        </p>
-        <p class="detail-body-text">
-            Around the core loop is a shop system that lets players unlock and equip different ball skins,
-            and an itch.io leaderboard that turned each attempt into a race for the best score. This is one
-            of my earlier games, so depending on itch.io's current rules the leaderboard service may no
-            longer be live, but the system was fully built and integrated.
-        </p>
-    </div>
-</section>
+<main id="main">
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Key Features</h2>
-        <div class="sep"></div>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>🛠️ Game Developer</h4>
-                <p>Built the game end to end, from physics to the shop and leaderboard.</p>
-            </div>
-            <div class="feature-item">
-                <h4>⚙️ Physics-Based Rolling</h4>
-                <p>Swipe to roll the ball with real momentum and weight driving every movement.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🚧 Levels and Obstacles</h4>
-                <p>A series of levels, each introducing new obstacles to test timing and control.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🛍️ Ball Skins Shop</h4>
-                <p>A shop system to unlock and equip different ball skins.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🏆 itch.io Leaderboard</h4>
-                <p>Score competition through an integrated itch.io leaderboard.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🌐 WebGL, No Download</h4>
-                <p>Runs directly in the browser on itch.io.</p>
-            </div>
+<section class="page-hero">
+    <div class="container reveal">
+        <a class="back-link" href="../unity.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Unity games</a>
+        <div class="page-eyebrow"><svg class="icon"><use href="#i-gamepad"/></svg> Physics Arcade · Unity · WebGL</div>
+        <h1>Rise &amp; Roll</h1>
+        <div class="page-sub">UFD Studios · Lead Developer</div>
+        <div class="hero-meta">
+            <span class="platform-tag pt-webgl"><svg class="icon"><use href="#i-gamepad"/></svg> WebGL</span>
+            <span class="chip">Playable in browser</span>
+        </div>
+        <p class="page-lead">
+            A physics-based ball-rolling game where you swipe to send the ball through level after level of
+            obstacles, unlocking new skins along the way and chasing the top of the leaderboard.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
+            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
+<section class="section">
+    <div class="container reveal prose">
+        <h2 class="detail-h2">The game</h2>
+        <p>Rise &amp; Roll is a WebGL ball-rolling game built in Unity and published on itch.io, playable straight from the browser. You control a ball and swipe to set it rolling, working through levels packed with obstacles that test your timing and control.</p>
+        <p>The feel comes from its physics. The ball responds to your swipes with real momentum, so rolling, building speed, and threading past hazards all come down to reading the physics rather than memorizing inputs. Each level introduces new obstacles to keep it fresh.</p>
+        <p>Around the core loop is a shop for unlocking and equipping ball skins, and an itch.io leaderboard that turned each attempt into a race for the best score. This is one of my earlier games, so depending on itch.io's current rules the leaderboard service may no longer be live, but the system was fully built and integrated.</p>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">What I built</h2>
+        <div class="feat-grid">
+            <div class="feat"><h4>Built end to end</h4><p>From physics to the shop and leaderboard.</p></div>
+            <div class="feat"><h4>Physics-based rolling</h4><p>Swipe to roll the ball with real momentum and weight driving every movement.</p></div>
+            <div class="feat"><h4>Levels &amp; obstacles</h4><p>A series of levels, each introducing new obstacles to test timing and control.</p></div>
+            <div class="feat"><h4>Ball skins shop</h4><p>A shop system to unlock and equip different ball skins.</p></div>
+            <div class="feat"><h4>itch.io leaderboard</h4><p>Score competition through an integrated itch.io leaderboard.</p></div>
+            <div class="feat"><h4>WebGL, no download</h4><p>Runs directly in the browser on itch.io.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container reveal">
         <h2 class="detail-h2">Screenshots</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">Gameplay, levels, and the skins shop.</p>
-        <div class="gallery-grid">
-            <div class="media-frame"><img src="../assets/media/rise-and-roll/shot-1.jpg" alt="Rise & Roll title screen" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/rise-and-roll/shot-2.jpg" alt="Ball rolling down the track on level 9" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/rise-and-roll/shot-3.jpg" alt="Ball skins shop with select and close" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/rise-and-roll/shot-4.jpg" alt="Level completed screen with three stars and coins" loading="lazy"></div>
+        <div class="gallery">
+            <div class="frame"><img src="../assets/media/rise-and-roll/shot-1.jpg" alt="Rise and Roll title screen" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/rise-and-roll/shot-2.jpg" alt="Ball rolling down the track on level 9" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/rise-and-roll/shot-3.jpg" alt="Ball skins shop with select and close" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/rise-and-roll/shot-4.jpg" alt="Level completed screen with three stars and coins" loading="lazy" /></div>
         </div>
-    </div>
-</section>
-
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Gameplay Video</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">A run showing the rolling physics, obstacles, and shop.</p>
-        <div class="media-frame video-frame">
+        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
+        <div class="frame frame-wide">
             <video controls preload="metadata" poster="../assets/media/rise-and-roll/poster.png">
-                <source src="../assets/media/rise-and-roll/gameplay.mp4" type="video/mp4">
+                <source src="../assets/media/rise-and-roll/gameplay.mp4" type="video/mp4" />
                 Your browser doesn't support embedded video.
             </video>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Tech &amp; Tools</h2>
-        <div class="sep"></div>
-        <div class="detail-tags">
-            <span class="tag">Unity</span>
-            <span class="tag">C#</span>
-            <span class="tag">WebGL</span>
-            <span class="tag">Physics</span>
-            <span class="tag">Swipe Controls</span>
-            <span class="tag">Shop System</span>
-            <span class="tag">itch.io Leaderboard</span>
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">Tech &amp; tools</h2>
+        <div class="chips">
+            <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">WebGL</span><span class="chip">Physics</span>
+            <span class="chip">Swipe Controls</span><span class="chip">Shop System</span><span class="chip">itch.io Leaderboard</span>
         </div>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank">Play on itch.io ↗</a>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://daredevil101.itch.io/rolling-ball-test" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on itch.io</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">More Projects</h2>
-        <div class="sep"></div>
-        <div class="more-projects">
-            <a class="more-chip" href="mouse-maze.html">🐭 Mouse Maze</a>
-            <a class="more-chip" href="99-days-zombie-survival.html">🧟 99 Days Zombie Survival</a>
-            <a class="more-chip" href="four-reaction.html">🎲 4 Reaction</a>
-            <a class="more-chip" href="circular-pong.html">🏓 Circular Pong</a>
+<section class="section">
+    <div class="container reveal">
+        <h2 class="detail-h2">More projects</h2>
+        <div class="more-chips">
+            <a class="more-chip2" href="mouse-maze.html"><svg class="icon"><use href="#i-gamepad"/></svg> Mouse Maze</a>
+            <a class="more-chip2" href="four-reaction.html"><svg class="icon"><use href="#i-smartphone"/></svg> 4 Reaction</a>
+            <a class="more-chip2" href="circular-pong.html"><svg class="icon"><use href="#i-smartphone"/></svg> Circular Pong</a>
+            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 <span>Hussnain Sajjad</span> · <a href="../index.html">Home</a> · Hosted on GitHub Pages</p>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id"><div class="f-name">Hussnain Sajjad</div><div class="f-role">Game Developer · Unity &amp; Roblox</div></div>
+            <a class="btn btn-ghost btn-sm" href="../index.html#contact">Let's Talk</a>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../index.html">Home</a> · Hosted on GitHub Pages</div>
+    </div>
 </footer>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>

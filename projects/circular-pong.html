@@ -2,189 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Circular Pong | Hussnain Sajjad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Circular Pong: an arcade color-ball game with a full live-ops meta layer, led end to end by Hussnain Sajjad." />
+    <title>Circular Pong — Case Study | Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
 
-<nav>
-    <div class="nav-inner">
-        <a class="nav-logo" href="../index.html">Hussnain Sajjad</a>
-        <ul class="nav-links">
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M2 7h20"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+</defs></svg>
 
-<header class="detail-hero">
-    <div class="container fade-up visible">
-        <a class="back-link" href="../index.html#projects">← Back to Projects</a>
-        <div class="detail-emoji">🏓</div>
-        <h1 class="detail-title">Circular Pong</h1>
-        <div class="detail-studio">UFD Studios &nbsp;·&nbsp; Lead Developer</div>
-        <div class="detail-meta">
-            <span class="platform-badge badge-android">Android</span>
-            <span class="tl-period">Google Play</span>
-        </div>
-        <p class="detail-tagline">
-            An arcade color-ball game where you spin a paddle to keep the ball alive inside the ring,
-            dodging obstacles and collecting coins. I led its development end to end for Android.
-        </p>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank">Google Play ↗</a>
-            <a class="btn btn-outline" href="../index.html#contact">Get in Touch</a>
-        </div>
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="../index.html"><span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span> Hussnain Sajjad</a>
+        <nav aria-label="Primary"><ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../unity.html">Unity</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul></nav>
+        <div class="nav-right"><a class="btn btn-primary btn-sm nav-desktop-cta" href="../index.html#contact">Let's Talk</a></div>
     </div>
 </header>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Overview</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">
-            Circular Pong is an arcade reflex game built around a single ring. You control a paddle that
-            moves around the circle, and your job is to keep the colorful ball bouncing inside it. I led
-            development of the game end to end, building its core systems and gameplay.
-        </p>
-        <p class="detail-body-text">
-            Every time the ball collides with your paddle you score a point, so survival and scoring are
-            one and the same. The longer you last, the trickier it gets: obstacles appear inside the ring
-            that you have to steer the ball clear of, while coins are scattered around for you to collect
-            along the way.
-        </p>
-        <p class="detail-body-text">
-            Coins feed a full progression loop. A store lets players buy and equip skins for the ball,
-            the paddle, and the rings, and a spin wheel hands out in-game rewards. Daily rewards, a daily
-            ad bonus, and weekly missions give players a reason to come back every day.
-        </p>
-        <p class="detail-body-text">
-            A Google Play leaderboard turns every run into a competition for the global high score, and
-            DOTween drives the menus and transitions for smooth, satisfying animation throughout. On the
-            production side, I integrated Google Ads and in-app purchases to monetize the game without
-            breaking the flow of play.
-        </p>
-    </div>
-</section>
+<main id="main">
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Key Features</h2>
-        <div class="sep"></div>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h4>🛠️ Lead Developer</h4>
-                <p>Led development of the game end to end, building its core systems and gameplay.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🎯 One-Ring Gameplay</h4>
-                <p>Move a paddle around a circle to keep the ball bouncing inside. Each paddle hit scores a point.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🚧 Obstacles and Coins</h4>
-                <p>Steer the ball clear of obstacles inside the ring while collecting coins as you survive.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🛍️ Skins Store</h4>
-                <p>Spend coins to buy and equip custom skins for the ball, the paddle, and the rings.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🎡 Spin Wheel and Daily Rewards</h4>
-                <p>A reward wheel, daily rewards, a daily ad bonus, and weekly missions keep players coming back.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🏆 Google Play Leaderboard</h4>
-                <p>Global high-score competition through Google Play Games services.</p>
-            </div>
-            <div class="feature-item">
-                <h4>✨ DOTween Animations</h4>
-                <p>Smooth, animated menus and transitions throughout the interface.</p>
-            </div>
-            <div class="feature-item">
-                <h4>💰 Google Ads and IAP</h4>
-                <p>Integrated Google Ads and in-app purchases for monetization.</p>
-            </div>
+<section class="page-hero">
+    <div class="container reveal">
+        <a class="back-link" href="../unity.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Unity games</a>
+        <div class="page-eyebrow"><svg class="icon"><use href="#i-smartphone"/></svg> Arcade · Unity · Mobile</div>
+        <h1>Circular Pong</h1>
+        <div class="page-sub">UFD Studios · Lead Developer</div>
+        <div class="hero-meta">
+            <span class="platform-tag pt-android"><svg class="icon"><use href="#i-smartphone"/></svg> Android</span>
+            <span class="chip">Google Play</span>
+        </div>
+        <p class="page-lead">
+            An arcade color-ball game where you spin a paddle to keep the ball alive inside the ring, dodging
+            obstacles and collecting coins. I led its development end to end for Android.
+        </p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank" rel="noopener"><svg class="icon"><use href="#i-store"/></svg> Google Play</a>
+            <a class="btn btn-ghost" href="../index.html#contact">Get in touch</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
+<section class="section">
+    <div class="container reveal prose">
+        <h2 class="detail-h2">The game</h2>
+        <p>Circular Pong is an arcade reflex game built around a single ring. You control a paddle that moves around the circle, keeping a colorful ball bouncing inside it. I led development end to end, building its core systems and gameplay.</p>
+        <p>Every paddle hit scores a point, so survival and scoring are one and the same. The longer you last, the trickier it gets: obstacles appear inside the ring that you steer the ball clear of, while coins are scattered around to collect along the way.</p>
+        <p>Coins feed a full progression loop, a store for ball, paddle, and ring skins, a spin wheel for rewards, plus daily rewards, a daily ad bonus, and weekly missions, giving players a reason to return every day.</p>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">What I built</h2>
+        <div class="feat-grid">
+            <div class="feat"><h4>Lead developer</h4><p>Led development end to end, building the core systems and gameplay.</p></div>
+            <div class="feat"><h4>One-ring gameplay</h4><p>Move a paddle around a circle to keep the ball bouncing inside; each hit scores.</p></div>
+            <div class="feat"><h4>Obstacles &amp; coins</h4><p>Steer the ball clear of obstacles inside the ring while collecting coins.</p></div>
+            <div class="feat"><h4>Skins store</h4><p>Spend coins on skins for the ball, the paddle, and the rings.</p></div>
+            <div class="feat"><h4>Spin wheel &amp; daily rewards</h4><p>A reward wheel, daily rewards, a daily ad bonus, and weekly missions.</p></div>
+            <div class="feat"><h4>Leaderboard, Ads &amp; IAP</h4><p>A Google Play leaderboard for global scores, with Google Ads and IAP monetization.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container reveal">
         <h2 class="detail-h2">Screenshots</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">Gameplay, store, and reward screens.</p>
-        <div class="gallery-grid">
-            <div class="media-frame"><img src="../assets/media/circular-pong/shot-1.jpg" alt="Circular Pong branded loading screen" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/circular-pong/shot-2.jpg" alt="Ready screen with the ring, ball, and game buttons" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/circular-pong/shot-3.jpg" alt="Skins store showing ball skins and coin prices" loading="lazy"></div>
-            <div class="media-frame"><img src="../assets/media/circular-pong/shot-4.jpg" alt="Active gameplay with an obstacle and a coin to collect" loading="lazy"></div>
+        <div class="gallery">
+            <div class="frame"><img src="../assets/media/circular-pong/shot-1.jpg" alt="Circular Pong branded loading screen" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/circular-pong/shot-2.jpg" alt="Ready screen with the ring, ball, and game buttons" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/circular-pong/shot-3.jpg" alt="Skins store showing ball skins and coin prices" loading="lazy" /></div>
+            <div class="frame"><img src="../assets/media/circular-pong/shot-4.jpg" alt="Active gameplay with an obstacle and a coin to collect" loading="lazy" /></div>
         </div>
-    </div>
-</section>
-
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Gameplay Video</h2>
-        <div class="sep"></div>
-        <p class="detail-body-text">A run showing the core loop, obstacles, coins, and reward screens.</p>
-        <div class="media-frame video-frame">
+        <h2 class="detail-h2" style="margin-top:2.5rem;">Gameplay video</h2>
+        <div class="frame frame-wide">
             <video controls preload="metadata" poster="../assets/media/circular-pong/poster.png">
-                <source src="../assets/media/circular-pong/gameplay.mp4" type="video/mp4">
+                <source src="../assets/media/circular-pong/gameplay.mp4" type="video/mp4" />
                 Your browser doesn't support embedded video.
             </video>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">Tech &amp; Tools</h2>
-        <div class="sep"></div>
-        <div class="detail-tags">
-            <span class="tag">Unity 2D</span>
-            <span class="tag">C#</span>
-            <span class="tag">DOTween</span>
-            <span class="tag">Google Play Leaderboard</span>
-            <span class="tag">Skins Store</span>
-            <span class="tag">Spin Wheel</span>
-            <span class="tag">Daily Rewards</span>
-            <span class="tag">Google Ads</span>
-            <span class="tag">IAP</span>
-            <span class="tag">Android</span>
+<section class="section section-alt">
+    <div class="container reveal">
+        <h2 class="detail-h2">Tech &amp; tools</h2>
+        <div class="chips">
+            <span class="chip">Unity 2D</span><span class="chip">C#</span><span class="chip">DOTween</span><span class="chip">Google Play Leaderboard</span>
+            <span class="chip">Skins Store</span><span class="chip">Spin Wheel</span><span class="chip">Daily Rewards</span><span class="chip">Google Ads</span>
+            <span class="chip">IAP</span><span class="chip">Android</span>
         </div>
-        <div class="detail-links">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank">Google Play ↗</a>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.ufdstudios.circularpong" target="_blank" rel="noopener"><svg class="icon"><use href="#i-store"/></svg> Google Play</a>
         </div>
     </div>
 </section>
 
-<section class="detail-section">
-    <div class="container fade-up">
-        <h2 class="detail-h2">More Projects</h2>
-        <div class="sep"></div>
-        <div class="more-projects">
-            <a class="more-chip" href="99-days-zombie-survival.html">🧟 99 Days Zombie Survival</a>
-            <a class="more-chip" href="four-reaction.html">🎲 4 Reaction</a>
-            <a class="more-chip" href="mouse-maze.html">🐭 Mouse Maze</a>
-            <a class="more-chip" href="rise-and-roll.html">🎱 Rise &amp; Roll</a>
+<section class="section">
+    <div class="container reveal">
+        <h2 class="detail-h2">More projects</h2>
+        <div class="more-chips">
+            <a class="more-chip2" href="four-reaction.html"><svg class="icon"><use href="#i-smartphone"/></svg> 4 Reaction</a>
+            <a class="more-chip2" href="mouse-maze.html"><svg class="icon"><use href="#i-gamepad"/></svg> Mouse Maze</a>
+            <a class="more-chip2" href="rise-and-roll.html"><svg class="icon"><use href="#i-gamepad"/></svg> Rise &amp; Roll</a>
+            <a class="more-chip2" href="99-days-zombie-survival.html"><svg class="icon"><use href="#i-gamepad"/></svg> 99 Days Zombie Survival</a>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 <span>Hussnain Sajjad</span> · <a href="../index.html">Home</a> · Hosted on GitHub Pages</p>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id"><div class="f-name">Hussnain Sajjad</div><div class="f-role">Game Developer · Unity &amp; Roblox</div></div>
+            <a class="btn btn-ghost btn-sm" href="../index.html#contact">Let's Talk</a>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../index.html">Home</a> · Hosted on GitHub Pages</div>
+    </div>
 </footer>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
 </body>
