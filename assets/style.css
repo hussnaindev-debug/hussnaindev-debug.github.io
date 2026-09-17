@@ -614,8 +614,9 @@ section { padding: 5.5rem 2rem; }
 }
 
 /* ═══ Featured (flagship) project card ═══ */
+.featured-wrap { width: 100%; margin-bottom: 1.75rem; }
+
 .featured-card {
-    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 0;
@@ -626,7 +627,6 @@ section { padding: 5.5rem 2rem; }
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 1.75rem;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(204,0,0,0.12);
     transition: all 0.4s;
 }
