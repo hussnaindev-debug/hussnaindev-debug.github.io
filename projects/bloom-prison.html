@@ -31,6 +31,9 @@
     <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-chevron-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
 </defs></svg>
 
 <header class="nav" id="nav">
@@ -55,7 +58,8 @@
         <a href="#enemies">Enemy AI</a>
         <a href="#poi">Points of Interest</a>
         <a href="#cutscenes">Cutscenes</a>
-        <a href="#status">Status</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#gameplay">Gameplay</a>
         <a href="#tech">Built With</a>
     </div>
 </nav>
@@ -77,11 +81,7 @@
                 </div>
             </div>
             <div class="cs-hero-visual">
-                <div class="cs-hero-devbuild">
-                    <span class="db-badge"><svg class="icon"><use href="#i-sparkles"/></svg> Early Development</span>
-                    <div class="db-mark"><svg class="icon"><use href="#i-sword"/></svg></div>
-                    <p>An active development build. Screenshots and footage are on the way as the project grows.</p>
-                </div>
+                <img src="../assets/media/bloom-prison/cover.jpg" alt="Bloom Prison key art: a ninja clashing swords with a flower-headed guardian amid falling petals" />
             </div>
         </div>
         <div class="cs-metrics">
@@ -187,14 +187,40 @@
     </div>
 </section>
 
-<!-- Development status: one polished panel instead of empty coming-soon boxes -->
-<section class="cs-section alt" id="status">
+<!-- Gallery -->
+<section class="cs-section alt" id="gallery">
     <div class="container">
-        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Development status</h2></div>
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Inside the game</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">Key art and gameplay from the current build. Click any image to enlarge.</p>
+        <div class="cs-gallery">
+            <figure class="g-lead" data-full="../assets/media/bloom-prison/cover.jpg">
+                <img src="../assets/media/bloom-prison/cover.jpg" alt="Bloom Prison key art: a ninja clashing swords with a flower-headed guardian amid falling petals" loading="lazy" />
+                <figcaption>Key art</figcaption>
+            </figure>
+            <figure data-full="../assets/media/bloom-prison/shot-3.jpg">
+                <img src="../assets/media/bloom-prison/shot-3.jpg" alt="Fighting the Camellia Guardian boss with abilities and VFX" loading="lazy" />
+                <figcaption>Camellia Guardian boss fight</figcaption>
+            </figure>
+            <figure data-full="../assets/media/bloom-prison/shot-1.jpg">
+                <img src="../assets/media/bloom-prison/shot-1.jpg" alt="Fighting Flower Worm Larva enemies with the ability bar and HUD" loading="lazy" />
+                <figcaption>Flower Worm encounter</figcaption>
+            </figure>
+            <figure data-full="../assets/media/bloom-prison/shot-2.jpg">
+                <img src="../assets/media/bloom-prison/shot-2.jpg" alt="Exploring the world with weapon and ability slots on the HUD" loading="lazy" />
+                <figcaption>Exploring the map</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- Gameplay video (placeholder until footage is wired) -->
+<section class="cs-section" id="gameplay">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Gameplay</h2></div>
         <div class="cs-video" style="margin-top:1.25rem;">
             <div class="cs-video-ph">
-                <span class="db-badge" style="display:inline-flex;align-items:center;gap:0.45rem;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--pa-2);background:var(--pa-soft);border:1px solid var(--pa-border);padding:0.35rem 0.8rem;border-radius:100px;"><svg class="icon" style="width:14px;height:14px;"><use href="#i-sparkles"/></svg> Early Development</span>
-                <span>Bloom Prison is actively being developed. Screenshots and gameplay footage will be added as the project progresses.</span>
+                <div class="vp-ring"><svg class="icon"><use href="#i-video"/></svg></div>
+                <span>Gameplay footage coming soon.</span>
             </div>
         </div>
     </div>
@@ -242,6 +268,14 @@
 </section>
 
 </main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-btn lb-close" aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <button class="lb-btn lb-prev" aria-label="Previous image"><svg class="icon"><use href="#i-chevron-l"/></svg></button>
+    <button class="lb-btn lb-next" aria-label="Next image"><svg class="icon"><use href="#i-chevron-r"/></svg></button>
+    <img src="" alt="" />
+    <div class="lb-cap"></div>
+</div>
 
 <footer class="footer">
     <div class="container">
