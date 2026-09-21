@@ -1396,14 +1396,16 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 /* ─── Two platform cards ─── */
 .platforms {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
 }
-@media (max-width: 800px) { .platforms { grid-template-columns: 1fr; } }
+/* Two columns from 768px up; single column only below. */
+@media (max-width: 767px) { .platforms { grid-template-columns: minmax(0, 1fr); } }
 
 .platform-card {
     display: flex;
     flex-direction: column;
+    min-width: 0;               /* let the grid track shrink; image never forces overflow */
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface);
@@ -1414,8 +1416,8 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 }
 .platform-card:hover {
     border-color: var(--pc-border, var(--accent-border));
-    transform: translateY(-4px);
-    box-shadow: 0 22px 55px rgba(0,0,0,0.45);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.4);
 }
 .platform-media {
     position: relative;
@@ -1429,7 +1431,7 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
     object-fit: cover;
     transition: transform 0.4s var(--ease);
 }
-.platform-card:hover .platform-media img { transform: scale(1.04); }
+.platform-card:hover .platform-media img { transform: scale(1.03); }
 .platform-media .platform-badge2 {
     position: absolute; top: 1rem; left: 1rem;
     display: inline-flex; align-items: center; gap: 0.45rem;
@@ -1585,3 +1587,32 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 }
 .nav-dd a .icon { width: 16px; height: 16px; }
 .nav-dd a:hover { background: var(--surface-2); color: var(--text); }
+
+/* ─── Compact "What I Build" 3-column list (homepage) ─── */
+.build-cols {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+@media (max-width: 760px) { .build-cols { grid-template-columns: 1fr; gap: 1.75rem; } }
+.build-col {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    padding: 1.5rem;
+}
+.build-col-head {
+    display: flex; align-items: center; gap: 0.65rem;
+    margin-bottom: 1rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-soft);
+}
+.build-col-head .bc-ico {
+    width: 34px; height: 34px; border-radius: 8px;
+    display: grid; place-items: center;
+    color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-border);
+}
+.build-col-head .bc-ico .icon { width: 17px; height: 17px; }
+.build-col-head h3 { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); }
+.build-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.build-col li { color: var(--text-2); font-size: 0.95rem; display: flex; align-items: center; gap: 0.6rem; }
+.build-col li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
