@@ -1421,7 +1421,7 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 }
 .platform-media {
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;                 /* larger, dominant image */
     overflow: hidden;
     background: var(--bg-2);
     border-bottom: 1px solid var(--border);
@@ -1429,13 +1429,21 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 .platform-media img {
     width: 100%; height: 100%;
     object-fit: cover;
-    transition: transform 0.4s var(--ease);
+    transition: transform 0.32s var(--ease);
 }
 .platform-card:hover .platform-media img { transform: scale(1.03); }
+/* Subtle bottom scrim for depth; slightly stronger on hover */
+.platform-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(11,13,18,0.45), transparent 45%);
+    opacity: 0.6; transition: opacity 0.25s var(--ease);
+    pointer-events: none;
+}
+.platform-card:hover .platform-scrim { opacity: 1; }
 .platform-media .platform-badge2 {
-    position: absolute; top: 1rem; left: 1rem;
+    position: absolute; top: 1rem; left: 1rem; z-index: 1;
     display: inline-flex; align-items: center; gap: 0.45rem;
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
     color: #fff;
     background: rgba(11,13,18,0.72);
     backdrop-filter: blur(4px);
@@ -1444,25 +1452,25 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 }
 .platform-media .platform-badge2 .icon { width: 15px; height: 15px; color: var(--pc, var(--accent-2)); }
 
+/* Editorial body: eyebrow -> big project name -> metadata -> CTA */
 .platform-body {
-    padding: 1.75rem;
+    padding: 1.75rem 1.75rem 1.9rem;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 .platform-label {
-    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--pc, var(--accent-2));
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 .platform-name {
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    font-weight: 700; letter-spacing: -0.02em; line-height: 1.05;
+    font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+    font-weight: 700; letter-spacing: -0.02em; line-height: 1.02;
 }
-.platform-sub { margin-top: 0.4rem; font-size: 0.86rem; color: var(--text-2); font-weight: 500; }
-.platform-desc { margin-top: 1rem; color: var(--text-2); font-size: 0.98rem; flex: 1; }
+.platform-sub { margin-top: 0.55rem; font-size: 0.9rem; color: var(--text-2); font-weight: 500; }
 .platform-cta {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
     display: inline-flex; align-items: center; gap: 0.5rem;
     font-size: 0.95rem; font-weight: 600;
     color: var(--pc, var(--accent-2));
@@ -1616,3 +1624,40 @@ body.cs { --pa: var(--accent); --pa-2: var(--accent-2); --pa-soft: var(--accent-
 .build-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
 .build-col li { color: var(--text-2); font-size: 0.95rem; display: flex; align-items: center; gap: 0.6rem; }
 .build-col li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* ─── Currently building: compact editorial strip ─── */
+.building-strip {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid #34D399;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    text-decoration: none; color: inherit;
+    transition: border-color 0.25s var(--ease), background 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.building-strip:hover { background: var(--surface-2); transform: translateY(-2px); }
+.building-strip .bs-label {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #6EE7B7;
+}
+.building-strip .bs-label .icon { width: 14px; height: 14px; }
+.building-strip .bs-main { flex: 1; min-width: 0; }
+.building-strip .bs-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
+.building-strip .bs-meta { font-size: 0.82rem; font-weight: 500; color: var(--text-3); margin-left: 0.5rem; }
+.building-strip .bs-desc { margin-top: 0.2rem; color: var(--text-2); font-size: 0.9rem; }
+.building-strip .bs-cta {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.9rem; font-weight: 600; color: #6EE7B7;
+}
+.building-strip .bs-cta .icon { width: 16px; height: 16px; transition: transform 0.25s var(--ease); }
+.building-strip:hover .bs-cta .icon { transform: translateX(4px); }
+@media (max-width: 680px) {
+    .building-strip { flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+    .building-strip .bs-cta { align-self: flex-start; }
+}
