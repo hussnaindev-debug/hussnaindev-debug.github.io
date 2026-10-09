@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Steal a Viral Squishy: a Roblox collection and progression game built solo by Hussnain Sajjad, with an upgrade economy, rebirth, and quests." />
+    <title>Steal a Viral Squishy — Case Study | Hussnain Sajjad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body class="cs" style="--pa:#EC4899; --pa-2:#F9A8D4; --pa-soft:rgba(236,72,153,0.14); --pa-border:rgba(236,72,153,0.4);">
+
+<a class="skip-link" href="#overview">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-shopping" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+</defs></svg>
+
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="../index.html"><span class="logo-mark"><svg class="icon"><use href="#i-gamepad"/></svg></span> Hussnain Sajjad</a>
+        <nav aria-label="Primary"><ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#work">Work</a></li>
+            <li><a href="../roblox.html">Roblox</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul></nav>
+        <div class="nav-right"><a class="btn btn-primary btn-sm nav-desktop-cta" href="../index.html#contact">Let's Talk</a></div>
+    </div>
+</header>
+
+<nav class="cs-subnav" aria-label="On this page">
+    <div class="cs-subnav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#role">My Role</a>
+        <a href="#built">What I Built</a>
+        <a href="#systems">Systems</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#tech">Built With</a>
+    </div>
+</nav>
+
+<main id="main">
+
+<section class="cs-hero">
+    <div class="container">
+        <a class="back-link" href="../roblox.html"><svg class="icon"><use href="#i-arrow-l"/></svg> Selected Work / Roblox Games</a>
+        <div class="cs-hero-grid">
+            <div>
+                <div class="cs-hero-kicker"><svg class="icon"><use href="#i-coins"/></svg> Collection &amp; Progression · Roblox · Luau</div>
+                <h1>Steal a Viral Squishy</h1>
+                <p class="cs-hero-lead">A collection and progression game where earning, upgrading, and rebirthing drive the loop, built solo.</p>
+                <div class="cs-hero-role"><svg class="icon"><use href="#i-gamepad"/></svg> Solo Developer · All Systems</div>
+                <div class="cs-hero-actions">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=704791eb7911a7449df4853e92b1a03a&type=ExperienceDetails&stamp=1791560656714" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox <svg class="icon"><use href="#i-external"/></svg></a>
+                    <a class="btn btn-ghost" href="#gameplay">Watch gameplay</a>
+                </div>
+            </div>
+            <div class="cs-hero-visual">
+                <img src="../assets/media/steal-a-viral-squishy/poster.png" alt="Steal a Viral Squishy gameplay: the shop, currency, and quest HUD" />
+            </div>
+        </div>
+        <div class="cs-metrics">
+            <div class="cs-metric"><div class="cm-num">Live</div><div class="cm-label">On Roblox</div></div>
+            <div class="cs-metric"><div class="cm-num">All</div><div class="cm-label">Systems by me</div></div>
+            <div class="cs-metric"><div class="cm-num">Economy</div><div class="cm-label">+ Rebirth · Quests</div></div>
+            <div class="cs-metric"><div class="cm-num">Luau</div><div class="cm-label">Server-authoritative</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="overview">
+    <div class="container">
+        <div class="cs-body-grid">
+            <div class="cs-prose">
+                <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">The game</h2></div>
+                <p style="margin-top:1rem;">Steal a Viral Squishy is a Roblox collection and progression game. The core loop is about earning currency, spending it on upgrades, and rebirthing to push further, with quests guiding the player and a shop at the center of it all. I designed and built every system in the experience.</p>
+                <p>Around that loop sits a full stack of progression and retention features: a shop, a rebirth system, quests, and an index to track what the player has collected, all on a server-authoritative Roblox setup so progress and the in-game economy stay secure and persistent.</p>
+            </div>
+            <aside class="cs-info">
+                <dl>
+                    <div class="cs-info-row"><dt>Role</dt><dd>Solo Developer</dd></div>
+                    <div class="cs-info-row"><dt>Platform</dt><dd>Roblox</dd></div>
+                    <div class="cs-info-row"><dt>Engine</dt><dd>Roblox Studio (Luau)</dd></div>
+                    <div class="cs-info-row"><dt>Genre</dt><dd>Collection · Progression</dd></div>
+                    <div class="cs-info-row"><dt>Status</dt><dd>Live on Roblox</dd></div>
+                </dl>
+                <div class="cs-info-cta">
+                    <a class="btn btn-primary" href="https://www.roblox.com/share?code=704791eb7911a7449df4853e92b1a03a&type=ExperienceDetails&stamp=1791560656714" target="_blank" rel="noopener"><svg class="icon"><use href="#i-play"/></svg> Play on Roblox</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="role">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">My role</h2></div>
+        <div class="cs-role-card" style="margin-top:1.25rem;">
+            <div class="role-title">Solo Developer · All Systems</div>
+            <p>I built the game <strong>on my own, from the ground up</strong>: the currency and earning loop, the shop, the rebirth system, the quest flow, the collection index, and the UI that ties them together, all on a server-authoritative setup.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="built">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">What I built</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">The systems that make up the progression loop.</p>
+        <div class="build-grid">
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-coins"/></svg></div><h4>Currency &amp; earning</h4><p>The core earning loop that drives every other system in the game.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-shopping"/></svg></div><h4>Shop</h4><p>A shop where players spend their earnings on upgrades and items.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-refresh"/></svg></div><h4>Rebirth system</h4><p>A rebirth loop that resets progress for long-term multipliers and reach.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-list"/></svg></div><h4>Quests</h4><p>A quest flow that guides players and gives them goals to work toward.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-chart"/></svg></div><h4>Index &amp; stats</h4><p>A collection index and statistics so players can track their progress.</p></div>
+            <div class="build-card"><div class="build-ico"><svg class="icon"><use href="#i-server"/></svg></div><h4>Server-authoritative</h4><p>Economy and progress handled on the server so player data stays secure.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="systems">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">An upgrade economy that keeps players going</h2></div>
+        <div class="deepdive" style="margin-top:1.25rem;">
+            <p>The heart of Steal a Viral Squishy is an <strong>upgrade economy</strong>: players earn currency, reinvest it through the shop, and rebirth to unlock bigger gains. Each system feeds the next, so there's always a clear next goal, which is what keeps a progression game engaging.</p>
+            <p>Layered on top are the retention systems, quests to guide players, an index to chase completion, and statistics to show progress. Everything runs <strong>server-authoritative</strong> so the economy and player data can't be tampered with from the client, which matters for a game built around earning and upgrading.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" id="gameplay">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Gameplay</h2></div>
+        <p class="cs-lede" style="margin-top:0.75rem;">A walkthrough of the loop: earning, the shop, rebirth, and quests.</p>
+        <div class="cs-video">
+            <video controls preload="none" poster="../assets/media/steal-a-viral-squishy/poster.png">
+                <source src="../assets/media/steal-a-viral-squishy/gameplay.mp4" type="video/mp4" />
+                Your browser doesn't support embedded video.
+            </video>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt" id="tech">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">Built with</h2></div>
+        <div class="builtwith" style="margin-top:1.25rem;">
+            <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Economy</span><span class="chip">Shop System</span>
+            <span class="chip">Rebirth</span><span class="chip">Quests</span><span class="chip">Collection Index</span><span class="chip">Server-Authoritative</span>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section" style="padding-top:0;">
+    <div class="container">
+        <div class="cs-pager">
+            <a class="pg pg-prev" href="survive-area-51-arena.html"><svg class="icon"><use href="#i-arrow-l"/></svg><span><span class="pg-label">Previous</span>Survive Area 51 Arena</span></a>
+            <a class="pg-all" href="../index.html#work">All projects</a>
+            <a class="pg pg-next" href="fall-for-brainrot.html"><span><span class="pg-label">Next</span>Fall for Brainrot</span><svg class="icon"><use href="#i-arrow-r"/></svg></a>
+        </div>
+    </div>
+</section>
+
+<section class="cs-section alt">
+    <div class="container">
+        <div class="cs-h2-mark"><span class="bar"></span><h2 class="cs-h2">More Roblox games</h2></div>
+        <div class="more-cards" style="margin-top:1.5rem;">
+            <a class="more-card" href="fall-for-brainrot.html">
+                <div class="mc-thumb"><img src="../assets/media/fall-for-brainrot/poster.png" alt="Fall for Brainrot gameplay" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">Fall for Brainrot</div><div class="mc-plat">Roblox · In Development</div><p class="mc-desc">A progression game with a rarity-tiered upgrade economy, built solo.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="octopus-energy.html">
+                <div class="mc-thumb"><div class="mc-thumb-ph"><svg class="icon"><use href="#i-gamepad"/></svg></div></div>
+                <div class="mc-body"><div class="mc-title">Octopus Energy</div><div class="mc-plat">Roblox · Live</div><p class="mc-desc">A tycoon game where I built every system.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+            <a class="more-card" href="bloom-prison.html">
+                <div class="mc-thumb"><img src="../assets/media/bloom-prison/cover.jpg" alt="Bloom Prison key art" loading="lazy" /></div>
+                <div class="mc-body"><div class="mc-title">Bloom Prison</div><div class="mc-plat">Roblox · In Development</div><p class="mc-desc">My flagship roguelike action-adventure, built solo.</p><span class="mc-link">View project <svg class="icon"><use href="#i-arrow-ur"/></svg></span></div>
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-id"><div class="f-name">Hussnain Sajjad</div><div class="f-role">Game Developer · Unity &amp; Roblox</div></div>
+            <a class="btn btn-ghost btn-sm" href="../index.html#contact">Let's Talk</a>
+        </div>
+        <div class="footer-copy">© 2026 Hussnain Sajjad · <a href="../roblox.html">Roblox games</a> · <a href="../index.html">Home</a></div>
+    </div>
+</footer>
+
+<script src="../assets/case-study.js"></script>
+
+</body>
+</html>
