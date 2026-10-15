@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import Cursor from "@/components/Cursor";
+import Loader from "@/components/Loader";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,7 +44,16 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${display.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main">Skip to content</a>
+        <Loader />
+        <SmoothScroll />
+        <Cursor />
+        <Nav />
+        {children}
+        <Footer />
+        <Analytics />
+      </body>
     </html>
   );
 }
