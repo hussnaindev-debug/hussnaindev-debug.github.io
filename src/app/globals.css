@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design tokens — dark "gaming" theme
+   Accent stays purple for now (retune in the HUD pass).
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:            #0A0B10;
+  --bg-2:          #0E1017;
+  --surface:       #13151E;
+  --surface-2:     #181B26;
+  --border:        #262A38;
+  --border-soft:   #1C2030;
+  --text:          #F3F4F6;
+  --text-2:        #9AA3B2;
+  --text-3:        #646B7D;
+
+  --accent:        #7C5CFF;
+  --accent-2:      #9E86FF;
+  --accent-soft:   rgba(124, 92, 255, 0.14);
+  --accent-border: rgba(124, 92, 255, 0.40);
+  --accent-glow:   rgba(124, 92, 255, 0.55);
+
+  /* platform hues */
+  --hue-unity:     #A5B4FC;
+  --hue-roblox:    #7CC1FF;
+  --hue-android:   #3DDC84;
+  --hue-webgl:     #F6AD55;
+
+  --maxw: 1180px;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-display: var(--font-display), "Space Grotesk", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth-scroll hooks */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+a { color: inherit; text-decoration: none; }
+img, video { max-width: 100%; display: block; }
+
+::selection { background: rgba(124, 92, 255, 0.32); color: #fff; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #2b2f40; border-radius: 6px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: #3a3f52; }
+
+:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 4px; }
+
+/* ---- HUD helpers ---- */
+.hud-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.scanlines::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom, transparent 0 2px, rgba(255,255,255,0.015) 2px 4px
+  );
+  z-index: 1;
+}
+/* cornered HUD frame */
+.hud-frame { position: relative; }
+.hud-frame::before, .hud-frame::after {
+  content: ""; position: absolute; width: 14px; height: 14px;
+  border-color: var(--accent-border); border-style: solid; pointer-events: none;
+}
+.hud-frame::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+.hud-frame::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+/* ---- Custom cursor: hide native on desktop pointer ---- */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-none, .cursor-none * { cursor: none !important; }
+}
+
+/* ---- Reduced motion: kill all non-essential motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* reveal baseline (GSAP toggles .is-in) */
+.reveal { opacity: 0; transform: translateY(22px); }
+.reveal.is-in { opacity: 1; transform: none; transition: opacity .6s var(--ease), transform .6s var(--ease); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
