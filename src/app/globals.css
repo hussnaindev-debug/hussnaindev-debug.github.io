@@ -676,3 +676,60 @@ main { position: relative; z-index: 1; }
   .lb-prev { left: 0.5rem; }
   .lb-next { right: 0.5rem; }
 }
+
+/* ============================================================
+   PHASE 6 — HUD polish + scroll motion
+   ============================================================ */
+
+/* ---- top scroll-progress bar ---- */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 120;
+  transform: scaleX(0); transform-origin: left center;
+  background: linear-gradient(90deg, var(--pa, var(--accent)), var(--accent-2));
+  box-shadow: 0 0 10px var(--pa, var(--accent-glow));
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) { #scroll-progress { display: none; } }
+
+/* ---- faint HUD grid texture (opt-in via .hud-grid) ---- */
+.hud-grid { position: relative; }
+.hud-grid::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 40%, transparent 100%);
+}
+.hud-grid > * { position: relative; z-index: 1; }
+
+/* ---- heading HUD underline sweep (tied to Reveal's .is-in) ---- */
+.section-title { position: relative; }
+.section-head .section-title::after {
+  content: ""; display: block; height: 2px; width: 0;
+  margin-top: 0.7rem; border-radius: 2px;
+  background: linear-gradient(90deg, var(--pa, var(--accent)), transparent);
+  transition: width 0.8s var(--ease) 0.2s;
+}
+.reveal.is-in .section-title::after { width: 68px; }
+
+/* corner-bracket accent glow refinement */
+.hud-frame::before, .hud-frame::after {
+  transition: border-color 0.3s var(--ease);
+}
+.hud-frame:hover::before, .hud-frame:hover::after {
+  border-color: var(--pa, var(--accent));
+}
+
+/* ---- GSAP autoAlpha guard: keep pre-animation content measurable but hidden
+   only when JS is active; no-JS / reduced-motion shows everything ---- */
+.fx-rise, .fx-parallax { will-change: transform; }
+/* parallax images sit oversized so ±22px drift never reveals the frame edge */
+.cs-hero-visual img.fx-parallax { height: calc(100% + 56px); margin-top: -28px; }
+@media (prefers-reduced-motion: reduce) {
+  .cs-hero-visual img.fx-parallax { height: 100%; margin-top: 0; }
+}
+
+/* staggered groups: ensure children are block-level flow for measurement */
+.fx-stagger { }

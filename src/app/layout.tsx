@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollFX from "@/components/ScrollFX";
 import Cursor from "@/components/Cursor";
 import Loader from "@/components/Loader";
 import Nav from "@/components/Nav";
@@ -48,6 +49,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">Skip to content</a>
         <Loader />
         <SmoothScroll />
+        <ScrollFX />
         <Cursor />
         <Nav />
         {children}

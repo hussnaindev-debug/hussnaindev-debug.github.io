@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* ============ WHAT I BUILD ============ */}
-      <section className="section" id="build">
+      <section className="section hud-grid" id="build">
         <div className="container">
           <Reveal className="section-head">
             <span className="section-index">02 // What I build</span>

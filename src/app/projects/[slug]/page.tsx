@@ -100,7 +100,7 @@ export default async function CaseStudy({
             <div className="cs-hero-visual hud-frame">
               {hasMedia ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={p.cover || p.poster} alt={`${p.name} key art`} />
+                <img className="fx-parallax" src={p.cover || p.poster} alt={`${p.name} key art`} />
               ) : (
                 <div className="cs-devbuild">
                   <span className="db-badge"><Sparkles size={14} /> {p.status === "live" ? "Live on Roblox" : "Early Development"}</span>
