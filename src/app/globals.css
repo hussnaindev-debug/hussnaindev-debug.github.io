@@ -52,7 +52,7 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -62,6 +62,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Lenis smooth-scroll hooks */
@@ -733,3 +734,40 @@ main { position: relative; z-index: 1; }
 
 /* staggered groups: ensure children are block-level flow for measurement */
 .fx-stagger { }
+
+/* ============================================================
+   PHASE 8 — mobile hardening (phone widths)
+   Fixes horizontal overflow of long display text + tight grids.
+   ============================================================ */
+
+/* Defensive: long words / headings never push past the viewport */
+.hero-title, .page-title, .cs-title, .flagship-title, .platform-name,
+.section-title, .cs-h2, .hero-lead, .cs-lead, .page-lead,
+.cs-prose p, .deepdive p, .platform-desc, .page-desc,
+.flagship-desc {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+@media (max-width: 560px) {
+  .container { padding: 0 1.15rem; }
+
+  /* display headings: smaller + tighter max-width so they wrap early */
+  .hero-title { font-size: clamp(1.95rem, 9vw, 2.5rem); max-width: 13ch; }
+  .cs-title   { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+  .page-title { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+
+  /* long leads/prose never exceed the viewport */
+  .hero-lead, .cs-lead, .page-lead { max-width: 100%; }
+
+  /* metric rows: single column (2-up is too tight at 390px) */
+  .cs-metrics { grid-template-columns: 1fr; gap: 0.75rem; margin-top: 2rem; }
+
+  /* CTAs stack full-width so they never clip at the edge */
+  .hero-cta, .cs-actions { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn, .cs-actions .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  .hero-title { font-size: clamp(1.8rem, 9.5vw, 2.2rem); }
+}

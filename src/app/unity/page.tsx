@@ -41,7 +41,7 @@ export default function UnityPage() {
       <section className="section">
         <div className="container">
           <Reveal className="section-head">
-            <span className="section-index">// Unity Portfolio</span>
+            <span className="section-index">{"// Unity Portfolio"}</span>
             <h2 className="section-title">Games</h2>
           </Reveal>
           <div className="game-grid">

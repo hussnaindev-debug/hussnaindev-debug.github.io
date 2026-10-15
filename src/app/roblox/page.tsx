@@ -46,7 +46,7 @@ export default function RobloxPage() {
       <section className="section">
         <div className="container">
           <Reveal className="section-head">
-            <span className="section-index">// Flagship</span>
+            <span className="section-index">{"// Flagship"}</span>
             <h2 className="section-title">Bloom Prison</h2>
           </Reveal>
           <Reveal>
@@ -80,7 +80,7 @@ export default function RobloxPage() {
       <section className="section section-alt">
         <div className="container">
           <Reveal className="section-head">
-            <span className="section-index">// Live Experiences</span>
+            <span className="section-index">{"// Live Experiences"}</span>
             <h2 className="section-title">Shipped on Roblox</h2>
           </Reveal>
           <div className="game-grid">

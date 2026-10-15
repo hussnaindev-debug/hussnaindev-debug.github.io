@@ -25,7 +25,7 @@ export default function Home() {
         <div className="hero-glow" aria-hidden />
         <div className="container hero-inner">
           <Reveal>
-            <span className="hud-label hero-eyebrow">// Game Developer</span>
+            <span className="hud-label hero-eyebrow">{"// Game Developer"}</span>
             <h1 className="hero-title">
               Game developer building <span className="grad">gameplay that ships</span>.
             </h1>

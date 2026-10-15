@@ -18,6 +18,8 @@ export default function Loader() {
     const seen = sessionStorage.getItem("booted") === "1";
     if (reduce || seen) return;
 
+    // one-shot: boot screen shows only after reading sessionStorage + reduced-motion (client-only)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShow(true);
     document.documentElement.classList.add("lenis-stopped"); // lock scroll during boot
     ready.current = true;

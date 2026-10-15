@@ -77,7 +77,7 @@ export default async function CaseStudy({
           </Link>
           <div className="cs-hero-grid">
             <div>
-              <div className="cs-hero-kicker hud-label">// {p.kind} · {p.platform === "unity" ? "Unity · C#" : "Roblox · Luau"}</div>
+              <div className="cs-hero-kicker hud-label">{"// "}{p.kind} · {p.platform === "unity" ? "Unity · C#" : "Roblox · Luau"}</div>
               {p.status === "in-development" && (
                 <span className="cs-devbadge"><Sparkles size={13} /> In Development</span>
               )}

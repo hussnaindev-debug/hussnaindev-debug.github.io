@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -14,16 +14,20 @@ function Points({ count = 900, color = "#7C5CFF" }: { count?: number; color?: st
   const ref = useRef<THREE.Points>(null);
   const mouse = useRef({ x: 0, y: 0 });
 
-  const positions = useRef<Float32Array>(null!);
-  if (!positions.current) {
+  // Generated once per mount (useMemo). Randomness is intentional for a
+  // decorative field; the compiler flags Math.random as impure, which is
+  // exactly what we want here (scatter once, never re-run).
+  const positions = useMemo(() => {
     const arr = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
+      /* eslint-disable react-hooks/purity */
       arr[i * 3] = (Math.random() - 0.5) * 18;
       arr[i * 3 + 1] = (Math.random() - 0.5) * 11;
       arr[i * 3 + 2] = (Math.random() - 0.5) * 8;
+      /* eslint-enable react-hooks/purity */
     }
-    positions.current = arr;
-  }
+    return arr;
+  }, [count]);
 
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
@@ -48,7 +52,7 @@ function Points({ count = 900, color = "#7C5CFF" }: { count?: number; color?: st
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          args={[positions.current, 3]}
+          args={[positions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial
@@ -71,6 +75,8 @@ export default function ParticleField({ color = "#7C5CFF" }: { color?: string })
     const ok =
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
       window.innerWidth >= 768;
+    // one-shot: enable only after reading reduced-motion + viewport width (client-only)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnabled(ok);
   }, []);
 

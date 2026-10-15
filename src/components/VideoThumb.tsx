@@ -31,6 +31,8 @@ export default function VideoThumb({
     // @ts-expect-error saveData is non-standard
     const saveData = navigator.connection?.saveData === true;
     if (reduce || saveData) return;
+    // one-shot: enable video only after reading reduced-motion + Save-Data (client-only)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCanPlay(true);
   }, [src]);
 

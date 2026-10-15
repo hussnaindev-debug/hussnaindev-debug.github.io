@@ -20,6 +20,8 @@ export default function Cursor() {
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!fine) return;
 
+    // one-shot: enable only after reading a browser-only capability (no SSR equivalent)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnabled(true);
     document.documentElement.classList.add("cursor-none");
 
