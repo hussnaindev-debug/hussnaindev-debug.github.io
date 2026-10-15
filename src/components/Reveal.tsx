@@ -26,6 +26,12 @@ export default function Reveal({ children, as, className = "", delay = 0, style 
       el.classList.add("is-in");
       return;
     }
+    // Already in view on mount (e.g. above the fold) -> reveal immediately.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.95) {
+      el.classList.add("is-in");
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
