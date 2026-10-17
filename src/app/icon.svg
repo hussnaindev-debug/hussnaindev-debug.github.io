@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00F5FF"/>
+      <stop offset="1" stop-color="#287BFF"/>
+    </linearGradient>
+  </defs>
+  <!-- cyberpunk clipped tile (matches the site logo mark) -->
+  <path d="M14 4 H60 V50 L50 60 H4 V14 Z" fill="#07090D"/>
+  <path d="M15 6 H58 V49 L49 58 H6 V15 Z" fill="url(#g)"/>
+  <!-- HS monogram, dark cut-out -->
+  <text x="32" y="33" fill="#04121A" font-family="Verdana, Arial, sans-serif"
+        font-size="26" font-weight="900" letter-spacing="-1"
+        text-anchor="middle" dominant-baseline="central">HS</text>
+</svg>
