@@ -22,7 +22,12 @@ export default function Reveal({ children, as, className = "", delay = 0, style 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // QA aid: ?still disables scroll-reveal so headless screenshots show
+    // all content immediately. Harmless in production.
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.location.search.includes("still")
+    ) {
       el.classList.add("is-in");
       return;
     }

@@ -70,13 +70,13 @@ export default function Loader() {
         <div className="loader-logo hud-frame">
           <span className="loader-mark">HS</span>
         </div>
-        <p className="hud-label loader-tag">Hussnain Sajjad · Game Developer</p>
+        <p className="hud-label loader-tag">Hussnain Sajjad · Game Developer Archive</p>
 
         <div className="loader-bar" aria-hidden>
           <div className="loader-fill" style={{ width: `${pct}%` }} />
         </div>
         <div className="loader-meta">
-          <span className="hud-label">Loading systems</span>
+          <span className="hud-label">Booting systems</span>
           <span className="loader-pct">{pct}%</span>
         </div>
 

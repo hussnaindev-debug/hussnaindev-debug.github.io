@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { LinkedinIcon } from "@/components/BrandIcons";
+import Year from "@/components/Year";
 
 const LINKEDIN = "https://www.linkedin.com/in/hussnain-sajjad-4129302b7";
 const MAIL =
@@ -24,7 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-copy">
-        © 2026 Hussnain Sajjad · Built with Next.js · <Link href="/">Home</Link>
+        © <Year /> Hussnain Sajjad · Built with Next.js · <Link href="/#home">Home</Link>
       </div>
     </footer>
   );
