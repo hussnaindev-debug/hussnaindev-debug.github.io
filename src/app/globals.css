@@ -346,7 +346,32 @@ main { position: relative; z-index: 1; }
 }
 .loader-mark { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: #04121a; letter-spacing: 1px; }
 @keyframes loaderPulse { 0%,100% { transform: scale(1); box-shadow: 0 0 30px var(--accent-glow); } 50% { transform: scale(1.04); box-shadow: 0 0 52px var(--accent-glow); } }
-.loader-tag { display: block; margin-bottom: 1.6rem; color: var(--text-2); }
+.loader-tag { display: block; margin-bottom: 1.3rem; color: var(--text-2); }
+
+/* terminal boot log */
+.loader-term {
+  text-align: left; font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.7;
+  color: var(--text-2); min-height: 7.4em; margin-bottom: 1.3rem;
+  border-left: 2px solid var(--accent-border); padding: 0.3rem 0 0.3rem 0.9rem;
+}
+.loader-term-line { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; animation: termIn .25s var(--ease) both; }
+@keyframes termIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+.loader-caret { display: inline-block; width: 8px; height: 1em; background: var(--cyan); box-shadow: 0 0 8px var(--cyan); vertical-align: text-bottom; animation: blink 0.9s steps(2) infinite; }
+
+.loader-grid {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(0,245,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,245,255,0.04) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 80%);
+}
+
+.loader.is-exit { opacity: 0; transform: translateY(-1.5%); pointer-events: none; }
+.loader.is-exit .loader-inner { animation: loaderOut .5s var(--ease) both; }
+@keyframes loaderOut { to { transform: scale(1.06); filter: blur(4px); opacity: 0; } }
+
 .loader-bar { height: 4px; border-radius: 0; background: var(--surface-2); border: 1px solid var(--accent-border); overflow: hidden; }
 .loader-fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--magenta)); box-shadow: 0 0 12px var(--accent-glow); transition: width .1s linear; }
 .loader-meta { display: flex; justify-content: space-between; margin-top: 0.6rem; }
