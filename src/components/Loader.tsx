@@ -112,7 +112,7 @@ export default function Loader() {
         </div>
 
         <p className={`loader-start${pct >= 100 ? " is-ready" : ""}`}>
-          {pct >= 100 ? "PRESS START" : " "}
+          {pct >= 100 ? "SYSTEM READY" : " "}
         </p>
       </div>
     </div>
