@@ -380,63 +380,6 @@ export const projects: Project[] = [
       { label: "Play on Roblox", href: "https://www.roblox.com/share?code=c5ea151f2a6b5f4daba1182f934d62bc&type=ExperienceDetails&stamp=1783770704028", external: true, kind: "play" },
     ],
   },
-  {
-    slug: "survive-area-51-arena",
-    name: "Survive Area 51 Arena",
-    platform: "roblox",
-    status: "live",
-    kind: "Wave Survival",
-    tagline:
-      "A wave-based survival game that blends direct combat with base defense.",
-    cardDesc:
-      "A wave-based survival game: hold off escalating waves, build fences and plant guns to defend, unlock weapons, and climb the leaderboard.",
-    role: "Game Developer",
-    roleBody:
-      "I built the game's core loop and systems: the escalating wave survival, the multiple enemy types, the buildable fences and plantable auto-firing guns that add a tower-defense layer, the weapon-unlock progression, and the leaderboard.",
-    accent: "#A78BFA",
-    poster: `${M("survive-area-51-arena")}/poster-fallback`,
-    tags: ["Roblox Studio", "Luau", "Wave Survival", "Tower Defense", "Leaderboard"],
-    metrics: [
-      { num: "Live", label: "On Roblox" },
-      { num: "Waves", label: "Escalating" },
-      { num: "TD", label: "+ Combat blend" },
-      { num: "Luau", label: "Roblox Studio" },
-    ],
-    info: [
-      { k: "Role", v: "Game Developer" },
-      { k: "Platform", v: "Roblox" },
-      { k: "Engine", v: "Roblox Studio (Luau)" },
-      { k: "Genre", v: "Wave Survival · Tower Defense" },
-      { k: "Status", v: "Live on Roblox" },
-    ],
-    overview: [
-      "Survive Area 51 Arena is a wave-based survival game on Roblox. You defend against relentless waves of enemies that come in multiple types, each one pushing you to adapt how you fight and defend. It blends direct combat with base defense, so every wave is about both shooting and planning.",
-      "To hold the line, you can build fences to block and funnel incoming enemies and plant guns that fire on the waves automatically, adding a tower-defense layer. As you survive longer you unlock stronger weapons, and a leaderboard tracks how far players push.",
-    ],
-    build: [
-      { title: "Wave survival", body: "Defend against relentless, escalating waves of enemies.", icon: "Waves" },
-      { title: "Multiple enemy types", body: "Different enemy types that force you to adapt your strategy.", icon: "Bug" },
-      { title: "Build fences", body: "Place fences to block and funnel incoming enemies.", icon: "Fence" },
-      { title: "Plant guns", body: "Set down guns that automatically fire on the waves, tower-defense style.", icon: "Crosshair" },
-      { title: "Weapon unlocks", body: "Unlock stronger weapons the longer you survive.", icon: "Sword" },
-      { title: "Leaderboard", body: "Compete for the top spot based on how far you push.", icon: "Trophy" },
-    ],
-    deepDives: [
-      {
-        heading: "Combat meets tower defense",
-        paras: [
-          "What makes Survive Area 51 Arena more than a shooter is the base-defense layer sitting on top of the combat. Enemies arrive in escalating waves and in multiple types, so pure aim isn't enough; you have to plan the space you're fighting in.",
-          "Players can build fences to block and funnel incoming enemies and plant guns that fire on the waves automatically, turning each round into a mix of direct combat and tower-defense strategy. Surviving longer unlocks stronger weapons, and a leaderboard tracks how far players manage to push.",
-        ],
-      },
-    ],
-    gallery: [],
-    tech: ["Roblox Studio", "Luau", "Wave Survival", "Tower Defense", "Enemy AI", "Weapons", "Leaderboard"],
-    links: [
-      { label: "Play on Roblox", href: "https://www.roblox.com/games/122972445498260/Survive-Area-51-Arena", external: true, kind: "play" },
-    ],
-  },
-
   /* ============================ UNITY ============================ */
   {
     slug: "four-reaction",
