@@ -294,10 +294,10 @@ export const projects: Project[] = [
     ],
     info: [
       { k: "Role", v: "Roblox Game Developer" },
-      { k: "Studio", v: "ZhenStudio – 26" },
+      { k: "Studio", v: "ZhenStudio 26" },
       { k: "Platform", v: "Roblox" },
       { k: "Engine", v: "Roblox Studio (Luau)" },
-      { k: "Status", v: "Live · Jan 2026 – Present" },
+      { k: "Status", v: "Live · Jan 2026 to Present" },
     ],
     overview: [
       "99 Days Zombie Survival is a story-driven Roblox title built in Roblox Studio with Luau. As a core developer, I contributed across gameplay systems, UI, and performance, taking the experience from early build to a live game that reached 155,800+ visits and 1,200+ favorites within its first four months.",
@@ -401,7 +401,7 @@ export const projects: Project[] = [
     metrics: [
       { num: "5,000+", label: "Installs" },
       { num: "30", label: "Minigames" },
-      { num: "1–4", label: "Players" },
+      { num: "1-4", label: "Players" },
       { num: "Lead", label: "Developer" },
     ],
     info: [

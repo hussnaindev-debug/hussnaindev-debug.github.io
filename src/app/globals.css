@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Design tokens — HEAVY CYBERPUNK
+   Design tokens - HEAVY CYBERPUNK
    Cyan dominant, magenta accent, amber indicators.
    Legacy --accent* vars are remapped to cyan so existing
    component rules recolor automatically.
@@ -146,7 +146,7 @@ img, video { max-width: 100%; display: block; }
   );
   z-index: 1;
 }
-/* cornered HUD frame — sharper, cyan brackets on all 4 corners */
+/* cornered HUD frame - sharper, cyan brackets on all 4 corners */
 .hud-frame { position: relative; }
 .hud-frame::before, .hud-frame::after {
   content: ""; position: absolute; width: 16px; height: 16px;
@@ -210,7 +210,7 @@ img, video { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 
 /* ============================================================
-   GLOBAL SHELL — buttons, nav, loader, cursor, footer
+   GLOBAL SHELL - buttons, nav, loader, cursor, footer
    ============================================================ */
 
 .skip-link {
@@ -840,7 +840,7 @@ main { position: relative; z-index: 1; }
 }
 
 /* ============================================================
-   PHASE 6 — HUD polish + scroll motion
+   PHASE 6 - HUD polish + scroll motion
    ============================================================ */
 
 /* ---- top scroll-progress bar ---- */
@@ -897,7 +897,7 @@ main { position: relative; z-index: 1; }
 .fx-stagger { }
 
 /* ============================================================
-   PHASE 8 — mobile hardening (phone widths)
+   PHASE 8 - mobile hardening (phone widths)
    Fixes horizontal overflow of long display text + tight grids.
    ============================================================ */
 
@@ -913,7 +913,7 @@ main { position: relative; z-index: 1; }
 @media (max-width: 560px) {
   .container { padding: 0 1.15rem; }
 
-  /* display headings: Orbitron is wide — size down so it never overflows */
+  /* display headings: Orbitron is wide - size down so it never overflows */
   .hero-title { font-size: clamp(1.5rem, 7vw, 2rem); max-width: 100%; letter-spacing: 0; }
   .cs-title   { font-size: clamp(1.6rem, 8vw, 2.1rem); }
   .page-title { font-size: clamp(1.6rem, 8vw, 2.1rem); }
@@ -935,7 +935,7 @@ main { position: relative; z-index: 1; }
 }
 
 /* ============================================================
-   CYBERPUNK OVERRIDE LAYER (appended — wins on equal specificity)
+   CYBERPUNK OVERRIDE LAYER (appended - wins on equal specificity)
    Reskins cards, sections, matrix, experience, contact terminal.
    ============================================================ */
 
@@ -1079,7 +1079,7 @@ main { position: relative; z-index: 1; }
 .matrix-proj .hud-label::before { content: none; }
 
 /* ============================================================
-   CASE STUDY — cyberpunk retune
+   CASE STUDY - cyberpunk retune
    ============================================================ */
 .cs-h2 { font-weight: 800; text-transform: uppercase; letter-spacing: 0.01em; }
 .cs-subnav { top: var(--nav-h); background: rgba(7,9,13,0.9); border-bottom: 1px solid var(--accent-border); }

@@ -36,7 +36,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hussnain Sajjad — Game Developer (Unity & Roblox)",
+  title: "Hussnain Sajjad · Game Developer (Unity & Roblox)",
   description:
     "Game developer specializing in Unity/C# and Roblox/Luau. Gameplay systems, mobile games, and interactive experiences, from prototype to production.",
 };

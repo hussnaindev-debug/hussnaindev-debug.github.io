@@ -23,7 +23,7 @@ export async function generateMetadata({
   const p = getProject(slug);
   if (!p) return {};
   return {
-    title: `${p.name} — Case Study | Hussnain Sajjad`,
+    title: `${p.name} · Case Study | Hussnain Sajjad`,
     description: p.tagline,
   };
 }

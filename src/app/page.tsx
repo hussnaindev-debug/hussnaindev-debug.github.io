@@ -34,7 +34,7 @@ export default function Home() {
               I engineer the <span className="neon-mag">gameplay</span>.
             </h1>
             <p className="hero-lead">
-              Hussnain Sajjad — I build gameplay systems, games, and interactive experiences
+              Hussnain Sajjad. I build gameplay systems, games, and interactive experiences
               across Unity/C# and Roblox/Luau, from prototype to production.
             </p>
             <div className="hero-cta">
@@ -175,8 +175,8 @@ export default function Home() {
           </Reveal>
           <div className="exp-list">
             {[
-              { date: "2026 — Present", current: true, co: "ZhenStudio", role: "Roblox Game Developer", tags: "Gameplay · UI · Weapons · Cutscenes · Performance", metric: "155K+ visits" },
-              { date: "2024 — 2025", co: "UFD Studios", role: "Junior Unity Game Developer", tags: "Mobile · WebGL · IAP · Ads · Analytics", metric: "55K+ installs" },
+              { date: "2026 to Present", current: true, co: "ZhenStudio", role: "Roblox Game Developer", tags: "Gameplay · UI · Weapons · Cutscenes · Performance", metric: "155K+ visits" },
+              { date: "2024 to 2025", co: "UFD Studios", role: "Junior Unity Game Developer", tags: "Mobile · WebGL · IAP · Ads · Analytics", metric: "55K+ installs" },
               { date: "2024", co: "AIRIDev", role: "Unity 3D Developer Intern", tags: "Gameplay · Physics · Optimization", metric: "Internship" },
             ].map((e, i) => (
               <Reveal key={e.co} delay={i * 60}>
