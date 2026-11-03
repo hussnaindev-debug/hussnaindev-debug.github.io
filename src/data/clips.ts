@@ -41,6 +41,14 @@ const HEIZOU = {
   note: "Animated in Blender, VFX built in Roblox Studio. Plays the animation clean first, then with the wind VFX.",
 };
 
+const ABILITY = {
+  set: "Combat ability kit",
+  kinds: ["animation", "vfx"] as ClipKind[],
+  ratio: "16/9" as const,
+  tools: ["Animation: Blender", "VFX: Roblox Studio"],
+  note: "Abilities for a Roblox combat game, shown on a standard R15 rig. Animated in Blender, VFX built in Roblox Studio and fired from markers in the animation. Plays clean first, then with the VFX.",
+};
+
 export const clips: Clip[] = [
   { id: "heizou-skill", title: "Skill: Charged Burst", desc: "A hold-to-charge skill that releases as a dashing burst. Holding the button freezes the pose, release fires it.", duration: 8.0, ...HEIZOU, ...C("heizou-skill") },
   { id: "heizou-burst", title: "Ultimate: Air Ball", desc: "A jumping kick that launches an air ball, with the landing timed on separate left and right foot markers.", duration: 6.0, ...HEIZOU, ...C("heizou-burst") },
@@ -50,6 +58,10 @@ export const clips: Clip[] = [
   { id: "heizou-attack-3", title: "Combo 3: Kick and Sweep", desc: "A kick into a jumping leg sweep that hits all around him.", duration: 3.5, ...HEIZOU, ...C("heizou-attack-3") },
   { id: "heizou-attack-4", title: "Combo 4: Triple Kick", desc: "A three-kick flurry from a planted stance, one hit marker per kick.", duration: 4.4, ...HEIZOU, ...C("heizou-attack-4") },
   { id: "heizou-attack-5", title: "Combo 5: Finisher", desc: "The combo finisher: a leaping kick into a spinning sweep.", duration: 4.8, ...HEIZOU, ...C("heizou-attack-5") },
+  { id: "volley-kick", title: "Volley Kick", desc: "A spinning volley kick. The arc trail follows the shin bone, and the hit bursts into a ring of sparks and dust.", duration: 5.2, ...ABILITY, ...C("volley-kick") },
+  { id: "blitz-kick", title: "Blitz Kick", desc: "A lightning kick dash. The dash lasts a tenth of a second, so the trail is a pre-built corkscrew of beams instead of a sparse particle trail.", duration: 5.8, ...ABILITY, ...C("blitz-kick") },
+  { id: "aura-heal", title: "Aura Heal", desc: "A heal ability: a charged glow that blooms into an electric halo with rising heal sparks.", duration: 7.8, ...ABILITY, ...C("aura-heal") },
+  { id: "power-jump", title: "Power Jump", desc: "A three-part move: launch, air trail and landing, each its own animation, ending in a red lightning impact.", duration: 9.0, ...ABILITY, ...C("power-jump") },
 ];
 
 export const clipLength = (s: number) => `0:${String(Math.round(s)).padStart(2, "0")}`;
