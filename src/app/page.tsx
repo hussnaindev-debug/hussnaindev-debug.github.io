@@ -1,13 +1,15 @@
 import Link from "next/link";
 import {
-  ArrowRight, ArrowUpRight, Sparkles, MapPin, Check, FileText, Mail, Terminal,
-  Swords, Bot, Boxes, Gauge, Coins, Cpu,
+  ArrowRight, MapPin, Check, FileText, Mail, Clapperboard,
+  Swords, Bot, Boxes, Gauge, Coins, Cpu, Sparkles,
 } from "lucide-react";
 import ParticleField from "@/components/ParticleField";
 import VideoThumb from "@/components/VideoThumb";
-import GameCard from "@/components/GameCard";
+import ArchiveGrid from "@/components/ArchiveGrid";
+import ClipShowcase from "@/components/ClipShowcase";
 import Reveal from "@/components/Reveal";
-import { getProject, robloxProjects, unityProjects } from "@/data/projects";
+import { getProject, projects, robloxProjects, unityProjects } from "@/data/projects";
+import { clips } from "@/data/clips";
 import { LinkedinIcon } from "@/components/BrandIcons";
 
 const MAIL =
@@ -15,9 +17,6 @@ const MAIL =
 const LINKEDIN = "https://www.linkedin.com/in/hussnain-sajjad-4129302b7";
 
 const heroGame = getProject("bloom-prison")!;
-// Roblox flagship leads its grid; the rest follow.
-const robloxFlagship = getProject("bloom-prison")!;
-const robloxRest = robloxProjects.filter((p) => p.slug !== robloxFlagship.slug);
 
 export default function Home() {
   return (
@@ -28,25 +27,25 @@ export default function Home() {
         <div className="hero-glow" aria-hidden />
         <div className="container hero-inner">
           <Reveal className="hero-copy">
-            <span className="hud-label hero-eyebrow">{"// Independent Game Developer · Gameplay Programmer"}</span>
+            <span className="hud-label hero-eyebrow">{"// Gameplay · VFX · Animation"}</span>
             <h1 className="hero-title">
               I build <span className="neon glitch" data-text="worlds">worlds</span>.<br />
-              I engineer the <span className="neon-mag">gameplay</span>.
+              I make them <span className="neon-mag">move</span>.
             </h1>
             <p className="hero-lead">
-              Hussnain Sajjad. I build gameplay systems, games, and interactive experiences
-              across Unity/C# and Roblox/Luau, from prototype to production.
+              Hussnain Sajjad. I build gameplay systems, combat VFX and animation for
+              Roblox and Unity, from prototype to shipped game.
             </p>
             <div className="hero-cta">
-              <Link className="btn btn-primary" href="#roblox" data-cursor="VIEW">
-                Explore all games <ArrowRight size={18} />
+              <Link className="btn btn-primary" href="#work" data-cursor="VIEW">
+                Explore the games <ArrowRight size={18} />
               </Link>
-              <a className="btn btn-ghost" href={MAIL} target="_blank" rel="noopener" data-cursor="EMAIL">
-                <Terminal size={16} /> Contact / Transmission
-              </a>
+              <Link className="btn btn-ghost" href="#vfx" data-cursor="PLAY">
+                <Clapperboard size={16} /> Watch the VFX
+              </Link>
             </div>
             <div className="hero-stack">
-              <span>Unity / C#</span><i>/</i><span>Roblox / Luau</span><i>/</i><span>Gameplay Systems</span>
+              <span>Unity / C#</span><i>/</i><span>Roblox / Luau</span><i>/</i><span>Blender</span>
             </div>
           </Reveal>
 
@@ -58,7 +57,7 @@ export default function Home() {
                 <span className="holo-live"><span className="stat-dot" /> LIVE</span>
               </div>
               <div className="holo-screen">
-                <VideoThumb src={heroGame.previewVideo} poster={heroGame.cover || heroGame.poster} alt={`${heroGame.name} gameplay`} />
+                <VideoThumb src={heroGame.previewVideo} poster={heroGame.cover || heroGame.poster} alt={`${heroGame.name} gameplay`} mode="view" />
                 <span className="holo-scan" aria-hidden />
               </div>
               <div className="holo-meta">
@@ -69,72 +68,49 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
-        <div className="hero-scroll hud-label" aria-hidden>Scroll ↓</div>
       </section>
 
-      {/* ============ ROBLOX ARCHIVE ============ */}
-      <section className="section archive" id="roblox">
+      {/* ============ HIGHLIGHTS ============ */}
+      <section className="highlights" aria-label="Highlights">
         <div className="container">
-          <Reveal className="section-head">
-            <span className="section-index">{"// THE GAME ARCHIVE · 01"}</span>
-            <h2 className="section-title neon">Roblox <span className="st-sub">{"// Live Experiences"}</span></h2>
-            <div className="arch-tags">
-              <span className="hud-label">Platform: Roblox Studio</span>
-              <span className="hud-label">Language: Luau</span>
-              <span className="hud-label">{robloxProjects.length} Projects</span>
-            </div>
-          </Reveal>
-
-          {/* flagship */}
-          <Reveal>
-            <article className="flagship hud-frame" style={{ ["--pc" as string]: robloxFlagship.accent }}>
-              <div className="flagship-media">
-                <VideoThumb src={robloxFlagship.previewVideo} poster={robloxFlagship.cover || robloxFlagship.poster} alt={`${robloxFlagship.name} gameplay`} />
-                <span className="flagship-scrim" aria-hidden />
-                <span className="flagship-tag"><Sparkles size={13} /> Flagship · In Development</span>
-              </div>
-              <div className="flagship-body">
-                <span className="hud-label">Roblox · Luau · Roguelike Action</span>
-                <h3 className="flagship-name">{robloxFlagship.name}</h3>
-                <p className="flagship-desc">{robloxFlagship.cardDesc}</p>
-                <div className="g-tags">
-                  {robloxFlagship.tags.slice(0, 5).map((t) => <span className="chip" key={t}>{t}</span>)}
-                </div>
-                <div className="g-links">
-                  <Link className="link-btn primary" href={`/projects/${robloxFlagship.slug}`} data-cursor="VIEW">
-                    View project <ArrowUpRight size={15} />
-                  </Link>
-                </div>
-              </div>
-            </article>
-          </Reveal>
-
-          {/* rest of roblox */}
-          <div className="game-grid">
-            {robloxRest.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 60}><GameCard project={p} /></Reveal>
-            ))}
+          <div className="hl-strip">
+            <div className="hl-cell"><div className="hl-num">{projects.length}</div><div className="hl-label">Games in the archive</div></div>
+            <div className="hl-cell"><div className="hl-num">155K+</div><div className="hl-label">Visits on 99 Days</div></div>
+            <div className="hl-cell"><div className="hl-num">5,000+</div><div className="hl-label">Installs on 4 Reaction</div></div>
+            <div className="hl-cell"><div className="hl-num mag">{clips.length}</div><div className="hl-label">VFX and animation clips</div></div>
           </div>
         </div>
       </section>
 
-      {/* ============ UNITY ARCHIVE ============ */}
-      <section className="section archive alt" id="unity">
+      {/* ============ GAMES ARCHIVE ============ */}
+      <section className="section archive" id="work">
+        <div className="container">
+          <Reveal className="section-head">
+            <span className="section-index">{"// THE GAME ARCHIVE · 01"}</span>
+            <h2 className="section-title neon">Games <span className="st-sub">{"// Roblox + Unity"}</span></h2>
+            <div className="arch-tags">
+              <span className="hud-label">{robloxProjects.length} Roblox · Luau</span>
+              <span className="hud-label">{unityProjects.length} Unity · C#</span>
+              <span className="hud-label">Case studies open in place</span>
+            </div>
+          </Reveal>
+          <ArchiveGrid />
+        </div>
+      </section>
+
+      {/* ============ VFX + ANIMATION ============ */}
+      <section className="section archive alt" id="vfx">
         <div className="container">
           <Reveal className="section-head">
             <span className="section-index">{"// THE GAME ARCHIVE · 02"}</span>
-            <h2 className="section-title neon-mag">Unity <span className="st-sub">{"// Built in C#"}</span></h2>
-            <div className="arch-tags">
-              <span className="hud-label">Platform: Unity Engine</span>
-              <span className="hud-label">Language: C#</span>
-              <span className="hud-label">{unityProjects.length} Projects</span>
+            <h2 className="section-title neon-mag">VFX <span className="st-sub">{"// + Animation"}</span></h2>
+            <div className="arch-tags mag">
+              <span className="hud-label">Combat VFX</span>
+              <span className="hud-label">Combat animation</span>
+              <span className="hud-label">{clips.length} Clips</span>
             </div>
           </Reveal>
-          <div className="game-grid">
-            {unityProjects.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 60}><GameCard project={p} /></Reveal>
-            ))}
-          </div>
+          <ClipShowcase />
         </div>
       </section>
 
@@ -148,6 +124,7 @@ export default function Home() {
           <div className="matrix">
             {[
               { icon: <Swords size={18} />, title: "Combat & Gameplay", items: ["Free-flow combat", "Weapon abilities", "Hit detection", "Game loops"], proj: "Bloom Prison" },
+              { icon: <Sparkles size={18} />, title: "VFX & Animation", items: ["Combat VFX", "Marker-driven effects", "Combo animation", "Blender to Roblox"], proj: "Heizou combat kit" },
               { icon: <Bot size={18} />, title: "AI & Game Logic", items: ["Enemy AI", "Boss behaviours", "Spawning", "State machines"], proj: "Bloom Prison" },
               { icon: <Boxes size={18} />, title: "Progression & Inventory", items: ["XP & unlocks", "Inventory", "Shops", "Save data"], proj: "Steal a Viral Squishy" },
               { icon: <Coins size={18} />, title: "Economy & Monetization", items: ["IAP", "Ads", "In-game economy", "Rebirth loops"], proj: "Fall for Brainrot" },

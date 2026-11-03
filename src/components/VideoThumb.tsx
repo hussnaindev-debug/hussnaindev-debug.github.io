@@ -15,11 +15,14 @@ export default function VideoThumb({
   poster,
   alt,
   className = "",
+  mode = "hover",
 }: {
   src?: string;
   poster: string;
   alt: string;
   className?: string;
+  /** "hover": desktop plays on hover, touch plays in view. "view": always plays while on screen. */
+  mode?: "hover" | "view";
 }) {
   const wrap = useRef<HTMLDivElement>(null);
   const video = useRef<HTMLVideoElement>(null);
@@ -40,7 +43,7 @@ export default function VideoThumb({
   useEffect(() => {
     if (!canPlay || !wrap.current || !video.current) return;
     const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    if (hoverCapable) return; // desktop uses hover handlers instead
+    if (hoverCapable && mode === "hover") return; // desktop uses hover handlers instead
 
     const el = video.current;
     const io = new IntersectionObserver(
@@ -50,17 +53,17 @@ export default function VideoThumb({
           else el.pause();
         });
       },
-      { threshold: 0.6 }
+      { threshold: mode === "view" ? 0.35 : 0.6 }
     );
     io.observe(wrap.current);
     return () => io.disconnect();
-  }, [canPlay]);
+  }, [canPlay, mode]);
 
   const onEnter = () => {
-    if (canPlay && video.current) video.current.play().catch(() => {});
+    if (mode === "hover" && canPlay && video.current) video.current.play().catch(() => {});
   };
   const onLeave = () => {
-    if (canPlay && video.current) {
+    if (mode === "hover" && canPlay && video.current) {
       video.current.pause();
       video.current.currentTime = 0;
     }
@@ -84,7 +87,7 @@ export default function VideoThumb({
           muted
           loop
           playsInline
-          preload="none"
+          preload={mode === "view" ? "metadata" : "none"}
           onPlaying={(e) => e.currentTarget.classList.add("is-playing")}
           onPause={(e) => e.currentTarget.classList.remove("is-playing")}
         />

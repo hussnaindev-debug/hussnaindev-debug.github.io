@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { LinkedinIcon } from "@/components/BrandIcons";
+import { lockScroll, unlockScroll } from "@/lib/scrollLock";
 
 const LINKEDIN = "https://www.linkedin.com/in/hussnain-sajjad-4129302b7";
 const MAIL =
@@ -11,8 +12,8 @@ const MAIL =
 
 const LINKS = [
   { href: "/#home", label: "Home" },
-  { href: "/#roblox", label: "Roblox" },
-  { href: "/#unity", label: "Unity" },
+  { href: "/#work", label: "Games" },
+  { href: "/#vfx", label: "VFX" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -29,8 +30,9 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("lenis-stopped", open);
-    return () => document.documentElement.classList.remove("lenis-stopped");
+    if (!open) return;
+    lockScroll();
+    return () => unlockScroll();
   }, [open]);
 
   return (

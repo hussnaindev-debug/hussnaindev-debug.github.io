@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { lockScroll, unlockScroll } from "@/lib/scrollLock";
 
 /**
  * Cyberpunk boot-sequence loader. Streams system-check lines into a
@@ -30,7 +31,13 @@ export default function Loader() {
       setShow(false);
       return;
     }
-    document.documentElement.classList.add("lenis-stopped");
+    lockScroll();
+    let locked = true;
+    const release = () => {
+      if (!locked) return;
+      locked = false;
+      unlockScroll();
+    };
 
     // stream boot lines
     let li = 0;
@@ -59,7 +66,7 @@ export default function Loader() {
       setExiting(true);
       setTimeout(() => {
         setShow(false);
-        document.documentElement.classList.remove("lenis-stopped");
+        release();
       }, 700);
     };
 
@@ -80,7 +87,7 @@ export default function Loader() {
       window.clearTimeout(skipTimer);
       window.removeEventListener("keydown", skip);
       window.removeEventListener("click", skip);
-      document.documentElement.classList.remove("lenis-stopped");
+      release();
     };
   }, []);
 

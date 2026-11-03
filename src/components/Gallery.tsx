@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import type { GalleryShot } from "@/data/projects";
+import { lockScroll, unlockScroll } from "@/lib/scrollLock";
 
 /**
  * Asymmetric gallery grid + lightbox (keyboard arrows, Esc, prev/next,
@@ -25,10 +26,10 @@ export default function Gallery({ shots }: { shots: GalleryShot[] }) {
       else if (e.key === "ArrowRight") go(1);
     };
     document.addEventListener("keydown", onKey);
-    document.documentElement.classList.add("lenis-stopped");
+    lockScroll();
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.documentElement.classList.remove("lenis-stopped");
+      unlockScroll();
     };
   }, [open, close, go]);
 
