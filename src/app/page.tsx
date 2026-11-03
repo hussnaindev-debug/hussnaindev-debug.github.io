@@ -105,8 +105,8 @@ export default function Home() {
             <span className="section-index">{"// THE GAME ARCHIVE · 02"}</span>
             <h2 className="section-title neon-mag">VFX <span className="st-sub">{"// + Animation"}</span></h2>
             <div className="arch-tags mag">
-              <span className="hud-label">Combat VFX</span>
-              <span className="hud-label">Combat animation</span>
+              <span className="hud-label">Animation in Blender</span>
+              <span className="hud-label">VFX in Roblox Studio</span>
               <span className="hud-label">{clips.length} Clips</span>
             </div>
           </Reveal>

@@ -37,8 +37,8 @@ const HEIZOU = {
   set: "Heizou combat kit",
   kinds: ["animation", "vfx"] as ClipKind[],
   ratio: "16/9" as const,
-  tools: ["Blender", "Roblox Studio", "Luau"],
-  note: "Plays the animation clean first, then with the wind VFX.",
+  tools: ["Animation: Blender", "VFX: Roblox Studio"],
+  note: "Animated in Blender, VFX built in Roblox Studio. Plays the animation clean first, then with the wind VFX.",
 };
 
 export const clips: Clip[] = [
