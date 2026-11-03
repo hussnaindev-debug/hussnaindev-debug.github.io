@@ -16,6 +16,7 @@ export default function VideoThumb({
   alt,
   className = "",
   mode = "hover",
+  priority = false,
 }: {
   src?: string;
   poster: string;
@@ -23,6 +24,8 @@ export default function VideoThumb({
   className?: string;
   /** "hover": desktop plays on hover, touch plays in view. "view": always plays while on screen. */
   mode?: "hover" | "view";
+  /** Above-the-fold media: load the poster eagerly at high priority (it is the LCP). */
+  priority?: boolean;
 }) {
   const wrap = useRef<HTMLDivElement>(null);
   const video = useRef<HTMLVideoElement>(null);
@@ -77,7 +80,14 @@ export default function VideoThumb({
       onMouseLeave={onLeave}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={poster} alt={alt} loading="lazy" className="vthumb-poster" />
+      <img
+        src={poster}
+        alt={alt}
+        className="vthumb-poster"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding="async"
+      />
       {src && canPlay && (
         <video
           ref={video}
@@ -87,7 +97,7 @@ export default function VideoThumb({
           muted
           loop
           playsInline
-          preload={mode === "view" ? "metadata" : "none"}
+          preload="none"
           onPlaying={(e) => e.currentTarget.classList.add("is-playing")}
           onPause={(e) => e.currentTarget.classList.remove("is-playing")}
         />

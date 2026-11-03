@@ -32,6 +32,7 @@ export default function CaseStudyBody({
   return (
     <div
       className="cs cs-in-modal"
+      data-game={p.slug}
       style={{
         ["--pa" as string]: p.accent,
         ["--pa-soft" as string]: `color-mix(in srgb, ${p.accent} 14%, transparent)`,

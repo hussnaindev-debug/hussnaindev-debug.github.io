@@ -57,7 +57,7 @@ export default function Home() {
                 <span className="holo-live"><span className="stat-dot" /> LIVE</span>
               </div>
               <div className="holo-screen">
-                <VideoThumb src={heroGame.previewVideo} poster={heroGame.cover || heroGame.poster} alt={`${heroGame.name} gameplay`} mode="view" />
+                <VideoThumb src={heroGame.previewVideo} poster={heroGame.cover || heroGame.poster} alt={`${heroGame.name} gameplay`} mode="view" priority />
                 <span className="holo-scan" aria-hidden />
               </div>
               <div className="holo-meta">
@@ -232,10 +232,10 @@ export default function Home() {
                 Open to game development roles, freelance projects, and interesting collaborations.
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={MAIL} target="_blank" rel="noopener" data-analytics="contact_click" data-cursor="EMAIL">
+                <a className="btn btn-primary" href={MAIL} target="_blank" rel="noopener" data-cursor="EMAIL">
                   <Mail size={18} /> Email me
                 </a>
-                <a className="btn btn-ghost" href={LINKEDIN} target="_blank" rel="noopener" data-analytics="contact_click" data-cursor="OPEN">
+                <a className="btn btn-ghost" href={LINKEDIN} target="_blank" rel="noopener" data-cursor="OPEN">
                   <LinkedinIcon size={18} /> LinkedIn
                 </a>
               </div>

@@ -15,19 +15,66 @@ const KIND_LABEL: Record<ClipKind, string> = { vfx: "VFX", animation: "Animation
  * VFX + animation section: an auto-advancing slideshow on top, the full
  * filterable clip library below, and a full-screen viewer for any clip.
  */
+const readClip = () => {
+  const id = new URLSearchParams(window.location.search).get("clip");
+  return clips.findIndex((c) => c.id === id);
+};
+
 export default function ClipShowcase() {
   const [viewer, setViewer] = useState<{ list: Clip[]; i: number } | null>(null);
+  const pushed = useRef(false);
+
+  // ?clip=<id> makes every clip shareable; back button closes the viewer
+  useEffect(() => {
+    const at = readClip();
+    // one-shot: open the viewer a shared link points at (URL is client-only)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (at >= 0) setViewer({ list: clips, i: at });
+    const onPop = () => {
+      const j = readClip();
+      if (j < 0) { pushed.current = false; setViewer(null); return; }
+      setViewer((v) => {
+        const list = v?.list ?? clips;
+        const k = list.findIndex((c) => c.id === clips[j].id);
+        return k >= 0 ? { list, i: k } : { list: clips, i: j };
+      });
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  const show = useCallback((list: Clip[], i: number) => {
+    const url = `${window.location.pathname}?clip=${list[i].id}`;
+    if (readClip() >= 0) {
+      window.history.replaceState(null, "", url);
+    } else {
+      window.history.pushState(null, "", url);
+      pushed.current = true;
+    }
+    setViewer({ list, i });
+  }, []);
+
+  const close = useCallback(() => {
+    if (pushed.current) {
+      pushed.current = false;
+      window.history.back(); // popstate clears the viewer
+    } else {
+      window.history.replaceState(null, "", window.location.pathname);
+      setViewer(null);
+    }
+  }, []);
+
   if (!clips.length) return null;
   return (
     <>
-      <Slideshow onExpand={(i) => setViewer({ list: clips, i })} />
-      <Library onOpen={(list, i) => setViewer({ list, i })} />
+      <Slideshow onExpand={(i) => show(clips, i)} />
+      <Library onOpen={show} />
       {viewer && (
         <ClipViewer
           list={viewer.list}
           index={viewer.i}
-          onIndex={(i) => setViewer({ ...viewer, i })}
-          onClose={() => setViewer(null)}
+          onIndex={(i) => show(viewer.list, i)}
+          onClose={close}
         />
       )}
     </>

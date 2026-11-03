@@ -39,30 +39,37 @@ export default function Loader() {
       unlockScroll();
     };
 
+    // Full boot once per session. Repeat loads, and visitors arriving on a
+    // shared ?game= / ?clip= link, get a ~1s quick boot.
+    let seen = false;
+    try { seen = sessionStorage.getItem("booted") === "1"; } catch {}
+    const fast = seen || /[?&](game|clip)=/.test(window.location.search);
+
     // stream boot lines
     let li = 0;
     const lineId = window.setInterval(() => {
       li += 1;
       setLines(li);
       if (li >= BOOT_LINES.length) window.clearInterval(lineId);
-    }, 340);
+    }, fast ? 90 : 340);
 
-    // fill progress bar (reaches 100 at ~2.4s)
+    // fill progress bar (full boot reaches 100 at ~2.4s, quick boot ~0.9s)
     let p = 0;
     const barId = window.setInterval(() => {
-      p += Math.max(1.5, (100 - p) * 0.06) + Math.random() * 2.5;
+      p += fast ? 8 + Math.random() * 4 : Math.max(1.5, (100 - p) * 0.06) + Math.random() * 2.5;
       if (p >= 100) {
         p = 100;
         window.clearInterval(barId);
-        setTimeout(finish, 480);
+        setTimeout(finish, fast ? 120 : 480);
       }
       setPct(Math.floor(p));
     }, 80);
 
     // allow skipping only after it's had a moment on screen
-    const skipTimer = window.setTimeout(() => { canSkip.current = true; }, 900);
+    const skipTimer = window.setTimeout(() => { canSkip.current = true; }, fast ? 0 : 900);
 
     const finish = () => {
+      try { sessionStorage.setItem("booted", "1"); } catch {}
       setExiting(true);
       setTimeout(() => {
         setShow(false);

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono, Orbitron } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
+import { Inter, JetBrains_Mono, Orbitron } from "next/font/google";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 import "./archive.css";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -14,12 +15,6 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-const display = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-grotesk",
-  weight: ["500", "600", "700"],
   display: "swap",
 });
 // Cyberpunk display face for large headings + HUD labels.
@@ -52,7 +47,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable} ${orbitron.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${orbitron.variable} ${mono.variable}`}>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <Loader />
@@ -62,7 +57,9 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
-        <Analytics />
+        <Suspense fallback={null}>
+          <SiteAnalytics />
+        </Suspense>
       </body>
     </html>
   );

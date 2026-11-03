@@ -90,8 +90,8 @@ export const projects: Project[] = [
     roleBody:
       "I design and script every system myself in Roblox Studio with Luau: the free-flow combat, the enemy AI, the ability and VFX systems, the randomized points of interest, the cutscenes, and the full inventory system. Bloom Prison is a solo project at my company.",
     accent: "#34D399",
-    poster: `${M("bloom-prison")}/cover.jpg`,
-    cover: `${M("bloom-prison")}/cover.jpg`,
+    poster: `${M("bloom-prison")}/cover.webp`,
+    cover: `${M("bloom-prison")}/cover.webp`,
     previewVideo: `${M("bloom-prison")}/preview.mp4`,
     heroVideo: `${M("bloom-prison")}/gameplay.mp4`,
     tags: ["Roblox Studio", "Luau", "Free-Flow Combat", "Enemy AI", "Abilities & VFX"],
@@ -160,8 +160,8 @@ export const projects: Project[] = [
     roleBody:
       "I built the game on my own, from the ground up: the multiplayer base and conveyor system, passive income, the server-authoritative stealing and base-locking, defensive tools, rarities, rebirth, mystery-box gacha, the full monetization framework, the first-time tutorial and beginner quests, the cross-platform UI, and the analytics funnel, with DataStore saving and exploit/dupe protection throughout.",
     accent: "#EC4899",
-    poster: `${M("steal-a-viral-squishy")}/cover.jpg`,
-    cover: `${M("steal-a-viral-squishy")}/cover.jpg`,
+    poster: `${M("steal-a-viral-squishy")}/cover.webp`,
+    cover: `${M("steal-a-viral-squishy")}/cover.webp`,
     previewVideo: `${M("steal-a-viral-squishy")}/preview.mp4`,
     heroVideo: `${M("steal-a-viral-squishy")}/gameplay.mp4`,
     tags: ["Roblox Studio", "Luau", "Multiplayer", "Stealing", "Server-Authoritative"],
@@ -223,8 +223,8 @@ export const projects: Project[] = [
     roleBody:
       "I'm building Fall for Brainrot on my own: the custom dual-body ball physics and controls, the launch and run loop, bubble durability and glass-shatter, coin/gem pickups and distance-gated rewards, the 100-Brainrot collection with bases and passive income, upgrades, rebirth, quests, global leaderboards, a full pet-sim UI, server-side anti-cheat, and the DataStore saving that holds it all together.",
     accent: "#F59E0B",
-    poster: `${M("fall-for-brainrot")}/cover.jpg`,
-    cover: `${M("fall-for-brainrot")}/cover.jpg`,
+    poster: `${M("fall-for-brainrot")}/cover.webp`,
+    cover: `${M("fall-for-brainrot")}/cover.webp`,
     previewVideo: `${M("fall-for-brainrot")}/preview.mp4`,
     heroVideo: `${M("fall-for-brainrot")}/gameplay.mp4`,
     tags: ["Roblox Studio", "Luau", "Custom Physics", "100 Brainrots", "Anti-Cheat"],
@@ -394,7 +394,7 @@ export const projects: Project[] = [
     roleBody:
       "I built the game from scratch with no kit or template, and owned the core gameplay framework, the modular architecture behind all 30 minigames, the AI opponent, the XP and unlock progression, and the full production stack of IAP, AppsFlyer analytics, and iOS ATT compliance.",
     accent: "#6366F1",
-    poster: `${M("four-reaction")}/poster.png`,
+    poster: `${M("four-reaction")}/poster.webp`,
     previewVideo: `${M("four-reaction")}/preview.mp4`,
     heroVideo: `${M("four-reaction")}/gameplay.mp4`,
     tags: ["Unity 2D", "Lead Dev", "30 Minigames", "AI Opponent", "IAP"],
@@ -434,10 +434,10 @@ export const projects: Project[] = [
       },
     ],
     gallery: [
-      { src: `${M("four-reaction")}/shot-3.jpg`, caption: "Four-player minigame round" },
-      { src: `${M("four-reaction")}/shot-1.jpg`, caption: "Main menu & setup" },
-      { src: `${M("four-reaction")}/shot-2.jpg`, caption: "Minigame selection grid" },
-      { src: `${M("four-reaction")}/shot-4.jpg`, caption: "Results & XP progression" },
+      { src: `${M("four-reaction")}/shot-3.webp`, caption: "Four-player minigame round" },
+      { src: `${M("four-reaction")}/shot-1.webp`, caption: "Main menu & setup" },
+      { src: `${M("four-reaction")}/shot-2.webp`, caption: "Minigame selection grid" },
+      { src: `${M("four-reaction")}/shot-4.webp`, caption: "Results & XP progression" },
     ],
     tech: ["Unity 2D", "C#", "ScriptableObjects", "Prefab Architecture", "Local Multiplayer", "AI Opponent", "XP System", "DOTween", "IAP", "AppsFlyer", "iOS ATT"],
     links: [
@@ -458,7 +458,7 @@ export const projects: Project[] = [
     roleBody:
       "I led development end to end, building the core arcade loop and the full meta layer around it: a skins store, spin wheel, daily rewards, weekly missions, a Google Play leaderboard, and the Google Ads and IAP monetization.",
     accent: "#22B8CF",
-    poster: `${M("circular-pong")}/poster.png`,
+    poster: `${M("circular-pong")}/poster.webp`,
     previewVideo: `${M("circular-pong")}/preview.mp4`,
     heroVideo: `${M("circular-pong")}/gameplay.mp4`,
     tags: ["Unity 2D", "Lead Dev", "Leaderboard", "Skins Store", "IAP"],
@@ -498,10 +498,10 @@ export const projects: Project[] = [
       },
     ],
     gallery: [
-      { src: `${M("circular-pong")}/shot-4.jpg`, caption: "Active gameplay: obstacle & coin" },
-      { src: `${M("circular-pong")}/shot-2.jpg`, caption: "Ready screen" },
-      { src: `${M("circular-pong")}/shot-3.jpg`, caption: "Skins store" },
-      { src: `${M("circular-pong")}/shot-1.jpg`, caption: "Loading screen" },
+      { src: `${M("circular-pong")}/shot-4.webp`, caption: "Active gameplay: obstacle & coin" },
+      { src: `${M("circular-pong")}/shot-2.webp`, caption: "Ready screen" },
+      { src: `${M("circular-pong")}/shot-3.webp`, caption: "Skins store" },
+      { src: `${M("circular-pong")}/shot-1.webp`, caption: "Loading screen" },
     ],
     tech: ["Unity 2D", "C#", "DOTween", "Google Play Leaderboard", "Skins Store", "Spin Wheel", "Daily Rewards", "Google Ads", "IAP", "Android"],
     links: [
@@ -522,7 +522,7 @@ export const projects: Project[] = [
     roleBody:
       "I built the game end to end, from the maze gameplay and UI to the adaptive control system that detects the player's device and switches between keyboard input on PC and an on-screen joystick on mobile, plus the DOTween-animated menus and panels.",
     accent: "#F6AD55",
-    poster: `${M("mouse-maze")}/poster.png`,
+    poster: `${M("mouse-maze")}/poster.webp`,
     previewVideo: `${M("mouse-maze")}/preview.mp4`,
     heroVideo: `${M("mouse-maze")}/gameplay.mp4`,
     tags: ["Unity", "WebGL", "Adaptive Controls", "DOTween"],
@@ -562,10 +562,10 @@ export const projects: Project[] = [
       },
     ],
     gallery: [
-      { src: `${M("mouse-maze")}/shot-3.jpg`, caption: "Navigating the maze" },
-      { src: `${M("mouse-maze")}/shot-1.jpg`, caption: "Main menu" },
-      { src: `${M("mouse-maze")}/shot-2.jpg`, caption: "Level select" },
-      { src: `${M("mouse-maze")}/shot-4.jpg`, caption: "Victory screen" },
+      { src: `${M("mouse-maze")}/shot-3.webp`, caption: "Navigating the maze" },
+      { src: `${M("mouse-maze")}/shot-1.webp`, caption: "Main menu" },
+      { src: `${M("mouse-maze")}/shot-2.webp`, caption: "Level select" },
+      { src: `${M("mouse-maze")}/shot-4.webp`, caption: "Victory screen" },
     ],
     tech: ["Unity", "C#", "WebGL", "DOTween", "Device Detection", "On-Screen Joystick", "Keyboard Controls"],
     links: [
@@ -586,7 +586,7 @@ export const projects: Project[] = [
     roleBody:
       "I built the game end to end, from the swipe-driven physics movement and the obstacle-filled levels to the ball-skins shop and the integrated itch.io leaderboard for the WebGL release.",
     accent: "#38C172",
-    poster: `${M("rise-and-roll")}/poster.png`,
+    poster: `${M("rise-and-roll")}/poster.webp`,
     previewVideo: `${M("rise-and-roll")}/preview.mp4`,
     heroVideo: `${M("rise-and-roll")}/gameplay.mp4`,
     tags: ["Unity", "WebGL", "Physics", "Shop System", "Leaderboard"],
@@ -626,10 +626,10 @@ export const projects: Project[] = [
       },
     ],
     gallery: [
-      { src: `${M("rise-and-roll")}/shot-2.jpg`, caption: "Rolling down the track" },
-      { src: `${M("rise-and-roll")}/shot-1.jpg`, caption: "Title screen" },
-      { src: `${M("rise-and-roll")}/shot-3.jpg`, caption: "Ball skins shop" },
-      { src: `${M("rise-and-roll")}/shot-4.jpg`, caption: "Level complete" },
+      { src: `${M("rise-and-roll")}/shot-2.webp`, caption: "Rolling down the track" },
+      { src: `${M("rise-and-roll")}/shot-1.webp`, caption: "Title screen" },
+      { src: `${M("rise-and-roll")}/shot-3.webp`, caption: "Ball skins shop" },
+      { src: `${M("rise-and-roll")}/shot-4.webp`, caption: "Level complete" },
     ],
     tech: ["Unity", "C#", "WebGL", "Physics", "Swipe Controls", "Shop System", "itch.io Leaderboard"],
     links: [

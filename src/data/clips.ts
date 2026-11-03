@@ -6,7 +6,7 @@
  *   clip.mp4   full clip, muted, faststart (viewer + slideshow)
  *   thumb.mp4  ~640px wide loop for the library tile; cut it to the part
  *              where the effect plays so the tile is never a plain idle pose
- *   poster.jpg frame where the effect is at its peak
+ *   poster.webp frame where the effect is at its peak
  * then add an entry below. `ratio` drives the tile shape (16/9, 9/16, 1/1, 4/5).
  */
 
@@ -30,7 +30,7 @@ export interface Clip {
 const C = (id: string) => ({
   src: `/media/clips/${id}/clip.mp4`,
   thumb: `/media/clips/${id}/thumb.mp4`,
-  poster: `/media/clips/${id}/poster.jpg`,
+  poster: `/media/clips/${id}/poster.webp`,
 });
 
 const HEIZOU = {

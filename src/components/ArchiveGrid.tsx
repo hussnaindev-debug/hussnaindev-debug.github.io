@@ -69,9 +69,9 @@ export default function ArchiveGrid() {
   const openGame = useCallback((slug: string) => {
     const url = `${window.location.pathname}?game=${slug}`;
     if (readGame()) {
-      window.history.replaceState(window.history.state, "", url);
+      window.history.replaceState(null, "", url);
     } else {
-      window.history.pushState(window.history.state, "", url);
+      window.history.pushState(null, "", url);
       pushed.current = true;
     }
     setOpen(slug);
@@ -82,7 +82,7 @@ export default function ArchiveGrid() {
       pushed.current = false;
       window.history.back(); // popstate clears `open`
     } else {
-      window.history.replaceState(window.history.state, "", window.location.pathname);
+      window.history.replaceState(null, "", window.location.pathname);
       setOpen(null);
     }
   }, []);
