@@ -75,7 +75,7 @@ export default function Home() {
         <div className="container">
           <div className="hl-strip">
             <div className="hl-cell"><div className="hl-num">{projects.length}</div><div className="hl-label">Games in the archive</div></div>
-            <div className="hl-cell"><div className="hl-num">155K+</div><div className="hl-label">Visits on 99 Days</div></div>
+            <div className="hl-cell"><div className="hl-num">55K+</div><div className="hl-label">Installs at UFD Studios</div></div>
             <div className="hl-cell"><div className="hl-num">5,000+</div><div className="hl-label">Installs on 4 Reaction</div></div>
             <div className="hl-cell"><div className="hl-num mag">{clips.length}</div><div className="hl-label">VFX and animation clips</div></div>
           </div>

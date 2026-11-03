@@ -9,10 +9,10 @@ import { projects, getProject, type Project } from "@/data/projects";
 
 type Filter = "all" | "roblox" | "unity";
 
-// Display order: strongest footage first, games still missing media last.
+// Display order: strongest footage first.
 const ORDER = [
   "bloom-prison", "steal-a-viral-squishy", "fall-for-brainrot", "four-reaction",
-  "circular-pong", "mouse-maze", "rise-and-roll", "99-days-zombie-survival", "octopus-energy",
+  "circular-pong", "mouse-maze", "rise-and-roll",
 ];
 const ordered = [
   ...ORDER.map((s) => projects.find((p) => p.slug === s)).filter((p): p is Project => !!p),
